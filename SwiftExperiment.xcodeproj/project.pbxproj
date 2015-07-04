@@ -10,12 +10,14 @@
 		DC90F1B7ED7E6218D24F3EB8 /* Pods_SwiftExperimentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8993E2EE26DF516905C94059 /* Pods_SwiftExperimentUITests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		ECD64817C25F7BBBF40B8270 /* Pods_SwiftExperimentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61DB120E5B5A75F1ABA1C3A /* Pods_SwiftExperimentTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FA49655C1B47598500D487F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49655B1B47598500D487F1 /* AppDelegate.swift */; };
-		FA49655E1B47598500D487F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49655D1B47598500D487F1 /* ViewController.swift */; };
 		FA4965611B47598500D487F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA49655F1B47598500D487F1 /* Main.storyboard */; };
 		FA4965631B47598500D487F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4965621B47598500D487F1 /* Assets.xcassets */; };
 		FA4965661B47598500D487F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4965641B47598500D487F1 /* LaunchScreen.storyboard */; };
-		FA4965711B47598500D487F1 /* SwiftExperimentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4965701B47598500D487F1 /* SwiftExperimentTests.swift */; };
 		FA49657C1B47598500D487F1 /* SwiftExperimentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49657B1B47598500D487F1 /* SwiftExperimentUITests.swift */; };
+		FA7260791B476C9F00422466 /* MoviesViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260781B476C9F00422466 /* MoviesViewControllerSpec.swift */; };
+		FA72607E1B476DBA00422466 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA72607D1B476DBA00422466 /* MoviesViewController.swift */; };
+		FA7260811B47736B00422466 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260801B47736B00422466 /* MoviesView.swift */; };
+		FA7260831B477E8400422466 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260821B477E8400422466 /* MovieTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,17 +45,19 @@
 		F61DB120E5B5A75F1ABA1C3A /* Pods_SwiftExperimentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftExperimentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4965581B47598500D487F1 /* SwiftExperiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExperiment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA49655B1B47598500D487F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA49655D1B47598500D487F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA4965601B47598500D487F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA4965621B47598500D487F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA4965651B47598500D487F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA4965671B47598500D487F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA49656C1B47598500D487F1 /* SwiftExperimentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftExperimentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA4965701B47598500D487F1 /* SwiftExperimentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExperimentTests.swift; sourceTree = "<group>"; };
 		FA4965721B47598500D487F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA4965771B47598500D487F1 /* SwiftExperimentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftExperimentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA49657B1B47598500D487F1 /* SwiftExperimentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExperimentUITests.swift; sourceTree = "<group>"; };
 		FA49657D1B47598500D487F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA7260781B476C9F00422466 /* MoviesViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewControllerSpec.swift; sourceTree = "<group>"; };
+		FA72607D1B476DBA00422466 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		FA7260801B47736B00422466 /* MoviesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
+		FA7260821B477E8400422466 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		FB907FB1FFF4ED74A5D1C4C7 /* Pods-SwiftExperimentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftExperimentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftExperimentUITests/Pods-SwiftExperimentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,7 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				FA49655B1B47598500D487F1 /* AppDelegate.swift */,
-				FA49655D1B47598500D487F1 /* ViewController.swift */,
+				FA72607C1B476D9B00422466 /* Controllers */,
+				FA72607F1B47733F00422466 /* Views */,
 				FA49655F1B47598500D487F1 /* Main.storyboard */,
 				FA4965621B47598500D487F1 /* Assets.xcassets */,
 				FA4965641B47598500D487F1 /* LaunchScreen.storyboard */,
@@ -142,7 +147,7 @@
 		FA49656F1B47598500D487F1 /* SwiftExperimentTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA4965701B47598500D487F1 /* SwiftExperimentTests.swift */,
+				FA7260781B476C9F00422466 /* MoviesViewControllerSpec.swift */,
 				FA4965721B47598500D487F1 /* Info.plist */,
 			);
 			path = SwiftExperimentTests;
@@ -155,6 +160,23 @@
 				FA49657D1B47598500D487F1 /* Info.plist */,
 			);
 			path = SwiftExperimentUITests;
+			sourceTree = "<group>";
+		};
+		FA72607C1B476D9B00422466 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA72607D1B476DBA00422466 /* MoviesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FA72607F1B47733F00422466 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA7260801B47736B00422466 /* MoviesView.swift */,
+				FA7260821B477E8400422466 /* MovieTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,8 +393,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA49655E1B47598500D487F1 /* ViewController.swift in Sources */,
 				FA49655C1B47598500D487F1 /* AppDelegate.swift in Sources */,
+				FA7260811B47736B00422466 /* MoviesView.swift in Sources */,
+				FA7260831B477E8400422466 /* MovieTableViewCell.swift in Sources */,
+				FA72607E1B476DBA00422466 /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA4965711B47598500D487F1 /* SwiftExperimentTests.swift in Sources */,
+				FA7260791B476C9F00422466 /* MoviesViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +471,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -491,6 +516,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
