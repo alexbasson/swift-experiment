@@ -11,7 +11,10 @@ class MoviesViewControllerSpec: QuickSpec {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             subject = storyboard.instantiateViewControllerWithIdentifier("MoviesViewController") as! MoviesViewController
 
-            let movies = ["Wall-E", "Up", "Ratatouille"]
+            let movie0 = Movie(title: "Wall-E")
+            let movie1 = Movie(title: "Up")
+            let movie2 = Movie(title: "Ratatouille")
+            let movies = [movie0, movie1, movie2]
             subject.movies = movies
 
             expect(subject.view).notTo(beNil())
