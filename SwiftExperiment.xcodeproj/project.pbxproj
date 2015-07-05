@@ -19,6 +19,8 @@
 		FA7260811B47736B00422466 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260801B47736B00422466 /* MoviesView.swift */; };
 		FA7260831B477E8400422466 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260821B477E8400422466 /* MovieTableViewCell.swift */; };
 		FA7260861B47833E00422466 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260851B47833E00422466 /* Movie.swift */; };
+		FA7260A31B48D1D100422466 /* Production.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA7260A21B48D1D100422466 /* Production.plist */; };
+		FA7260A51B48DF6600422466 /* Test.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA7260A41B48DF6600422466 /* Test.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		FA7260801B47736B00422466 /* MoviesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
 		FA7260821B477E8400422466 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		FA7260851B47833E00422466 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		FA7260A21B48D1D100422466 /* Production.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Production.plist; sourceTree = "<group>"; };
+		FA7260A41B48DF6600422466 /* Test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Test.plist; sourceTree = "<group>"; };
 		FB907FB1FFF4ED74A5D1C4C7 /* Pods-SwiftExperimentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftExperimentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftExperimentUITests/Pods-SwiftExperimentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +147,8 @@
 				FA4965621B47598500D487F1 /* Assets.xcassets */,
 				FA4965641B47598500D487F1 /* LaunchScreen.storyboard */,
 				FA4965671B47598500D487F1 /* Info.plist */,
+				FA7260A21B48D1D100422466 /* Production.plist */,
+				FA7260A41B48DF6600422466 /* Test.plist */,
 			);
 			path = SwiftExperiment;
 			sourceTree = "<group>";
@@ -301,6 +307,8 @@
 			files = (
 				FA4965661B47598500D487F1 /* LaunchScreen.storyboard in Resources */,
 				FA4965631B47598500D487F1 /* Assets.xcassets in Resources */,
+				FA7260A51B48DF6600422466 /* Test.plist in Resources */,
+				FA7260A31B48D1D100422466 /* Production.plist in Resources */,
 				FA4965611B47598500D487F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,6 +628,163 @@
 			};
 			name = Release;
 		};
+		FA72609A1B48C5BD00422466 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Test;
+		};
+		FA72609B1B48C5BD00422466 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SwiftExperiment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.SwiftExperiment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Test;
+		};
+		FA72609C1B48C5BD00422466 /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45B872AE1B9176EF4CDEEBC5 /* Pods-SwiftExperimentTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SwiftExperimentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.SwiftExperimentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftExperiment.app/SwiftExperiment";
+			};
+			name = Test;
+		};
+		FA72609D1B48C5BD00422466 /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB907FB1FFF4ED74A5D1C4C7 /* Pods-SwiftExperimentUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = SwiftExperimentUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.SwiftExperimentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SwiftExperiment;
+				USES_XCTRUNNER = YES;
+			};
+			name = Test;
+		};
+		FA72609E1B48C5D200422466 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Staging;
+		};
+		FA72609F1B48C5D200422466 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SwiftExperiment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.SwiftExperiment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Staging;
+		};
+		FA7260A01B48C5D200422466 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1852C6DE283045431C576B81 /* Pods-SwiftExperimentTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SwiftExperimentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.SwiftExperimentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftExperiment.app/SwiftExperiment";
+			};
+			name = Staging;
+		};
+		FA7260A11B48C5D200422466 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAA71174ABDA2E35115D6525 /* Pods-SwiftExperimentUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = SwiftExperimentUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.SwiftExperimentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SwiftExperiment;
+				USES_XCTRUNNER = YES;
+			};
+			name = Staging;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -627,7 +792,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA49657E1B47598500D487F1 /* Debug */,
+				FA72609A1B48C5BD00422466 /* Test */,
 				FA49657F1B47598500D487F1 /* Release */,
+				FA72609E1B48C5D200422466 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -636,7 +803,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA4965811B47598500D487F1 /* Debug */,
+				FA72609B1B48C5BD00422466 /* Test */,
 				FA4965821B47598500D487F1 /* Release */,
+				FA72609F1B48C5D200422466 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -645,7 +814,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA4965841B47598500D487F1 /* Debug */,
+				FA72609C1B48C5BD00422466 /* Test */,
 				FA4965851B47598500D487F1 /* Release */,
+				FA7260A01B48C5D200422466 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -654,7 +825,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA4965871B47598500D487F1 /* Debug */,
+				FA72609D1B48C5BD00422466 /* Test */,
 				FA4965881B47598500D487F1 /* Release */,
+				FA7260A11B48C5D200422466 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
