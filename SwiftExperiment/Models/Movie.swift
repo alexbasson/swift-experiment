@@ -1,6 +1,4 @@
-import UIKit
-
-public class Movie: NSObject {
+public class Movie {
     public let title: String
 
     public init(title: String) {

@@ -21,6 +21,10 @@
 		FA7260861B47833E00422466 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260851B47833E00422466 /* Movie.swift */; };
 		FA7260A31B48D1D100422466 /* Production.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA7260A21B48D1D100422466 /* Production.plist */; };
 		FA7260A51B48DF6600422466 /* Test.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA7260A41B48DF6600422466 /* Test.plist */; };
+		FA7260A81B4B646600422466 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260A71B4B646600422466 /* MovieService.swift */; };
+		FA7260AB1B4B68A600422466 /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260AA1B4B68A600422466 /* RequestProvider.swift */; };
+		FA7260AF1B4B6FDE00422466 /* MovieServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260AE1B4B6FDE00422466 /* MovieServiceSpec.swift */; };
+		FA7260B91B4CBA7600422466 /* JSONClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260B81B4CBA7600422466 /* JSONClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,10 @@
 		FA7260851B47833E00422466 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		FA7260A21B48D1D100422466 /* Production.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Production.plist; sourceTree = "<group>"; };
 		FA7260A41B48DF6600422466 /* Test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Test.plist; sourceTree = "<group>"; };
+		FA7260A71B4B646600422466 /* MovieService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		FA7260AA1B4B68A600422466 /* RequestProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProvider.swift; sourceTree = "<group>"; };
+		FA7260AE1B4B6FDE00422466 /* MovieServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieServiceSpec.swift; sourceTree = "<group>"; };
+		FA7260B81B4CBA7600422466 /* JSONClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONClient.swift; sourceTree = "<group>"; };
 		FB907FB1FFF4ED74A5D1C4C7 /* Pods-SwiftExperimentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftExperimentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftExperimentUITests/Pods-SwiftExperimentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +150,9 @@
 				FA49655B1B47598500D487F1 /* AppDelegate.swift */,
 				FA72607C1B476D9B00422466 /* Controllers */,
 				FA7260841B47831E00422466 /* Models */,
+				FA7260B71B4CBA5000422466 /* Network */,
+				FA7260A91B4B688300422466 /* Providers */,
+				FA7260A61B4B643700422466 /* Services */,
 				FA72607F1B47733F00422466 /* Views */,
 				FA49655F1B47598500D487F1 /* Main.storyboard */,
 				FA4965621B47598500D487F1 /* Assets.xcassets */,
@@ -156,7 +167,8 @@
 		FA49656F1B47598500D487F1 /* SwiftExperimentTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA7260781B476C9F00422466 /* MoviesViewControllerSpec.swift */,
+				FA7260AC1B4B6B6800422466 /* Controllers */,
+				FA7260AD1B4B6FBB00422466 /* Services */,
 				FA4965721B47598500D487F1 /* Info.plist */,
 			);
 			path = SwiftExperimentTests;
@@ -194,6 +206,46 @@
 				FA7260851B47833E00422466 /* Movie.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FA7260A61B4B643700422466 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA7260A71B4B646600422466 /* MovieService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA7260A91B4B688300422466 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				FA7260AA1B4B68A600422466 /* RequestProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		FA7260AC1B4B6B6800422466 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA7260781B476C9F00422466 /* MoviesViewControllerSpec.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FA7260AD1B4B6FBB00422466 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA7260AE1B4B6FDE00422466 /* MovieServiceSpec.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA7260B71B4CBA5000422466 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FA7260B81B4CBA7600422466 /* JSONClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,8 +464,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7260A81B4B646600422466 /* MovieService.swift in Sources */,
 				FA49655C1B47598500D487F1 /* AppDelegate.swift in Sources */,
 				FA7260811B47736B00422466 /* MoviesView.swift in Sources */,
+				FA7260AB1B4B68A600422466 /* RequestProvider.swift in Sources */,
+				FA7260B91B4CBA7600422466 /* JSONClient.swift in Sources */,
 				FA7260831B477E8400422466 /* MovieTableViewCell.swift in Sources */,
 				FA72607E1B476DBA00422466 /* MoviesViewController.swift in Sources */,
 				FA7260861B47833E00422466 /* Movie.swift in Sources */,
@@ -425,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA7260791B476C9F00422466 /* MoviesViewControllerSpec.swift in Sources */,
+				FA7260AF1B4B6FDE00422466 /* MovieServiceSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

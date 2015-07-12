@@ -2,21 +2,29 @@ import Quick
 import Nimble
 import SwiftExperiment
 
+public class MockMovieService: MovieService {
+    public var receivedGetMovies = false
+
+    override public func getMovies(closure: ([Movie]) -> ()) {
+        receivedGetMovies = true
+        let movie0 = Movie(title: "Wall-E")
+        let movie1 = Movie(title: "Up")
+        let movie2 = Movie(title: "Ratatouille")
+        closure([movie0, movie1, movie2])
+    }
+}
+
 class MoviesViewControllerSpec: QuickSpec {
     override func spec() {
         var subject: MoviesViewController!
         var view: MoviesView!
+        let movieService = MockMovieService()
 
         beforeEach {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             subject = storyboard.instantiateViewControllerWithIdentifier("MoviesViewController") as! MoviesViewController
-
-            let movie0 = Movie(title: "Wall-E")
-            let movie1 = Movie(title: "Up")
-            let movie2 = Movie(title: "Ratatouille")
-            let movies = [movie0, movie1, movie2]
-            subject.movies = movies
-
+            subject.configureWithMovieService(movieService)
+            
             expect(subject.view).notTo(beNil())
             view = subject.moviesView
             if let tableView = view.tableView {
@@ -25,6 +33,12 @@ class MoviesViewControllerSpec: QuickSpec {
         }
 
         describe("when the view loads") {
+            it("messages the movie service to get movies") {
+                expect(movieService.receivedGetMovies).to(beTruthy())
+            }
+        }
+
+        describe("the table view") {
             var cells = []
 
             beforeEach {
