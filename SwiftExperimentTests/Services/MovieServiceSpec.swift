@@ -15,10 +15,12 @@ public class MockRequestProvider: RequestProvider {
 public class MockJSONClient: JSONClient {
     public var receivedSendRequest = false
     public var requestParam: NSURLRequest!
-    override public func sendRequest(request: NSURLRequest, closure: (json: AnyObject) -> ()) {
+    public var sendRequestClosure: JSONClientClosure!
+
+    override public func sendRequest(request: NSURLRequest, closure: JSONClientClosure) {
         receivedSendRequest = true
         requestParam = request
-        closure(json: ["movies": []])
+        sendRequestClosure = closure
     }
 }
 
@@ -39,7 +41,7 @@ class MovieServiceSpec: QuickSpec {
 
             closureWasCalled = false
             subject.getMovies {
-                (movie: [Movie]) in
+                (movie, error) in
                 closureWasCalled = true
             }
         }
@@ -54,8 +56,16 @@ class MovieServiceSpec: QuickSpec {
                 expect(jsonClient.requestParam).to(beIdenticalTo(requestProvider.fakeGetMoviesRequest))
             }
 
-            it("calls its closure") {
-                expect(closureWasCalled).to(beTruthy())
+            describe("when the request returns") {
+                context("successfully") {
+                    it("calls its closure with the array of movies") {
+                        jsonClient.sendRequestClosure(json: ["movies": []], error: nil)
+                        expect(closureWasCalled).to(beTruthy())
+                    }
+                }
+
+                context("with error") {
+                }
             }
         }
     }

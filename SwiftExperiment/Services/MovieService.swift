@@ -1,5 +1,7 @@
 import Foundation
 
+public typealias MovieServiceClosure = (movies: [Movie]?, error: NSError?) -> ()
+
 public class MovieService {
     let requestProvider: RequestProvider
     let jsonClient: JSONClient
@@ -13,18 +15,23 @@ public class MovieService {
         self.init(requestProvider: RequestProvider(), jsonClient: JSONClient())
     }
 
-    public func getMovies(closure: ([Movie]) -> ()) {
+    public func getMovies(closure: MovieServiceClosure) {
         if let request = requestProvider.getMoviesRequest() {
             jsonClient.sendRequest(request) {
-                (let json) in
-                if let moviesJson = json["movies"] as? NSArray {
-                    let movies: NSMutableArray = []
-                    for movieJson in moviesJson {
-                        if let title = movieJson["title"] as? String {
-                            movies.addObject(Movie(title: title))
+                (json, error) in
+                if let json = json {
+                    if let moviesJson = json["movies"] as? NSArray {
+                        let movies: NSMutableArray = []
+                        for movieJson in moviesJson {
+                            if let title = movieJson["title"] as? String {
+                                movies.addObject(Movie(title: title))
+                            }
                         }
+                        closure(movies: movies as NSArray as? [Movie], error: nil)
                     }
-                    closure(movies as NSArray as! [Movie])
+                } else if let error = error {
+                    print(error)
+                    // do something with the error
                 }
             }
         }

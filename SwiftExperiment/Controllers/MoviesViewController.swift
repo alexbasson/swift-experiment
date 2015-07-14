@@ -14,12 +14,17 @@ public class MoviesViewController: UIViewController {
         super.viewDidLoad()
 
         movieService.getMovies() {
-            (let movies) in
-            self.movies = movies
-            dispatch_async(dispatch_get_main_queue(), {
-                () -> Void in
-                self.moviesView.tableView?.reloadData()
-            })
+            (movies, error) in
+            if let movies = movies {
+                self.movies = movies
+                dispatch_async(dispatch_get_main_queue(), {
+                    () -> Void in
+                    self.moviesView.tableView?.reloadData()
+                })
+            } else if let error = error {
+                print(error)
+                // do something with the error
+            }
         }
     }
 }
