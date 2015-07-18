@@ -28,6 +28,7 @@
 		FA9801B11B57428C00B29F35 /* MovieSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9801B01B57428C00B29F35 /* MovieSerializer.swift */; };
 		FAA426FC1B59DEFC00D0AA32 /* Pods_SwiftExperimentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA426FB1B59DEFC00D0AA32 /* Pods_SwiftExperimentTests.framework */; };
 		FAA427051B59EC8B00D0AA32 /* HTTPClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA427041B59EC8B00D0AA32 /* HTTPClientSpec.swift */; };
+		FAA427081B59F78B00D0AA32 /* MovieSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA427071B59F78B00D0AA32 /* MovieSpec.swift */; };
 		FADD042E1B55EEEE00B4DA2B /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD042D1B55EEEE00B4DA2B /* HTTPClient.swift */; };
 		FADD04381B55F25C00B4DA2B /* JSONClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD04371B55F25C00B4DA2B /* JSONClientSpec.swift */; };
 /* End PBXBuildFile section */
@@ -85,6 +86,7 @@
 		FA9801B01B57428C00B29F35 /* MovieSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSerializer.swift; sourceTree = "<group>"; };
 		FAA426FB1B59DEFC00D0AA32 /* Pods_SwiftExperimentTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_SwiftExperimentTests.framework; path = "Pods/../build/Debug-iphoneos/Pods_SwiftExperimentTests.framework"; sourceTree = "<group>"; };
 		FAA427041B59EC8B00D0AA32 /* HTTPClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientSpec.swift; sourceTree = "<group>"; };
+		FAA427071B59F78B00D0AA32 /* MovieSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSpec.swift; sourceTree = "<group>"; };
 		FADD042D1B55EEEE00B4DA2B /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		FADD04371B55F25C00B4DA2B /* JSONClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONClientSpec.swift; sourceTree = "<group>"; };
 		FB907FB1FFF4ED74A5D1C4C7 /* Pods-SwiftExperimentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftExperimentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftExperimentUITests/Pods-SwiftExperimentUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				FA7260AC1B4B6B6800422466 /* Controllers */,
+				FAA427061B59F77700D0AA32 /* Models */,
 				FADD04361B55F23100B4DA2B /* Network */,
 				FA7260AD1B4B6FBB00422466 /* Services */,
 				FA4965721B47598500D487F1 /* Info.plist */,
@@ -286,6 +289,14 @@
 				FA9801B01B57428C00B29F35 /* MovieSerializer.swift */,
 			);
 			name = Serializers;
+			sourceTree = "<group>";
+		};
+		FAA427061B59F77700D0AA32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAA427071B59F78B00D0AA32 /* MovieSpec.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FADD04361B55F23100B4DA2B /* Network */ = {
@@ -533,6 +544,7 @@
 			files = (
 				FADD04381B55F25C00B4DA2B /* JSONClientSpec.swift in Sources */,
 				FAA427051B59EC8B00D0AA32 /* HTTPClientSpec.swift in Sources */,
+				FAA427081B59F78B00D0AA32 /* MovieSpec.swift in Sources */,
 				FA7260791B476C9F00422466 /* MoviesViewControllerSpec.swift in Sources */,
 				FA7260AF1B4B6FDE00422466 /* MovieServiceSpec.swift in Sources */,
 			);
