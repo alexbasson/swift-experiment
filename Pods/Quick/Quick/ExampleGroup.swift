@@ -53,11 +53,11 @@
     }
 
     internal var befores: [BeforeExampleWithMetadataClosure] {
-        var closures = Array(Array(hooks.befores.reverse()))
+        var closures = Array(hooks.befores.reverse())
         walkUp() { (group: ExampleGroup) -> () in
-            closures.extend(Array(Array(group.hooks.befores.reverse())))
+            closures.extend(Array(group.hooks.befores.reverse()))
         }
-        return Array(Array(closures.reverse()))
+        return Array(closures.reverse())
     }
 
     internal var afters: [AfterExampleWithMetadataClosure] {

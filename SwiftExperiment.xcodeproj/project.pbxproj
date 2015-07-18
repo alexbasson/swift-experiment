@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DC90F1B7ED7E6218D24F3EB8 /* Pods_SwiftExperimentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8993E2EE26DF516905C94059 /* Pods_SwiftExperimentUITests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		ECD64817C25F7BBBF40B8270 /* Pods_SwiftExperimentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61DB120E5B5A75F1ABA1C3A /* Pods_SwiftExperimentTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FA49655C1B47598500D487F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49655B1B47598500D487F1 /* AppDelegate.swift */; };
 		FA4965611B47598500D487F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA49655F1B47598500D487F1 /* Main.storyboard */; };
 		FA4965631B47598500D487F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4965621B47598500D487F1 /* Assets.xcassets */; };
@@ -25,6 +24,12 @@
 		FA7260AB1B4B68A600422466 /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260AA1B4B68A600422466 /* RequestProvider.swift */; };
 		FA7260AF1B4B6FDE00422466 /* MovieServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260AE1B4B6FDE00422466 /* MovieServiceSpec.swift */; };
 		FA7260B91B4CBA7600422466 /* JSONClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260B81B4CBA7600422466 /* JSONClient.swift */; };
+		FA9801AE1B5740B200B29F35 /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9801AD1B5740B200B29F35 /* Serializer.swift */; };
+		FA9801B11B57428C00B29F35 /* MovieSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9801B01B57428C00B29F35 /* MovieSerializer.swift */; };
+		FAA426FC1B59DEFC00D0AA32 /* Pods_SwiftExperimentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA426FB1B59DEFC00D0AA32 /* Pods_SwiftExperimentTests.framework */; };
+		FAA427051B59EC8B00D0AA32 /* HTTPClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA427041B59EC8B00D0AA32 /* HTTPClientSpec.swift */; };
+		FADD042E1B55EEEE00B4DA2B /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD042D1B55EEEE00B4DA2B /* HTTPClient.swift */; };
+		FADD04381B55F25C00B4DA2B /* JSONClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD04371B55F25C00B4DA2B /* JSONClientSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +50,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F9962A49124172DACE62608 /* Pods-SwiftExperimentTests.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftExperimentTests.test.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftExperimentTests/Pods-SwiftExperimentTests.test.xcconfig"; sourceTree = "<group>"; };
 		1852C6DE283045431C576B81 /* Pods-SwiftExperimentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftExperimentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftExperimentTests/Pods-SwiftExperimentTests.release.xcconfig"; sourceTree = "<group>"; };
+		30F88B2E69623D8105C38C30 /* Pods-SwiftExperimentUITests.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftExperimentUITests.test.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftExperimentUITests/Pods-SwiftExperimentUITests.test.xcconfig"; sourceTree = "<group>"; };
 		45B872AE1B9176EF4CDEEBC5 /* Pods-SwiftExperimentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftExperimentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftExperimentTests/Pods-SwiftExperimentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8993E2EE26DF516905C94059 /* Pods_SwiftExperimentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftExperimentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92291097CA6FF77A4C25F485 /* Pods-SwiftExperimentTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftExperimentTests.staging.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftExperimentTests/Pods-SwiftExperimentTests.staging.xcconfig"; sourceTree = "<group>"; };
 		DAA71174ABDA2E35115D6525 /* Pods-SwiftExperimentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftExperimentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftExperimentUITests/Pods-SwiftExperimentUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E2AA8656D9F886B7449E3F55 /* Pods-SwiftExperimentUITests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftExperimentUITests.staging.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftExperimentUITests/Pods-SwiftExperimentUITests.staging.xcconfig"; sourceTree = "<group>"; };
 		F61DB120E5B5A75F1ABA1C3A /* Pods_SwiftExperimentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftExperimentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4965581B47598500D487F1 /* SwiftExperiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExperiment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA49655B1B47598500D487F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +81,12 @@
 		FA7260AA1B4B68A600422466 /* RequestProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProvider.swift; sourceTree = "<group>"; };
 		FA7260AE1B4B6FDE00422466 /* MovieServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieServiceSpec.swift; sourceTree = "<group>"; };
 		FA7260B81B4CBA7600422466 /* JSONClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONClient.swift; sourceTree = "<group>"; };
+		FA9801AD1B5740B200B29F35 /* Serializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
+		FA9801B01B57428C00B29F35 /* MovieSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSerializer.swift; sourceTree = "<group>"; };
+		FAA426FB1B59DEFC00D0AA32 /* Pods_SwiftExperimentTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_SwiftExperimentTests.framework; path = "Pods/../build/Debug-iphoneos/Pods_SwiftExperimentTests.framework"; sourceTree = "<group>"; };
+		FAA427041B59EC8B00D0AA32 /* HTTPClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientSpec.swift; sourceTree = "<group>"; };
+		FADD042D1B55EEEE00B4DA2B /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		FADD04371B55F25C00B4DA2B /* JSONClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONClientSpec.swift; sourceTree = "<group>"; };
 		FB907FB1FFF4ED74A5D1C4C7 /* Pods-SwiftExperimentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftExperimentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftExperimentUITests/Pods-SwiftExperimentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECD64817C25F7BBBF40B8270 /* Pods_SwiftExperimentTests.framework in Frameworks */,
+				FAA426FC1B59DEFC00D0AA32 /* Pods_SwiftExperimentTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +120,7 @@
 		2F94E23DCF0922DA17255F3F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAA426FB1B59DEFC00D0AA32 /* Pods_SwiftExperimentTests.framework */,
 				F61DB120E5B5A75F1ABA1C3A /* Pods_SwiftExperimentTests.framework */,
 				8993E2EE26DF516905C94059 /* Pods_SwiftExperimentUITests.framework */,
 			);
@@ -118,6 +134,10 @@
 				1852C6DE283045431C576B81 /* Pods-SwiftExperimentTests.release.xcconfig */,
 				FB907FB1FFF4ED74A5D1C4C7 /* Pods-SwiftExperimentUITests.debug.xcconfig */,
 				DAA71174ABDA2E35115D6525 /* Pods-SwiftExperimentUITests.release.xcconfig */,
+				0F9962A49124172DACE62608 /* Pods-SwiftExperimentTests.test.xcconfig */,
+				92291097CA6FF77A4C25F485 /* Pods-SwiftExperimentTests.staging.xcconfig */,
+				30F88B2E69623D8105C38C30 /* Pods-SwiftExperimentUITests.test.xcconfig */,
+				E2AA8656D9F886B7449E3F55 /* Pods-SwiftExperimentUITests.staging.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -151,7 +171,9 @@
 				FA72607C1B476D9B00422466 /* Controllers */,
 				FA7260841B47831E00422466 /* Models */,
 				FA7260B71B4CBA5000422466 /* Network */,
+				FA9801AC1B57404E00B29F35 /* Protocols */,
 				FA7260A91B4B688300422466 /* Providers */,
+				FA9801AF1B57427000B29F35 /* Serializers */,
 				FA7260A61B4B643700422466 /* Services */,
 				FA72607F1B47733F00422466 /* Views */,
 				FA49655F1B47598500D487F1 /* Main.storyboard */,
@@ -168,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				FA7260AC1B4B6B6800422466 /* Controllers */,
+				FADD04361B55F23100B4DA2B /* Network */,
 				FA7260AD1B4B6FBB00422466 /* Services */,
 				FA4965721B47598500D487F1 /* Info.plist */,
 			);
@@ -244,6 +267,32 @@
 			isa = PBXGroup;
 			children = (
 				FA7260B81B4CBA7600422466 /* JSONClient.swift */,
+				FADD042D1B55EEEE00B4DA2B /* HTTPClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FA9801AC1B57404E00B29F35 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA9801AD1B5740B200B29F35 /* Serializer.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FA9801AF1B57427000B29F35 /* Serializers */ = {
+			isa = PBXGroup;
+			children = (
+				FA9801B01B57428C00B29F35 /* MovieSerializer.swift */,
+			);
+			name = Serializers;
+			sourceTree = "<group>";
+		};
+		FADD04361B55F23100B4DA2B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FADD04371B55F25C00B4DA2B /* JSONClientSpec.swift */,
+				FAA427041B59EC8B00D0AA32 /* HTTPClientSpec.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -469,6 +518,9 @@
 				FA7260811B47736B00422466 /* MoviesView.swift in Sources */,
 				FA7260AB1B4B68A600422466 /* RequestProvider.swift in Sources */,
 				FA7260B91B4CBA7600422466 /* JSONClient.swift in Sources */,
+				FA9801B11B57428C00B29F35 /* MovieSerializer.swift in Sources */,
+				FADD042E1B55EEEE00B4DA2B /* HTTPClient.swift in Sources */,
+				FA9801AE1B5740B200B29F35 /* Serializer.swift in Sources */,
 				FA7260831B477E8400422466 /* MovieTableViewCell.swift in Sources */,
 				FA72607E1B476DBA00422466 /* MoviesViewController.swift in Sources */,
 				FA7260861B47833E00422466 /* Movie.swift in Sources */,
@@ -479,6 +531,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FADD04381B55F25C00B4DA2B /* JSONClientSpec.swift in Sources */,
+				FAA427051B59EC8B00D0AA32 /* HTTPClientSpec.swift in Sources */,
 				FA7260791B476C9F00422466 /* MoviesViewControllerSpec.swift in Sources */,
 				FA7260AF1B4B6FDE00422466 /* MovieServiceSpec.swift in Sources */,
 			);
@@ -567,6 +621,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -605,6 +660,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -637,6 +693,7 @@
 			baseConfigurationReference = 45B872AE1B9176EF4CDEEBC5 /* Pods-SwiftExperimentTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftExperimentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.SwiftExperimentTests;
@@ -650,6 +707,7 @@
 			baseConfigurationReference = 1852C6DE283045431C576B81 /* Pods-SwiftExperimentTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftExperimentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.SwiftExperimentTests;
@@ -662,6 +720,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB907FB1FFF4ED74A5D1C4C7 /* Pods-SwiftExperimentUITests.debug.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftExperimentUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.SwiftExperimentUITests;
@@ -675,6 +734,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DAA71174ABDA2E35115D6525 /* Pods-SwiftExperimentUITests.release.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftExperimentUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.SwiftExperimentUITests;
@@ -724,6 +784,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -742,9 +803,10 @@
 		};
 		FA72609C1B48C5BD00422466 /* Test */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45B872AE1B9176EF4CDEEBC5 /* Pods-SwiftExperimentTests.debug.xcconfig */;
+			baseConfigurationReference = 0F9962A49124172DACE62608 /* Pods-SwiftExperimentTests.test.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftExperimentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.SwiftExperimentTests;
@@ -755,8 +817,9 @@
 		};
 		FA72609D1B48C5BD00422466 /* Test */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB907FB1FFF4ED74A5D1C4C7 /* Pods-SwiftExperimentUITests.debug.xcconfig */;
+			baseConfigurationReference = 30F88B2E69623D8105C38C30 /* Pods-SwiftExperimentUITests.test.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftExperimentUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.SwiftExperimentUITests;
@@ -799,6 +862,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -817,9 +881,10 @@
 		};
 		FA7260A01B48C5D200422466 /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1852C6DE283045431C576B81 /* Pods-SwiftExperimentTests.release.xcconfig */;
+			baseConfigurationReference = 92291097CA6FF77A4C25F485 /* Pods-SwiftExperimentTests.staging.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftExperimentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.SwiftExperimentTests;
@@ -830,8 +895,9 @@
 		};
 		FA7260A11B48C5D200422466 /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAA71174ABDA2E35115D6525 /* Pods-SwiftExperimentUITests.release.xcconfig */;
+			baseConfigurationReference = E2AA8656D9F886B7449E3F55 /* Pods-SwiftExperimentUITests.staging.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftExperimentUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.SwiftExperimentUITests;

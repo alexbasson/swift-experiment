@@ -51,7 +51,15 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Nimble.framework'
   install_framework 'Quick.framework'
 fi
+if [[ "$CONFIGURATION" == "Test" ]]; then
+  install_framework 'Nimble.framework'
+  install_framework 'Quick.framework'
+fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'Nimble.framework'
+  install_framework 'Quick.framework'
+fi
+if [[ "$CONFIGURATION" == "Staging" ]]; then
   install_framework 'Nimble.framework'
   install_framework 'Quick.framework'
 fi

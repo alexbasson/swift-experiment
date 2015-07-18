@@ -3,76 +3,76 @@ import Nimble
 import SwiftExperiment
 
 public class MockMovieService: MovieService {
-    public var receivedGetMovies = false
-    public var getMoviesClosure: MovieServiceClosure!
+  public var receivedGetMovies = false
+  public var getMoviesClosure: MovieServiceClosure!
 
-    override public func getMovies(closure: MovieServiceClosure) {
-        receivedGetMovies = true
-        getMoviesClosure = closure
-    }
+  override public func getMovies(closure: MovieServiceClosure) {
+    receivedGetMovies = true
+    getMoviesClosure = closure
+  }
 }
 
 class MoviesViewControllerSpec: QuickSpec {
-    override func spec() {
-        var subject: MoviesViewController!
-        var view: MoviesView!
-        let movieService = MockMovieService()
+  override func spec() {
+    var subject: MoviesViewController!
+    var view: MoviesView!
+    let movieService = MockMovieService()
 
-        beforeEach {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            subject = storyboard.instantiateViewControllerWithIdentifier("MoviesViewController") as! MoviesViewController
-            subject.configureWithMovieService(movieService)
-            
-            expect(subject.view).notTo(beNil())
-        }
+    beforeEach {
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      subject = storyboard.instantiateViewControllerWithIdentifier("MoviesViewController") as! MoviesViewController
+      subject.configureWithMovieService(movieService)
 
-        describe("when the view loads") {
-            it("messages the movie service to get movies") {
-                expect(movieService.receivedGetMovies).to(beTruthy())
-            }
-
-            describe("when the service returns") {
-                context("successfully") {
-                    var cells = []
-
-                    beforeEach {
-                        let movie0 = Movie(title: "Wall-E")
-                        let movie1 = Movie(title: "Up")
-                        movieService.getMoviesClosure(movies: [movie0, movie1], error: nil)
-
-                        view = subject.moviesView
-                        if let tableView = view.tableView {
-                            tableView.layoutIfNeeded()
-                            cells = tableView.visibleCells
-                        }
-                    }
-
-                    describe("the table view") {
-                        it("has two cells") {
-                            expect(cells.count).to(equal(2))
-                        }
-
-                        it("sets the title of the first cell to 'Wall-E'") {
-                            let cell: MovieTableViewCell = cells[0] as! MovieTableViewCell
-                            expect(cell.titleLabel.text).to(equal("Wall-E"))
-                        }
-
-                        it("sets the title of the second cell to 'Up'") {
-                            let cell: MovieTableViewCell = cells[1] as! MovieTableViewCell
-                            expect(cell.titleLabel.text).to(equal("Up"))
-                        }
-                    }
-                }
-
-                context("with error") {
-                    var error: NSError!
-
-                    beforeEach {
-                        error = NSError(domain: "MovieServiceError", code: 0, userInfo: nil)
-                        movieService.getMoviesClosure(movies: nil, error: error)
-                    }
-                }
-            }
-        }
+      expect(subject.view).notTo(beNil())
     }
+
+    describe("when the view loads") {
+      it("messages the movie service to get movies") {
+        expect(movieService.receivedGetMovies).to(beTruthy())
+      }
+
+      describe("when the service returns") {
+        context("successfully") {
+          var cells = []
+
+          beforeEach {
+            let movie0 = Movie(title: "Wall-E")
+            let movie1 = Movie(title: "Up")
+            movieService.getMoviesClosure(movies: [movie0, movie1], error: nil)
+
+            view = subject.moviesView
+            if let tableView = view.tableView {
+              tableView.layoutIfNeeded()
+              cells = tableView.visibleCells
+            }
+          }
+
+          describe("the table view") {
+            it("has two cells") {
+              expect(cells.count).to(equal(2))
+            }
+
+            it("sets the title of the first cell to 'Wall-E'") {
+              let cell: MovieTableViewCell = cells[0] as! MovieTableViewCell
+              expect(cell.titleLabel.text).to(equal("Wall-E"))
+            }
+
+            it("sets the title of the second cell to 'Up'") {
+              let cell: MovieTableViewCell = cells[1] as! MovieTableViewCell
+              expect(cell.titleLabel.text).to(equal("Up"))
+            }
+          }
+        }
+
+        context("with error") {
+          var error: NSError!
+
+          beforeEach {
+            error = NSError(domain: "MovieServiceError", code: 0, userInfo: nil)
+            movieService.getMoviesClosure(movies: nil, error: error)
+          }
+        }
+      }
+    }
+  }
 }
