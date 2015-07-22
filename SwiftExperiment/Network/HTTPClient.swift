@@ -18,8 +18,6 @@ public class HTTPClient {
       (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
       closure(data: data, error: error)
     }
-    if let task = task {
-      task.resume()
-    }
+    task.resume()
   }
 }
