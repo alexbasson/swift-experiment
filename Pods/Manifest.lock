@@ -14,10 +14,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Nimble:
-    :commit: 0adbea1f51e6bb489d81463a164df16d8d36d810
+    :commit: a804949542eb2f299b823ffb36936aec54fe0db6
     :git: https://github.com/Quick/Nimble.git
   Quick:
-    :commit: 39db56818cf68f8fefd6c3534362890fa337a326
+    :commit: e3c802be6c55710b39dba73caab9f234932c2ed7
     :git: https://github.com/Quick/Quick.git
 
 SPEC CHECKSUMS:
