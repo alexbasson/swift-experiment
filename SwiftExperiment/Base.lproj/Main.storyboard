@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1My-qb-J3A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1My-qb-J3A">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -42,6 +42,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="titleLabel" destination="dRe-uv-Idb" id="9MJ-XS-fzC"/>
+                                            <segue destination="E2d-ox-fhL" kind="show" identifier="ShowMovieDetailSegue" id="NQB-It-iD2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -65,7 +66,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1135" y="228"/>
+            <point key="canvasLocation" x="1181" y="-464"/>
+        </scene>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="9h9-uR-pOk">
+            <objects>
+                <viewController id="E2d-ox-fhL" customClass="MovieDetailViewController" customModule="SwiftExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qsn-EX-XiO"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tx4-os-PyZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qfj-xm-kya" customClass="MovieDetailView" customModule="SwiftExperiment" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Og-bu-vL5">
+                                <rect key="frame" x="279" y="155" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Og-bu-vL5" firstAttribute="top" secondItem="qsn-EX-XiO" secondAttribute="bottom" constant="91" id="IXM-m8-jOt"/>
+                            <constraint firstItem="1Og-bu-vL5" firstAttribute="centerX" secondItem="qfj-xm-kya" secondAttribute="centerX" id="K9x-zN-ZiK"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="titleLabel" destination="1Og-bu-vL5" id="1lA-GW-PdR"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CCj-Jb-rFw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1943" y="-464"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EXC-1E-mNU">
