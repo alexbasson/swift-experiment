@@ -16,5 +16,5 @@ public class MovieDetailViewController: UIViewController {
       movieDetailView.titleLabel?.text = movie.title
     }
   }
-
+  
 }
