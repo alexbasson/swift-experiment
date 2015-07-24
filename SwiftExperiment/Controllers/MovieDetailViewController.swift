@@ -3,7 +3,7 @@ import UIKit
 public class MovieDetailViewController: UIViewController {
   public var movieDetailView: MovieDetailView! { return self.view as! MovieDetailView }
 
-  var movie: Movie?
+  private(set) public var movie: Movie?
 
   public func configureWithMovie(movie: Movie) -> Void {
     self.movie = movie
