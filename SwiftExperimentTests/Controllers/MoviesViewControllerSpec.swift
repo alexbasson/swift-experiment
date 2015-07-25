@@ -2,16 +2,40 @@ import Quick
 import Nimble
 import SwiftExperiment
 
+public class MockMovieService: MovieServiceInterface {
+  public var receivedGetMovies = false
+  public var getMoviesClosure: MovieServiceClosure!
+
+  public func getMovies(closure: MovieServiceClosure) {
+    receivedGetMovies = true
+    getMoviesClosure = closure
+  }
+}
+
+public class MockMoviesPresenter: MoviesPresenter {
+  public var receivedPresentMoviesInTableView = false
+  public var moviesParam: [Movie]!
+  public var tableViewParam: UITableView!
+
+  override public func presentMoviesInTableView(movies movies: [Movie], tableView: UITableView?) {
+    receivedPresentMoviesInTableView = true
+    moviesParam = movies
+    tableViewParam = tableView
+    super.presentMoviesInTableView(movies: movies, tableView: tableView)
+  }
+}
+
 class MoviesViewControllerSpec: QuickSpec {
   override func spec() {
     var subject: MoviesViewController!
     var view: MoviesView!
     let movieService = MockMovieService()
     let imageService = MockImageService()
+    let moviesPresenter = MockMoviesPresenter()
 
     beforeEach {
       subject = MoviesViewController.getInstanceFromStoryboard("Main") as! MoviesViewController
-      subject.configure(movieService: movieService, imageService: imageService)
+      subject.configure(movieService: movieService, imageService: imageService, moviesPresenter: moviesPresenter)
 
       expect(subject.view).notTo(beNil())
       view = subject.moviesView
@@ -24,35 +48,26 @@ class MoviesViewControllerSpec: QuickSpec {
 
       describe("when the service returns") {
         context("successfully") {
-          var cells = []
+          var movie0 = Movie(title: "")
+          var movie1 = Movie(title: "")
 
           beforeEach {
-            let movie0 = Movie(title: "Wall-E")
-            let movie1 = Movie(title: "Up")
+            movie0 = Movie(title: "Wall-E")
+            movie1 = Movie(title: "Up")
             movieService.getMoviesClosure(movies: [movie0, movie1], error: nil)
 
-            if let tableView = view.tableView {
-              tableView.layoutIfNeeded()
-              cells = tableView.visibleCells
-            } else {
-              XCTFail()
-            }
           }
 
-          describe("the table view") {
-            it("has two cells") {
-              expect(cells.count).to(equal(2))
-            }
+          it("messages the moviesPresenter to present the movies in the tableView") {
+            expect(moviesPresenter.receivedPresentMoviesInTableView).to(beTruthy())
+          }
 
-            it("sets the title of the first cell to 'Wall-E'") {
-              let cell: MovieTableViewCell = cells[0] as! MovieTableViewCell
-              expect(cell.titleLabel.text).to(equal("Wall-E"))
-            }
+          it("passes the movies to the movies presenter") {
+            expect(moviesPresenter.moviesParam).to(equal([movie0, movie1]))
+          }
 
-            it("sets the title of the second cell to 'Up'") {
-              let cell: MovieTableViewCell = cells[1] as! MovieTableViewCell
-              expect(cell.titleLabel.text).to(equal("Up"))
-            }
+          it("passes the table view to the movies presenter") {
+            expect(moviesPresenter.tableViewParam).to(beIdenticalTo(view.tableView))
           }
         }
 

@@ -4,12 +4,12 @@ public class MoviesViewController: UIViewController {
   public var moviesView: MoviesView! { return self.view as! MoviesView }
 
   var movies = [Movie]()
-  var imageService: ImageServiceInterface = ImageService.sharedInstance
   var movieService: MovieServiceInterface = MovieService.sharedInstance
+  var moviesPresenter = MoviesPresenter()
 
-  public func configure(movieService movieService: MovieServiceInterface, imageService: ImageServiceInterface) {
+  public func configure(movieService movieService: MovieServiceInterface, moviesPresenter: MoviesPresenter) {
     self.movieService = movieService
-    self.imageService = imageService
+    self.moviesPresenter = moviesPresenter
   }
 
   override public func viewDidLoad() {
@@ -19,10 +19,7 @@ public class MoviesViewController: UIViewController {
       (movies, error) in
       if let movies = movies {
         self.movies = movies
-        dispatch_async(dispatch_get_main_queue(), {
-          () -> Void in
-          self.moviesView.tableView?.reloadData()
-        })
+        self.moviesPresenter.presentMoviesInTableView(movies: movies, tableView: self.moviesView.tableView)
       } else if let error = error {
         print(error)
         // do something with the error
@@ -46,22 +43,3 @@ public class MoviesViewController: UIViewController {
   }
 }
 
-extension MoviesViewController: UITableViewDataSource {
-  public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return movies.count
-  }
-
-  public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier(MovieTableViewCell.reuseIdentifier(), forIndexPath: indexPath) as! MovieTableViewCell
-    let movie = movies[indexPath.row]
-    cell.titleLabel.text = movie.title
-    imageService.fetchImage(url: movie.posters.thumbnailURL) {
-      (image) -> Void in
-      dispatch_async(dispatch_get_main_queue(), {
-        () -> Void in
-        cell.thumbnailImageView.image = image
-      })
-    }
-    return cell
-  }
-}

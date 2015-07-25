@@ -66,7 +66,13 @@ class MovieServiceSpec: QuickSpec {
 
           it("calls its closure with the array of movies") {
             expect(closureWasCalled).to(beTruthy())
+          }
+
+          it("passes to the closure the array of movies") {
             expect(movieParam).to(equal([movie]))
+          }
+
+          it("passes to the closure a nil error") {
             expect(errorParam).to(beNil())
           }
         }
@@ -81,7 +87,13 @@ class MovieServiceSpec: QuickSpec {
 
           it("calls its closure with the error") {
             expect(closureWasCalled).to(beTruthy())
+          }
+
+          it("passes to the closure a nil array of movies") {
             expect(movieParam).to(beNil())
+          }
+
+          it("passes to the closure the error") {
             expect(errorParam).to(equal(error))
           }
         }
