@@ -4,10 +4,10 @@ public typealias MovieServiceClosure = (movies: [Movie]?, error: NSError?) -> ()
 
 public class MovieService {
   let requestProvider: RequestProvider
-  let jsonClient: JSONClient
+  let jsonClient: JSONClientInterface
   let movieSerializer: MovieSerializer
 
-  public init(requestProvider: RequestProvider, jsonClient: JSONClient, movieSerializer: MovieSerializer) {
+  public init(requestProvider: RequestProvider, jsonClient: JSONClientInterface, movieSerializer: MovieSerializer) {
     self.requestProvider = requestProvider
     self.jsonClient = jsonClient
     self.movieSerializer = movieSerializer

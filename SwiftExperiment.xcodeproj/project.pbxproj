@@ -18,6 +18,7 @@
 		FA4965661B47598500D487F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4965641B47598500D487F1 /* LaunchScreen.storyboard */; };
 		FA49657C1B47598500D487F1 /* SwiftExperimentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49657B1B47598500D487F1 /* SwiftExperimentUITests.swift */; };
 		FA71712A1B64275400498180 /* HTTPClientInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7171291B64275400498180 /* HTTPClientInterface.swift */; };
+		FA71712C1B642ACC00498180 /* JSONClientInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71712B1B642ACC00498180 /* JSONClientInterface.swift */; };
 		FA7260791B476C9F00422466 /* MoviesViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260781B476C9F00422466 /* MoviesViewControllerSpec.swift */; };
 		FA72607E1B476DBA00422466 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA72607D1B476DBA00422466 /* MoviesViewController.swift */; };
 		FA7260811B47736B00422466 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260801B47736B00422466 /* MoviesView.swift */; };
@@ -82,6 +83,7 @@
 		FA49657B1B47598500D487F1 /* SwiftExperimentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExperimentUITests.swift; sourceTree = "<group>"; };
 		FA49657D1B47598500D487F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA7171291B64275400498180 /* HTTPClientInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientInterface.swift; sourceTree = "<group>"; };
+		FA71712B1B642ACC00498180 /* JSONClientInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONClientInterface.swift; sourceTree = "<group>"; };
 		FA7260781B476C9F00422466 /* MoviesViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewControllerSpec.swift; sourceTree = "<group>"; };
 		FA72607D1B476DBA00422466 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		FA7260801B47736B00422466 /* MoviesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
@@ -294,6 +296,8 @@
 		FA7260B71B4CBA5000422466 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				FA7171291B64275400498180 /* HTTPClientInterface.swift */,
+				FA71712B1B642ACC00498180 /* JSONClientInterface.swift */,
 				FADD042D1B55EEEE00B4DA2B /* HTTPClient.swift */,
 				FA7260B81B4CBA7600422466 /* JSONClient.swift */,
 			);
@@ -304,7 +308,6 @@
 			isa = PBXGroup;
 			children = (
 				FA9801AD1B5740B200B29F35 /* Serializer.swift */,
-				FA7171291B64275400498180 /* HTTPClientInterface.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				FA17C4FD1B610B21004C3F56 /* UIViewController+StoryboardIdentifier.swift in Sources */,
 				FA7260B91B4CBA7600422466 /* JSONClient.swift in Sources */,
 				FA4547631B5F2AAE0034D6D2 /* UITableViewCell+ReuseIdentifier.swift in Sources */,
+				FA71712C1B642ACC00498180 /* JSONClientInterface.swift in Sources */,
 				FA9801B11B57428C00B29F35 /* MovieSerializer.swift in Sources */,
 				FADD042E1B55EEEE00B4DA2B /* HTTPClient.swift in Sources */,
 				FA4547601B5F26C80034D6D2 /* MovieDetailView.swift in Sources */,

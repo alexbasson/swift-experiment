@@ -12,12 +12,12 @@ public class MockRequestProvider: RequestProvider {
   }
 }
 
-public class MockJSONClient: JSONClient {
+public class MockJSONClient: JSONClientInterface {
   public var receivedSendRequest = false
   public var requestParam: NSURLRequest!
   public var sendRequestClosure: JSONClientClosure!
 
-  override public func sendRequest(request: NSURLRequest, closure: JSONClientClosure) {
+  public func sendRequest(request: NSURLRequest, closure: JSONClientClosure) {
     receivedSendRequest = true
     requestParam = request
     sendRequestClosure = closure
