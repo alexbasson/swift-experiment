@@ -2,12 +2,12 @@ import Quick
 import Nimble
 import SwiftExperiment
 
-public class MockHTTPClient: HTTPClient {
+public class MockHTTPClient: HTTPClientInterface {
   public var receivedSendRequest = false
   public var requestParam: NSURLRequest!
   public var sendRequestClosure: HTTPClientClosure!
 
-  override public func sendRequest(request: NSURLRequest, closure: HTTPClientClosure) {
+  public func sendRequest(request: NSURLRequest, closure: HTTPClientClosure) {
     receivedSendRequest = true
     requestParam = request
     sendRequestClosure = closure

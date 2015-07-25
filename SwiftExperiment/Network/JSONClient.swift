@@ -3,9 +3,9 @@ import Foundation
 public typealias JSONClientClosure = (json: AnyObject?, error: NSError?) -> ()
 
 public class JSONClient {
-  let httpClient: HTTPClient
+  let httpClient: HTTPClientInterface
 
-  public init(httpClient: HTTPClient) {
+  public init(httpClient: HTTPClientInterface) {
     self.httpClient = httpClient
   }
 

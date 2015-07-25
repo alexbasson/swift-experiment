@@ -1,8 +1,6 @@
 import Foundation
 
-public typealias HTTPClientClosure = (data: NSData?, error: NSError?) -> Void
-
-public class HTTPClient {
+public class HTTPClient: HTTPClientInterface {
   let session: NSURLSession
 
   public init(session: NSURLSession) {
