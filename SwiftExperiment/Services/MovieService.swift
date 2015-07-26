@@ -3,16 +3,14 @@ import Foundation
 public class MovieService: MovieServiceInterface {
   let requestProvider: RequestProvider
   let jsonClient: JSONClientInterface
-  let movieSerializer: MovieSerializer
 
-  public init(requestProvider: RequestProvider, jsonClient: JSONClientInterface, movieSerializer: MovieSerializer) {
+  public init(requestProvider: RequestProvider, jsonClient: JSONClientInterface) {
     self.requestProvider = requestProvider
     self.jsonClient = jsonClient
-    self.movieSerializer = movieSerializer
   }
 
   public convenience init() {
-    self.init(requestProvider: RequestProvider(), jsonClient: JSONClient(), movieSerializer: MovieSerializer())
+    self.init(requestProvider: RequestProvider(), jsonClient: JSONClient())
   }
 
   public func getMovies(closure: MovieServiceClosure) {
@@ -20,13 +18,13 @@ public class MovieService: MovieServiceInterface {
       jsonClient.sendRequest(request) {
         (json, error) in
         if let json = json {
-          if let moviesJson = json["movies"] as? NSArray {
-            let movies: NSMutableArray = []
+          if let moviesJson = json["movies"] as? [Dictionary<String, AnyObject>] {
+            var movies: [Movie] = []
             for movieJson in moviesJson {
-              let movie = self.movieSerializer.deserialize(movieJson as! Dictionary<String, AnyObject>)
-              movies.addObject(movie)
+              let movie = Movie(dict: movieJson)
+              movies.append(movie)
             }
-            closure(movies: movies as NSArray as? [Movie], error: nil)
+            closure(movies: movies, error: nil)
           }
         } else if let error = error {
           closure(movies: nil, error: error)

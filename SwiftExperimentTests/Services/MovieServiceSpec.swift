@@ -24,15 +24,11 @@ public class MockJSONClient: JSONClientInterface {
   }
 }
 
-public class MockMovieSerializer: MovieSerializer {
-}
-
 class MovieServiceSpec: QuickSpec {
   override func spec() {
     var subject: MovieService!
     var requestProvider: MockRequestProvider!
     var jsonClient: MockJSONClient!
-    var movieSerializer: MockMovieSerializer!
     var closureWasCalled: Bool = false
     var movieParam: [Movie]!
     var errorParam: NSError!
@@ -40,9 +36,8 @@ class MovieServiceSpec: QuickSpec {
     beforeEach {
       requestProvider = MockRequestProvider()
       jsonClient = MockJSONClient()
-      movieSerializer = MockMovieSerializer()
 
-      subject = MovieService(requestProvider: requestProvider, jsonClient: jsonClient, movieSerializer: movieSerializer)
+      subject = MovieService(requestProvider: requestProvider, jsonClient: jsonClient)
 
       expect(requestProvider.receivedGetMoviesRequest).to(beFalsy())
       expect(jsonClient.receivedSendRequest).to(beFalsy())
