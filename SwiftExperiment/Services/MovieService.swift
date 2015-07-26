@@ -1,8 +1,6 @@
 import Foundation
 
-public typealias MovieServiceClosure = (movies: [Movie]?, error: NSError?) -> ()
-
-public class MovieService {
+public class MovieService: MovieServiceInterface {
   let requestProvider: RequestProvider
   let jsonClient: JSONClientInterface
   let movieSerializer: MovieSerializer

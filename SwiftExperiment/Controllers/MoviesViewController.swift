@@ -4,9 +4,9 @@ public class MoviesViewController: UIViewController {
   public var moviesView: MoviesView! { return self.view as! MoviesView }
 
   var movies = [Movie]()
-  var movieService = MovieService()
+  var movieService: MovieServiceInterface = MovieService()
 
-  public func configureWithMovieService(movieService: MovieService) {
+  public func configureWithMovieService(movieService: MovieServiceInterface) {
     self.movieService = movieService
   }
 

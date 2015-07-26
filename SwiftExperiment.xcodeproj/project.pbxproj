@@ -19,6 +19,7 @@
 		FA49657C1B47598500D487F1 /* SwiftExperimentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49657B1B47598500D487F1 /* SwiftExperimentUITests.swift */; };
 		FA71712A1B64275400498180 /* HTTPClientInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7171291B64275400498180 /* HTTPClientInterface.swift */; };
 		FA71712C1B642ACC00498180 /* JSONClientInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71712B1B642ACC00498180 /* JSONClientInterface.swift */; };
+		FA71712E1B65612700498180 /* MovieServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71712D1B65612700498180 /* MovieServiceInterface.swift */; };
 		FA7260791B476C9F00422466 /* MoviesViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260781B476C9F00422466 /* MoviesViewControllerSpec.swift */; };
 		FA72607E1B476DBA00422466 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA72607D1B476DBA00422466 /* MoviesViewController.swift */; };
 		FA7260811B47736B00422466 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260801B47736B00422466 /* MoviesView.swift */; };
@@ -84,6 +85,7 @@
 		FA49657D1B47598500D487F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA7171291B64275400498180 /* HTTPClientInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientInterface.swift; sourceTree = "<group>"; };
 		FA71712B1B642ACC00498180 /* JSONClientInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONClientInterface.swift; sourceTree = "<group>"; };
+		FA71712D1B65612700498180 /* MovieServiceInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieServiceInterface.swift; sourceTree = "<group>"; };
 		FA7260781B476C9F00422466 /* MoviesViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewControllerSpec.swift; sourceTree = "<group>"; };
 		FA72607D1B476DBA00422466 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		FA7260801B47736B00422466 /* MoviesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				FA7260A71B4B646600422466 /* MovieService.swift */,
+				FA71712D1B65612700498180 /* MovieServiceInterface.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				FA49655C1B47598500D487F1 /* AppDelegate.swift in Sources */,
 				FA7260811B47736B00422466 /* MoviesView.swift in Sources */,
 				FA7260AB1B4B68A600422466 /* RequestProvider.swift in Sources */,
+				FA71712E1B65612700498180 /* MovieServiceInterface.swift in Sources */,
 				FA17C4FD1B610B21004C3F56 /* UIViewController+StoryboardIdentifier.swift in Sources */,
 				FA7260B91B4CBA7600422466 /* JSONClient.swift in Sources */,
 				FA4547631B5F2AAE0034D6D2 /* UITableViewCell+ReuseIdentifier.swift in Sources */,
