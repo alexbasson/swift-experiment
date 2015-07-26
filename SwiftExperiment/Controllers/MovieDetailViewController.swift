@@ -5,7 +5,7 @@ public class MovieDetailViewController: UIViewController {
 
   private(set) public var movie: Movie?
 
-  public func configureWithMovie(movie: Movie) -> Void {
+  public func configure(movie movie: Movie) -> Void {
     self.movie = movie
   }
 

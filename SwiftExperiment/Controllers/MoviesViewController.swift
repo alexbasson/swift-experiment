@@ -6,7 +6,7 @@ public class MoviesViewController: UIViewController {
   var movies = [Movie]()
   var movieService: MovieServiceInterface = MovieService()
 
-  public func configureWithMovieService(movieService: MovieServiceInterface) {
+  public func configure(movieService movieService: MovieServiceInterface) {
     self.movieService = movieService
   }
 
@@ -36,7 +36,7 @@ public class MoviesViewController: UIViewController {
           let movie = movies[indexPath.row]
           let movieDetailViewController = segue.destinationViewController as? MovieDetailViewController
           if let movieDetailViewController = movieDetailViewController {
-            movieDetailViewController.configureWithMovie(movie)
+            movieDetailViewController.configure(movie: movie)
           }
       }
     }

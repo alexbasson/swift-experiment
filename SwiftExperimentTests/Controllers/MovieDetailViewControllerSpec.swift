@@ -10,7 +10,7 @@ class MovieDetailViewControllerSpec: QuickSpec {
 
     beforeEach {
       subject = MovieDetailViewController.getInstanceFromStoryboard("Main") as! MovieDetailViewController
-      subject.configureWithMovie(movie)
+      subject.configure(movie: movie)
 
       expect(subject.view).notTo(beNil())
       view = subject.movieDetailView

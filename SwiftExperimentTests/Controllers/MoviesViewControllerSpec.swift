@@ -20,7 +20,7 @@ class MoviesViewControllerSpec: QuickSpec {
 
     beforeEach {
       subject = MoviesViewController.getInstanceFromStoryboard("Main") as! MoviesViewController
-      subject.configureWithMovieService(movieService)
+      subject.configure(movieService: movieService)
 
       expect(subject.view).notTo(beNil())
       view = subject.moviesView
