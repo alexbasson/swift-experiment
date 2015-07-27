@@ -10,7 +10,6 @@ public class RequestProvider {
   public init() {}
 
   public func getMoviesRequest() -> NSURLRequest? {
-    var request: NSURLRequest?
     if let
       pListFilePath = NSBundle.mainBundle().pathForResource(pListName, ofType: "plist"),
       pList = NSDictionary(contentsOfFile: pListFilePath),
@@ -19,8 +18,8 @@ public class RequestProvider {
       requestString = urlString + "?apikey=" + apiKey as? String,
       url = NSURL(string: requestString)
     {
-      request = NSURLRequest(URL: url)
+      return NSURLRequest(URL: url)
     }
-    return request
+    return nil
   }
 }

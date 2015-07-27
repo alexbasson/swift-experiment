@@ -17,15 +17,15 @@ public class MovieService: MovieServiceInterface {
     if let request = requestProvider.getMoviesRequest() {
       jsonClient.sendRequest(request) {
         (json, error) in
-        if let json = json {
-          if let moviesJson = json["movies"] as? [Dictionary<String, AnyObject>] {
+        if let
+          json = json,
+          moviesJSON = json["movies"] as? [Dictionary<String, AnyObject>] {
             var movies: [Movie] = []
-            for movieJson in moviesJson {
-              let movie = Movie(dict: movieJson)
+            for movieJSON in moviesJSON {
+              let movie = Movie(dict: movieJSON)
               movies.append(movie)
             }
             closure(movies: movies, error: nil)
-          }
         } else if let error = error {
           closure(movies: nil, error: error)
         }
