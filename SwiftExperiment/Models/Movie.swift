@@ -5,8 +5,8 @@ public class Movie: Serializable {
     self.title = title
   }
 
-  public func serialize(obj: Movie) -> Dictionary<String, AnyObject> {
-    return ["title": obj.title]
+  public func serialize() -> Dictionary<String, AnyObject> {
+    return ["title": title]
   }
 
   public convenience required init(dict: Dictionary<String, AnyObject>) {

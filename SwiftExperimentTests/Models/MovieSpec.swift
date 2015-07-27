@@ -21,5 +21,27 @@ class MovieSpec: QuickSpec {
         expect(movie2).toNot(equal(movie3))
       }
     }
+
+    describe("serializable") {
+      var movie: Movie!
+      var dictionary: Dictionary<String, AnyObject>!
+
+      beforeEach {
+        movie = Movie(title: "A title")
+        dictionary = ["title": "A title"]
+      }
+
+//      describe("serialize") {
+//        it("serializes the movie into a dictionary") {
+//          expect(movie.serialize()).to(equal(dictionary))
+//        }
+//      }
+
+      describe("init(dict:))") {
+        it("deserializes the dictionary into a Movie") {
+          expect(Movie(dict: dictionary)).to(equal(movie))
+        }
+      }
+    }
   }
 }
