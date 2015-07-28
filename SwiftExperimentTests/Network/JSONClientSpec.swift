@@ -2,18 +2,6 @@ import Quick
 import Nimble
 import SwiftExperiment
 
-public class MockHTTPClient: HTTPClientInterface {
-  public var receivedSendRequest = false
-  public var requestParam: NSURLRequest!
-  public var sendRequestClosure: HTTPClientClosure!
-
-  public func sendRequest(request: NSURLRequest, closure: HTTPClientClosure) {
-    receivedSendRequest = true
-    requestParam = request
-    sendRequestClosure = closure
-  }
-}
-
 class JSONClientSpec: QuickSpec {
   override func spec() {
     var subject: JSONClient!

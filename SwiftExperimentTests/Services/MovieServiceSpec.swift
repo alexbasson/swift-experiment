@@ -2,28 +2,6 @@ import Quick
 import Nimble
 import SwiftExperiment
 
-public class MockRequestProvider: RequestProvider {
-  public var receivedGetMoviesRequest = false
-  public let fakeGetMoviesRequest = NSURLRequest()
-
-  override public func getMoviesRequest() -> NSURLRequest? {
-    receivedGetMoviesRequest = true
-    return fakeGetMoviesRequest
-  }
-}
-
-public class MockJSONClient: JSONClientInterface {
-  public var receivedSendRequest = false
-  public var requestParam: NSURLRequest!
-  public var sendRequestClosure: JSONClientClosure!
-
-  public func sendRequest(request: NSURLRequest, closure: JSONClientClosure) {
-    receivedSendRequest = true
-    requestParam = request
-    sendRequestClosure = closure
-  }
-}
-
 class MovieServiceSpec: QuickSpec {
   override func spec() {
     var subject: MovieService!
@@ -43,15 +21,18 @@ class MovieServiceSpec: QuickSpec {
       expect(jsonClient.receivedSendRequest).to(beFalsy())
 
       closureWasCalled = false
-      subject.getMovies {
-        (movie, error) in
-        closureWasCalled = true
-        movieParam = movie
-        errorParam = error
-      }
     }
 
     describe("getMovies()") {
+      beforeEach {
+        subject.getMovies {
+          (movie, error) in
+          closureWasCalled = true
+          movieParam = movie
+          errorParam = error
+        }
+      }
+
       it("gets the getMovies request from the request provider") {
         expect(requestProvider.receivedGetMoviesRequest).to(beTruthy())
       }

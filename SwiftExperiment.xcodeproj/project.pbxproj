@@ -33,6 +33,12 @@
 		FA7260B91B4CBA7600422466 /* JSONClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260B81B4CBA7600422466 /* JSONClient.swift */; };
 		FA96DC6D1B625DE200776B03 /* MovieDetailViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96DC6C1B625DE200776B03 /* MovieDetailViewControllerSpec.swift */; };
 		FA99F2B21B65773D00D58590 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F2B11B65773D00D58590 /* Serializable.swift */; };
+		FA99F2BD1B67A00100D58590 /* MockHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F2BC1B67A00100D58590 /* MockHTTPClient.swift */; };
+		FA99F2BF1B67A05200D58590 /* MockRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F2BE1B67A05200D58590 /* MockRequestProvider.swift */; };
+		FA99F2C11B67A08100D58590 /* MockJSONClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F2C01B67A08100D58590 /* MockJSONClient.swift */; };
+		FA99F2C31B67A0C000D58590 /* MockMovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F2C21B67A0C000D58590 /* MockMovieService.swift */; };
+		FA99F2C51B67A0F200D58590 /* MockImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F2C41B67A0F200D58590 /* MockImageService.swift */; };
+		FA99F2C71B67A14700D58590 /* MockNSURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F2C61B67A14700D58590 /* MockNSURLSessionDataTask.swift */; };
 		FAA426FC1B59DEFC00D0AA32 /* Pods_SwiftExperimentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA426FB1B59DEFC00D0AA32 /* Pods_SwiftExperimentTests.framework */; };
 		FAA427051B59EC8B00D0AA32 /* HTTPClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA427041B59EC8B00D0AA32 /* HTTPClientSpec.swift */; };
 		FAA427081B59F78B00D0AA32 /* MovieSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA427071B59F78B00D0AA32 /* MovieSpec.swift */; };
@@ -98,6 +104,12 @@
 		FA7260B81B4CBA7600422466 /* JSONClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONClient.swift; sourceTree = "<group>"; };
 		FA96DC6C1B625DE200776B03 /* MovieDetailViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewControllerSpec.swift; sourceTree = "<group>"; };
 		FA99F2B11B65773D00D58590 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
+		FA99F2BC1B67A00100D58590 /* MockHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockHTTPClient.swift; sourceTree = "<group>"; };
+		FA99F2BE1B67A05200D58590 /* MockRequestProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRequestProvider.swift; sourceTree = "<group>"; };
+		FA99F2C01B67A08100D58590 /* MockJSONClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockJSONClient.swift; sourceTree = "<group>"; };
+		FA99F2C21B67A0C000D58590 /* MockMovieService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMovieService.swift; sourceTree = "<group>"; };
+		FA99F2C41B67A0F200D58590 /* MockImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockImageService.swift; sourceTree = "<group>"; };
+		FA99F2C61B67A14700D58590 /* MockNSURLSessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNSURLSessionDataTask.swift; sourceTree = "<group>"; };
 		FAA426FB1B59DEFC00D0AA32 /* Pods_SwiftExperimentTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_SwiftExperimentTests.framework; path = "Pods/../build/Debug-iphoneos/Pods_SwiftExperimentTests.framework"; sourceTree = "<group>"; };
 		FAA427041B59EC8B00D0AA32 /* HTTPClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientSpec.swift; sourceTree = "<group>"; };
 		FAA427071B59F78B00D0AA32 /* MovieSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSpec.swift; sourceTree = "<group>"; };
@@ -214,6 +226,7 @@
 		FA49656F1B47598500D487F1 /* SwiftExperimentTests */ = {
 			isa = PBXGroup;
 			children = (
+				FA99F2BB1B679FD500D58590 /* Mocks */,
 				FA7260AC1B4B6B6800422466 /* Controllers */,
 				FAA427061B59F77700D0AA32 /* Models */,
 				FADD04361B55F23100B4DA2B /* Network */,
@@ -262,8 +275,8 @@
 		FA7260A61B4B643700422466 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				FA7260A71B4B646600422466 /* MovieService.swift */,
 				FA71712D1B65612700498180 /* MovieServiceInterface.swift */,
+				FA7260A71B4B646600422466 /* MovieService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -310,6 +323,19 @@
 				FA99F2B11B65773D00D58590 /* Serializable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FA99F2BB1B679FD500D58590 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				FA99F2BC1B67A00100D58590 /* MockHTTPClient.swift */,
+				FA99F2BE1B67A05200D58590 /* MockRequestProvider.swift */,
+				FA99F2C01B67A08100D58590 /* MockJSONClient.swift */,
+				FA99F2C21B67A0C000D58590 /* MockMovieService.swift */,
+				FA99F2C41B67A0F200D58590 /* MockImageService.swift */,
+				FA99F2C61B67A14700D58590 /* MockNSURLSessionDataTask.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		FAA427061B59F77700D0AA32 /* Models */ = {
@@ -569,11 +595,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA99F2BD1B67A00100D58590 /* MockHTTPClient.swift in Sources */,
+				FA99F2BF1B67A05200D58590 /* MockRequestProvider.swift in Sources */,
 				FADD04381B55F25C00B4DA2B /* JSONClientSpec.swift in Sources */,
 				FAA427051B59EC8B00D0AA32 /* HTTPClientSpec.swift in Sources */,
 				FAA427081B59F78B00D0AA32 /* MovieSpec.swift in Sources */,
 				FA7260791B476C9F00422466 /* MoviesViewControllerSpec.swift in Sources */,
 				FA7260AF1B4B6FDE00422466 /* MovieServiceSpec.swift in Sources */,
+				FA99F2C11B67A08100D58590 /* MockJSONClient.swift in Sources */,
+				FA99F2C71B67A14700D58590 /* MockNSURLSessionDataTask.swift in Sources */,
+				FA99F2C31B67A0C000D58590 /* MockMovieService.swift in Sources */,
 				FA96DC6D1B625DE200776B03 /* MovieDetailViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
