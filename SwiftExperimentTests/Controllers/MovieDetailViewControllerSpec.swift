@@ -6,7 +6,7 @@ class MovieDetailViewControllerSpec: QuickSpec {
   override func spec() {
     var subject: MovieDetailViewController!
     var view: MovieDetailView!
-    let movie = Movie(title: "A Title")
+    let movie = Movie(title: "A Title", thumbnailURL: NSURL(string: "example.com")!)
 
     beforeEach {
       subject = MovieDetailViewController.getInstanceFromStoryboard("Main") as! MovieDetailViewController

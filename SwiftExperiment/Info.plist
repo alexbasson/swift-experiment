@@ -40,6 +40,11 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>resizing.flixster.com</key>
+			<dict>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 			<key>api.rottentomatoes.com</key>
 			<dict>
 				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>

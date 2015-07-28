@@ -1,8 +1,12 @@
+import Foundation
+
 public class Movie: Serializable {
   public let title: String
+  public let thumbnailURL: NSURL
 
-  public init(title: String) {
+  public init(title: String, thumbnailURL: NSURL) {
     self.title = title
+    self.thumbnailURL = thumbnailURL
   }
 
   public func serialize() -> Dictionary<String, AnyObject> {
@@ -10,7 +14,10 @@ public class Movie: Serializable {
   }
 
   public convenience required init(dict: Dictionary<String, AnyObject>) {
-    self.init(title: dict["title"] as! String)
+    let title = dict["title"] as! String
+    let posters = dict["posters"] as! Dictionary<String, AnyObject>
+    let thumbnailURL = posters["thumbnail"] as! String
+    self.init(title: title, thumbnailURL: NSURL(string: thumbnailURL)!)
   }
 }
 

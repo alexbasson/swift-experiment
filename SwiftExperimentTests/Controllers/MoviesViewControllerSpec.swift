@@ -2,25 +2,16 @@ import Quick
 import Nimble
 import SwiftExperiment
 
-public class MockMovieService: MovieServiceInterface {
-  public var receivedGetMovies = false
-  public var getMoviesClosure: MovieServiceClosure!
-
-  public func getMovies(closure: MovieServiceClosure) {
-    receivedGetMovies = true
-    getMoviesClosure = closure
-  }
-}
-
 class MoviesViewControllerSpec: QuickSpec {
   override func spec() {
     var subject: MoviesViewController!
     var view: MoviesView!
     let movieService = MockMovieService()
+    let imageService = MockImageService()
 
     beforeEach {
       subject = MoviesViewController.getInstanceFromStoryboard("Main") as! MoviesViewController
-      subject.configure(movieService: movieService)
+      subject.configure(movieService: movieService, imageService: imageService)
 
       expect(subject.view).notTo(beNil())
       view = subject.moviesView
@@ -36,8 +27,8 @@ class MoviesViewControllerSpec: QuickSpec {
           var cells = []
 
           beforeEach {
-            let movie0 = Movie(title: "Wall-E")
-            let movie1 = Movie(title: "Up")
+            let movie0 = Movie(title: "Wall-E", thumbnailURL: NSURL(string: "example.com/0")!)
+            let movie1 = Movie(title: "Up", thumbnailURL: NSURL(string: "example.com/1")!)
             movieService.getMoviesClosure(movies: [movie0, movie1], error: nil)
 
             if let tableView = view.tableView {
@@ -81,8 +72,8 @@ class MoviesViewControllerSpec: QuickSpec {
       var movieDetailViewController: MovieDetailViewController!
 
       beforeEach {
-        let movie0 = Movie(title: "Wall-E")
-        let movie1 = Movie(title: "Up")
+        let movie0 = Movie(title: "Wall-E", thumbnailURL: NSURL(string: "example.com/0")!)
+        let movie1 = Movie(title: "Up", thumbnailURL: NSURL(string: "example.com/1")!)
         movieService.getMoviesClosure(movies: [movie0, movie1], error: nil)
 
         if let tableView = view.tableView {

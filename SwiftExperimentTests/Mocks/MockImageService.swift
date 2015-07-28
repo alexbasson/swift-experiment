@@ -1,13 +1,8 @@
-//
-//  MockImageService.swift
-//  SwiftExperiment
-//
-//  Created by Alex on 7/28/15.
-//  Copyright © 2015 ConditionallyConvergent. All rights reserved.
-//
+import Foundation
+import SwiftExperiment
 
-import UIKit
+public class MockImageService: ImageServiceInterface {
+  public func fetchImage(url url: NSURL, closure: ImageServiceClosure) {
 
-class MockImageService: NSObject {
-
+  }
 }

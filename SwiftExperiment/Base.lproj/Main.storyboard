@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1My-qb-J3A">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Movies-->
@@ -17,30 +16,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="djp-R6-deU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="81" sectionHeaderHeight="1" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="djp-R6-deU">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieTableViewCell" id="bne-Nf-SqL" customClass="MovieTableViewCell" customModule="SwiftExperiment" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="65" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieTableViewCell" rowHeight="81" id="bne-Nf-SqL" customClass="MovieTableViewCell" customModule="SwiftExperiment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="65" width="600" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bne-Nf-SqL" id="GW8-lB-uBp">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="80.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRe-uv-Idb">
-                                                    <rect key="frame" x="8" y="11" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="59" y="26" width="65" height="29"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9oH-Br-xf8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="51" height="80.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="51" id="iy8-18-Ylc"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="9oH-Br-xf8" firstAttribute="top" secondItem="GW8-lB-uBp" secondAttribute="top" id="2OF-Rp-5qg"/>
+                                                <constraint firstItem="9oH-Br-xf8" firstAttribute="leading" secondItem="GW8-lB-uBp" secondAttribute="leading" id="42W-61-qU0"/>
+                                                <constraint firstAttribute="bottom" secondItem="9oH-Br-xf8" secondAttribute="bottom" id="4Rf-z6-xuA"/>
+                                                <constraint firstItem="dRe-uv-Idb" firstAttribute="leading" secondItem="9oH-Br-xf8" secondAttribute="trailing" constant="8" id="Du9-2g-5BA"/>
                                                 <constraint firstItem="dRe-uv-Idb" firstAttribute="centerY" secondItem="GW8-lB-uBp" secondAttribute="centerY" id="PEy-Cq-GaR"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="dRe-uv-Idb" secondAttribute="leading" id="mow-za-v3e"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="thumbnailImageView" destination="9oH-Br-xf8" id="r6g-V9-et6"/>
                                             <outlet property="titleLabel" destination="dRe-uv-Idb" id="9MJ-XS-fzC"/>
                                             <segue destination="E2d-ox-fhL" kind="show" identifier="ShowMovieDetailSegue" id="NQB-It-iD2"/>
                                         </connections>

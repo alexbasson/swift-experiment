@@ -9,9 +9,9 @@ class MovieSpec: QuickSpec {
     var movie3: Movie!
 
     beforeEach {
-      movie1 = Movie(title: "equal")
-      movie2 = Movie(title: "equal")
-      movie3 = Movie(title: "unequal")
+      movie1 = Movie(title: "equal", thumbnailURL: NSURL(string: "example.com/0")!)
+      movie2 = Movie(title: "equal", thumbnailURL: NSURL(string: "example.com/1")!)
+      movie3 = Movie(title: "unequal", thumbnailURL: NSURL(string: "example.com/2")!)
     }
 
     describe("==") {
@@ -27,8 +27,8 @@ class MovieSpec: QuickSpec {
       var dictionary: Dictionary<String, AnyObject>!
 
       beforeEach {
-        movie = Movie(title: "A title")
-        dictionary = ["title": "A title"]
+        movie = Movie(title: "A title", thumbnailURL: NSURL(string: "example.com")!)
+        dictionary = ["title": "A title", "posters": ["thumbnail": "example.com"]]
       }
 
 //      describe("serialize") {

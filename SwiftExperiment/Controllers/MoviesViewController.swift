@@ -5,9 +5,11 @@ public class MoviesViewController: UIViewController {
 
   var movies = [Movie]()
   var movieService: MovieServiceInterface = MovieService()
+  var imageService: ImageServiceInterface = ImageService()
 
-  public func configure(movieService movieService: MovieServiceInterface) {
+  public func configure(movieService movieService: MovieServiceInterface, imageService: ImageServiceInterface) {
     self.movieService = movieService
+    self.imageService = imageService
   }
 
   override public func viewDidLoad() {
@@ -53,6 +55,13 @@ extension MoviesViewController: UITableViewDataSource {
     let cell = tableView.dequeueReusableCellWithIdentifier(MovieTableViewCell.reuseIdentifier(), forIndexPath: indexPath) as! MovieTableViewCell
     let movie = movies[indexPath.row]
     cell.titleLabel.text = movie.title
+    imageService.fetchImage(url: movie.thumbnailURL) {
+      (image) -> Void in
+      dispatch_async(dispatch_get_main_queue(), {
+        () -> Void in
+        cell.thumbnailImageView.image = image
+      })
+    }
     return cell
   }
 }

@@ -33,6 +33,9 @@
 		FA7260B91B4CBA7600422466 /* JSONClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260B81B4CBA7600422466 /* JSONClient.swift */; };
 		FA96DC6D1B625DE200776B03 /* MovieDetailViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96DC6C1B625DE200776B03 /* MovieDetailViewControllerSpec.swift */; };
 		FA99F2B21B65773D00D58590 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F2B11B65773D00D58590 /* Serializable.swift */; };
+		FA99F2B61B670C7300D58590 /* ImageServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F2B51B670C7300D58590 /* ImageServiceInterface.swift */; };
+		FA99F2B81B670DCF00D58590 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F2B71B670DCF00D58590 /* ImageService.swift */; };
+		FA99F2BA1B671B4500D58590 /* ImageServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F2B91B671B4500D58590 /* ImageServiceSpec.swift */; };
 		FA99F2BD1B67A00100D58590 /* MockHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F2BC1B67A00100D58590 /* MockHTTPClient.swift */; };
 		FA99F2BF1B67A05200D58590 /* MockRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F2BE1B67A05200D58590 /* MockRequestProvider.swift */; };
 		FA99F2C11B67A08100D58590 /* MockJSONClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F2C01B67A08100D58590 /* MockJSONClient.swift */; };
@@ -104,6 +107,9 @@
 		FA7260B81B4CBA7600422466 /* JSONClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONClient.swift; sourceTree = "<group>"; };
 		FA96DC6C1B625DE200776B03 /* MovieDetailViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewControllerSpec.swift; sourceTree = "<group>"; };
 		FA99F2B11B65773D00D58590 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
+		FA99F2B51B670C7300D58590 /* ImageServiceInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageServiceInterface.swift; sourceTree = "<group>"; };
+		FA99F2B71B670DCF00D58590 /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		FA99F2B91B671B4500D58590 /* ImageServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageServiceSpec.swift; sourceTree = "<group>"; };
 		FA99F2BC1B67A00100D58590 /* MockHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockHTTPClient.swift; sourceTree = "<group>"; };
 		FA99F2BE1B67A05200D58590 /* MockRequestProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRequestProvider.swift; sourceTree = "<group>"; };
 		FA99F2C01B67A08100D58590 /* MockJSONClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockJSONClient.swift; sourceTree = "<group>"; };
@@ -277,6 +283,8 @@
 			children = (
 				FA71712D1B65612700498180 /* MovieServiceInterface.swift */,
 				FA7260A71B4B646600422466 /* MovieService.swift */,
+				FA99F2B51B670C7300D58590 /* ImageServiceInterface.swift */,
+				FA99F2B71B670DCF00D58590 /* ImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -302,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				FA7260AE1B4B6FDE00422466 /* MovieServiceSpec.swift */,
+				FA99F2B91B671B4500D58590 /* ImageServiceSpec.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -576,6 +585,7 @@
 				FA7260811B47736B00422466 /* MoviesView.swift in Sources */,
 				FA7260AB1B4B68A600422466 /* RequestProvider.swift in Sources */,
 				FA71712E1B65612700498180 /* MovieServiceInterface.swift in Sources */,
+				FA99F2B81B670DCF00D58590 /* ImageService.swift in Sources */,
 				FA17C4FD1B610B21004C3F56 /* UIViewController+StoryboardIdentifier.swift in Sources */,
 				FA7260B91B4CBA7600422466 /* JSONClient.swift in Sources */,
 				FA4547631B5F2AAE0034D6D2 /* UITableViewCell+ReuseIdentifier.swift in Sources */,
@@ -586,6 +596,7 @@
 				FA72607E1B476DBA00422466 /* MoviesViewController.swift in Sources */,
 				FA7260861B47833E00422466 /* Movie.swift in Sources */,
 				FA45475E1B5F242B0034D6D2 /* MovieDetailViewController.swift in Sources */,
+				FA99F2B61B670C7300D58590 /* ImageServiceInterface.swift in Sources */,
 				FA99F2B21B65773D00D58590 /* Serializable.swift in Sources */,
 				FA71712A1B64275400498180 /* HTTPClientInterface.swift in Sources */,
 			);
@@ -600,12 +611,14 @@
 				FADD04381B55F25C00B4DA2B /* JSONClientSpec.swift in Sources */,
 				FAA427051B59EC8B00D0AA32 /* HTTPClientSpec.swift in Sources */,
 				FAA427081B59F78B00D0AA32 /* MovieSpec.swift in Sources */,
+				FA99F2BA1B671B4500D58590 /* ImageServiceSpec.swift in Sources */,
 				FA7260791B476C9F00422466 /* MoviesViewControllerSpec.swift in Sources */,
 				FA7260AF1B4B6FDE00422466 /* MovieServiceSpec.swift in Sources */,
 				FA99F2C11B67A08100D58590 /* MockJSONClient.swift in Sources */,
 				FA99F2C71B67A14700D58590 /* MockNSURLSessionDataTask.swift in Sources */,
 				FA99F2C31B67A0C000D58590 /* MockMovieService.swift in Sources */,
 				FA96DC6D1B625DE200776B03 /* MovieDetailViewControllerSpec.swift in Sources */,
+				FA99F2C51B67A0F200D58590 /* MockImageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
