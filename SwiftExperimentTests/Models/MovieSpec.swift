@@ -28,14 +28,16 @@ class MovieSpec: QuickSpec {
 
       beforeEach {
         movie = Movie(title: "A title", thumbnailURL: NSURL(string: "example.com")!)
-        dictionary = ["title": "A title", "posters": ["thumbnail": "example.com"]]
+        dictionary = ["title": "A title",
+          "posters": ["thumbnail": "example.com"]]
       }
 
-//      describe("serialize") {
-//        it("serializes the movie into a dictionary") {
-//          expect(movie.serialize()).to(equal(dictionary))
-//        }
-//      }
+      describe("serialize") {
+        it("serializes the things") {
+          let dict = movie.serialize()
+          expect(dict["title"] as? String).to(equal("A title"))
+        }
+      }
 
       describe("init(dict:))") {
         it("deserializes the dictionary into a Movie") {
