@@ -27,8 +27,8 @@ class MoviesViewControllerSpec: QuickSpec {
           var cells = []
 
           beforeEach {
-            let movie0 = Movie(title: "Wall-E", thumbnailURL: NSURL(string: "example.com/0")!)
-            let movie1 = Movie(title: "Up", thumbnailURL: NSURL(string: "example.com/1")!)
+            let movie0 = Movie(title: "Wall-E")
+            let movie1 = Movie(title: "Up")
             movieService.getMoviesClosure(movies: [movie0, movie1], error: nil)
 
             if let tableView = view.tableView {
@@ -72,8 +72,8 @@ class MoviesViewControllerSpec: QuickSpec {
       var movieDetailViewController: MovieDetailViewController!
 
       beforeEach {
-        let movie0 = Movie(title: "Wall-E", thumbnailURL: NSURL(string: "example.com/0")!)
-        let movie1 = Movie(title: "Up", thumbnailURL: NSURL(string: "example.com/1")!)
+        let movie0 = Movie(title: "Wall-E")
+        let movie1 = Movie(title: "Up")
         movieService.getMoviesClosure(movies: [movie0, movie1], error: nil)
 
         if let tableView = view.tableView {

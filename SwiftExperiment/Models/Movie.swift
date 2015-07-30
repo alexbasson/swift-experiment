@@ -1,29 +1,30 @@
 import Foundation
 
 public class Movie: Serializable {
-  public let title: String
-  public let thumbnailURL: NSURL
+  public var title: String
+  public var posters: Posters
 
-  public init(title: String, thumbnailURL: NSURL) {
+  public init(title: String, posters: Posters) {
     self.title = title
-    self.thumbnailURL = thumbnailURL
+    self.posters = posters
   }
 
   public func serialize() -> Dictionary<String, AnyObject> {
-    return ["title": title]
+    return [
+      "title": title,
+      "posters": posters.serialize()
+    ]
   }
 
   public convenience required init(dict: Dictionary<String, AnyObject>) {
-    let title = dict["title"] as! String
-    let posters = dict["posters"] as! Dictionary<String, AnyObject>
-    let thumbnailURL = posters["thumbnail"] as! String
-    self.init(title: title, thumbnailURL: NSURL(string: thumbnailURL)!)
+    self.init(title: dict["title"] as! String,
+              posters: Posters(dict: dict["posters"] as! Dictionary))
   }
 }
 
 extension Movie: Equatable {}
 
 public func ==(lhs: Movie, rhs: Movie) -> Bool {
-  return lhs.title == rhs.title
+  return lhs.title == rhs.title && lhs.posters == rhs.posters
 }
 

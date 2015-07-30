@@ -47,11 +47,18 @@ class MovieServiceSpec: QuickSpec {
           var movie: Movie!
 
           beforeEach {
-            movie = Movie(title: "A movie", thumbnailURL: NSURL(string: "example.com")!)
-            let json = ["movies": [
-              ["title": "A movie",
-                "posters": ["thumbnail": "example.com"]
-              ]
+            movie = Movie(title: "A movie")
+            let json = [
+              "movies": [
+                [
+                  "title": "A movie",
+                  "posters": [
+                    "thumbnail": "example.com/posters/thumbnail",
+                    "profile": "example.com/posters/profile",
+                    "detailed": "example.com/posters/detailed",
+                    "original": "example.com/posters/original"
+                  ]
+                ]
               ]
             ]
             jsonClient.sendRequestClosure(json: json, error: nil)

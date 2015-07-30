@@ -55,7 +55,7 @@ extension MoviesViewController: UITableViewDataSource {
     let cell = tableView.dequeueReusableCellWithIdentifier(MovieTableViewCell.reuseIdentifier(), forIndexPath: indexPath) as! MovieTableViewCell
     let movie = movies[indexPath.row]
     cell.titleLabel.text = movie.title
-    imageService.fetchImage(url: movie.thumbnailURL) {
+    imageService.fetchImage(url: movie.posters.thumbnailURL) {
       (image) -> Void in
       dispatch_async(dispatch_get_main_queue(), {
         () -> Void in
