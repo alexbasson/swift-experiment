@@ -7,12 +7,11 @@ class MoviesViewControllerSpec: QuickSpec {
     var subject: MoviesViewController!
     var view: MoviesView!
     let movieService = MockMovieService()
-    let imageService = MockImageService()
     let moviesPresenter = MockMoviesPresenter()
 
     beforeEach {
       subject = MoviesViewController.getInstanceFromStoryboard("Main") as! MoviesViewController
-      subject.configure(movieService: movieService, imageService: imageService, moviesPresenter: moviesPresenter)
+      subject.configure(movieService: movieService, moviesPresenter: moviesPresenter)
 
       expect(subject.view).notTo(beNil())
       view = subject.moviesView

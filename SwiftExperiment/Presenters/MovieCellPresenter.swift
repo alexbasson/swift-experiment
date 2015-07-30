@@ -1,7 +1,14 @@
 import UIKit
 
+func performOnMainQueue(closure: () -> Void) {
+  dispatch_async(dispatch_get_main_queue()) {
+    closure()
+  }
+}
+
 public class MovieCellPresenter: CellPresenter {
   public let movie: Movie
+  public let imageService = ImageService()
 
   public init(movie: Movie) {
     self.movie = movie
@@ -14,6 +21,12 @@ public class MovieCellPresenter: CellPresenter {
   public func presentInCell(cell: UITableViewCell) {
     let movieCell = cell as! MovieTableViewCell
     movieCell.titleLabel.text = movie.title
+    imageService.fetchImage(url: movie.posters.thumbnailURL) {
+      (image) -> Void in
+      performOnMainQueue() {
+        movieCell.thumbnailImageView.image = image
+      }
+    }
   }
 
   public func cellIdentifier() -> String {
