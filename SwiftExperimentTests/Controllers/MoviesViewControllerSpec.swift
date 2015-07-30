@@ -2,29 +2,6 @@ import Quick
 import Nimble
 import SwiftExperiment
 
-public class MockMovieService: MovieServiceInterface {
-  public var receivedGetMovies = false
-  public var getMoviesClosure: MovieServiceClosure!
-
-  public func getMovies(closure: MovieServiceClosure) {
-    receivedGetMovies = true
-    getMoviesClosure = closure
-  }
-}
-
-public class MockMoviesPresenter: MoviesPresenter {
-  public var receivedPresentMoviesInTableView = false
-  public var moviesParam: [Movie]!
-  public var tableViewParam: UITableView!
-
-  override public func presentMoviesInTableView(movies movies: [Movie], tableView: UITableView?) {
-    receivedPresentMoviesInTableView = true
-    moviesParam = movies
-    tableViewParam = tableView
-    super.presentMoviesInTableView(movies: movies, tableView: tableView)
-  }
-}
-
 class MoviesViewControllerSpec: QuickSpec {
   override func spec() {
     var subject: MoviesViewController!
