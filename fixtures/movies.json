@@ -1,74 +1,431 @@
 {
   "movies": [
     {
-      "id": "771324839",
-      "title": "Jurassic World",
+      "id": "770680853",
+      "title": "Ant-Man",
       "year": 2015,
       "mpaa_rating": "PG-13",
-      "runtime": 123,
+      "runtime": 115,
       "critics_consensus": "",
       "release_dates": {
-        "theater": "2015-06-12"
+        "theater": "2015-07-17"
       },
       "ratings": {
-        "critics_rating": "Fresh",
-        "critics_score": 71,
+        "critics_rating": "Certified Fresh",
+        "critics_score": 79,
         "audience_rating": "Upright",
-        "audience_score": 83
+        "audience_score": 91
       },
-      "synopsis": "Steven Spielberg returns to executive produce the long-awaited next installment of his groundbreaking Jurassic Park series, Jurassic World. Colin Trevorrow directs the epic action-adventure based on characters created by Michael Crichton. The screenplay is by Rick Jaffa & Amanda Silver and Derek Connolly & Trevorrow, and the story is by Rick Jaffa & Amanda Silver. Frank Marshall and Patrick Crowley join the team as producers. (C) Universal",
+      "synopsis": "The next evolution of the Marvel Cinematic Universe brings a founding member of The Avengers to the big screen for the first time with Marvel Studios' \"Ant-Man.\" Armed with the astonishing ability to shrink in scale but increase in strength, master thief Scott Lang must embrace his inner-hero and help his mentor, Dr. Hank Pym, protect the secret behind his spectacular Ant-Man suit from a new generation of towering threats. Against seemingly insurmountable obstacles, Pym and Lang must plan and pull off a heist that will save the world. -- (C) Marvel",
       "posters": {
-        "thumbnail": "http:\/\/resizing.flixster.com\/zJnnEYLx2T9TbVL9UspqrKV7X2g=\/51x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/12\/11191223_ori.jpg",
-        "profile": "http:\/\/resizing.flixster.com\/zJnnEYLx2T9TbVL9UspqrKV7X2g=\/51x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/12\/11191223_ori.jpg",
-        "detailed": "http:\/\/resizing.flixster.com\/zJnnEYLx2T9TbVL9UspqrKV7X2g=\/51x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/12\/11191223_ori.jpg",
-        "original": "http:\/\/resizing.flixster.com\/zJnnEYLx2T9TbVL9UspqrKV7X2g=\/51x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/12\/11191223_ori.jpg"
+        "thumbnail": "http:\/\/resizing.flixster.com\/_bifC--YxXyDN9XjqQ_yi176WAY=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/12\/11191270_ori.png",
+        "profile": "http:\/\/resizing.flixster.com\/_bifC--YxXyDN9XjqQ_yi176WAY=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/12\/11191270_ori.png",
+        "detailed": "http:\/\/resizing.flixster.com\/_bifC--YxXyDN9XjqQ_yi176WAY=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/12\/11191270_ori.png",
+        "original": "http:\/\/resizing.flixster.com\/_bifC--YxXyDN9XjqQ_yi176WAY=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/12\/11191270_ori.png"
       },
       "abridged_cast": [
         {
-          "name": "Chris Pratt",
-          "id": "770692298",
+          "name": "Paul Rudd",
+          "id": "162653309",
           "characters": [
-            "Owen Grady"
+            "Scott Lang\/Ant-Man"
           ]
         },
         {
-          "name": "Bryce Dallas Howard",
-          "id": "162660901",
+          "name": "Michael Douglas",
+          "id": "162660400",
           "characters": [
-            "Claire Dearing"
+            "Dr. Hank Pym"
           ]
         },
         {
-          "name": "Vincent D'Onofrio",
-          "id": "162654048",
+          "name": "Evangeline Lilly",
+          "id": "512423472",
           "characters": [
-            "Vic Hoskins"
+            "Hope Van Dyne"
           ]
         },
         {
-          "name": "Judy Greer",
-          "id": "162654580",
+          "name": "Corey Stoll",
+          "id": "770875086",
           "characters": [
-            "Karen Mitchell"
+            "Darren Cross\/Yellowjacket"
           ]
         },
         {
-          "name": "Omar Sy",
-          "id": "595303554",
+          "name": "Michael Pena",
+          "id": "309887156",
           "characters": [
-            "Barry"
+            "Luis"
           ]
         }
       ],
       "alternate_ids": {
-        "imdb": "0369610"
+        "imdb": "0478970"
       },
       "links": {
-        "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771324839.json",
-        "alternate": "http:\/\/www.rottentomatoes.com\/m\/jurassic_world\/",
-        "cast": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771324839\/cast.json",
-        "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771324839\/reviews.json",
-        "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771324839\/similar.json"
+        "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/770680853.json",
+        "alternate": "http:\/\/www.rottentomatoes.com\/m\/antman\/",
+        "cast": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/770680853\/cast.json",
+        "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/770680853\/reviews.json",
+        "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/770680853\/similar.json"
+      }
+    },
+    {
+      "id": "771263974",
+      "title": "Pixels",
+      "year": 2015,
+      "mpaa_rating": "PG-13",
+      "runtime": 106,
+      "critics_consensus": "",
+      "release_dates": {
+        "theater": "2015-07-24",
+        "dvd": "2015-10-19"
+      },
+      "ratings": {
+        "critics_rating": "Rotten",
+        "critics_score": 18,
+        "audience_rating": "Spilled",
+        "audience_score": 56
+      },
+      "synopsis": "As kids in the 1980s, Sam Brenner (Adam Sandler), Will Cooper (Kevin James), Ludlow Lamonsoff (Josh Gad), and Eddie \"The Fire Blaster\" Plant (Peter Dinklage) saved the world thousands of times - at 25 cents a game in the video arcades. Now, they're going to have to do it for real. In Pixels, when intergalactic aliens discover video feeds of classic arcade games and misinterpret them as a declaration of war, they attack the Earth, using the video games as the models for their assaults -- and now-U.S. President Cooper must call on his old-school arcade friends to save the world from being destroyed by PAC-MAN, Donkey Kong, Galaga, Centipede, and Space Invaders. Joining them is Lt. Col. Violet Van Patten (Michelle Monaghan), a specialist supplying the arcaders with unique weapons to fight the aliens.(C) Sony",
+      "posters": {
+        "thumbnail": "http:\/\/resizing.flixster.com\/K104iTuJRhb8EofICj3E_yYJAYg=\/53x75\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/18\/90\/11189074_ori.jpg",
+        "profile": "http:\/\/resizing.flixster.com\/K104iTuJRhb8EofICj3E_yYJAYg=\/53x75\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/18\/90\/11189074_ori.jpg",
+        "detailed": "http:\/\/resizing.flixster.com\/K104iTuJRhb8EofICj3E_yYJAYg=\/53x75\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/18\/90\/11189074_ori.jpg",
+        "original": "http:\/\/resizing.flixster.com\/K104iTuJRhb8EofICj3E_yYJAYg=\/53x75\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/18\/90\/11189074_ori.jpg"
+      },
+      "abridged_cast": [
+        {
+          "name": "Adam Sandler",
+          "id": "162652550",
+          "characters": [
+            "Sam Brenner"
+          ]
+        },
+        {
+          "name": "Peter Dinklage",
+          "id": "162653586",
+          "characters": [
+            "Eddie \"The Fire Blaster\" Plant"
+          ]
+        },
+        {
+          "name": "Kevin James",
+          "id": "326298578",
+          "characters": [
+            "Pres. Will Cooper"
+          ]
+        },
+        {
+          "name": "Jane Krakowski",
+          "id": "162653280",
+          "characters": [
+            "First Lady"
+          ]
+        },
+        {
+          "name": "Josh Gad",
+          "id": "770683794",
+          "characters": [
+            "Ludlow Lamonsoff"
+          ]
+        }
+      ],
+      "alternate_ids": {
+        "imdb": "2120120"
+      },
+      "links": {
+        "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771263974.json",
+        "alternate": "http:\/\/www.rottentomatoes.com\/m\/pixels\/",
+        "cast": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771263974\/cast.json",
+        "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771263974\/reviews.json",
+        "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771263974\/similar.json"
+      }
+    },
+    {
+      "id": "771314279",
+      "title": "Minions",
+      "year": 2015,
+      "mpaa_rating": "PG",
+      "runtime": 91,
+      "critics_consensus": "",
+      "release_dates": {
+        "theater": "2015-07-10"
+      },
+      "ratings": {
+        "critics_rating": "Rotten",
+        "critics_score": 54,
+        "audience_rating": "Spilled",
+        "audience_score": 55
+      },
+      "synopsis": "The story of Universal Pictures and Illumination Entertainment's Minions begins at the dawn of time. Starting as single-celled yellow organisms, Minions evolve through the ages, perpetually serving the most despicable of masters. Continuously unsuccessful at keeping these masters-from T. rex to Napoleon-the Minions find themselves without someone to serve and fall into a deep depression. But one Minion named Kevin has a plan, and he-alongside teenage rebel Stuart and lovable little Bob-ventures out into the world to find a new evil boss for his brethren to follow. The trio embarks upon a thrilling journey that ultimately leads them to their next potential master, Scarlet Overkill (Academy Award (R) winner Sandra Bullock), the world's first-ever female super-villain. They travel from frigid Antarctica to 1960s New York City, ending in mod London, where they must face their biggest challenge to date: saving all of Minionkind...from annihilation. (c) Universal",
+      "posters": {
+        "thumbnail": "http:\/\/resizing.flixster.com\/bFCtTtYrISyOAIG5NTTqvJmVZfA=\/51x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/18\/13\/11181319_ori.jpg",
+        "profile": "http:\/\/resizing.flixster.com\/bFCtTtYrISyOAIG5NTTqvJmVZfA=\/51x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/18\/13\/11181319_ori.jpg",
+        "detailed": "http:\/\/resizing.flixster.com\/bFCtTtYrISyOAIG5NTTqvJmVZfA=\/51x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/18\/13\/11181319_ori.jpg",
+        "original": "http:\/\/resizing.flixster.com\/bFCtTtYrISyOAIG5NTTqvJmVZfA=\/51x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/18\/13\/11181319_ori.jpg"
+      },
+      "abridged_cast": [
+        {
+          "name": "Sandra Bullock",
+          "id": "162652205",
+          "characters": [
+            "Scarlett Overkill"
+          ]
+        },
+        {
+          "name": "Jon Hamm",
+          "id": "770696952",
+          "characters": [
+            "Herb Overkill"
+          ]
+        },
+        {
+          "name": "Michael Keaton",
+          "id": "162652681",
+          "characters": [
+            "Walter Nelson"
+          ]
+        },
+        {
+          "name": "Allison Janney",
+          "id": "434230452",
+          "characters": [
+            "Madge Nelson"
+          ]
+        },
+        {
+          "name": "Steve Coogan",
+          "id": "162671833",
+          "characters": [
+            "Professor Flux \/ Tower Guard",
+            "Tower Guard"
+          ]
+        }
+      ],
+      "alternate_ids": {
+        "imdb": "2293640"
+      },
+      "links": {
+        "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771314279.json",
+        "alternate": "http:\/\/www.rottentomatoes.com\/m\/minions\/",
+        "cast": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771314279\/cast.json",
+        "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771314279\/reviews.json",
+        "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771314279\/similar.json"
+      }
+    },
+    {
+      "id": "771372670",
+      "title": "Trainwreck",
+      "year": 2015,
+      "mpaa_rating": "R",
+      "runtime": 122,
+      "critics_consensus": "",
+      "release_dates": {
+        "theater": "2015-07-17"
+      },
+      "ratings": {
+        "critics_rating": "Certified Fresh",
+        "critics_score": 85,
+        "audience_rating": "Upright",
+        "audience_score": 79
+      },
+      "synopsis": "Since she was a little girl, it's been drilled into Amy's (Schumer) head by her rascal of a dad (Colin Quinn) that monogamy isn't realistic. Now a magazine writer, Amy lives by that credo-enjoying what she feels is an uninhibited life free from stifling, boring romantic commitment-but in actuality, she's kind of in a rut. When she finds herself starting to fall for the subject of the new article she's writing, a charming and successful sports doctor named Aaron Conners (Bill Hader), Amy starts to wonder if other grown-ups, including this guy who really seems to like her, might be on to something.",
+      "posters": {
+        "thumbnail": "http:\/\/resizing.flixster.com\/Y4Zje4HV61fKuGEjtOc8w44AMT8=\/51x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/18\/99\/11189960_ori.jpg",
+        "profile": "http:\/\/resizing.flixster.com\/Y4Zje4HV61fKuGEjtOc8w44AMT8=\/51x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/18\/99\/11189960_ori.jpg",
+        "detailed": "http:\/\/resizing.flixster.com\/Y4Zje4HV61fKuGEjtOc8w44AMT8=\/51x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/18\/99\/11189960_ori.jpg",
+        "original": "http:\/\/resizing.flixster.com\/Y4Zje4HV61fKuGEjtOc8w44AMT8=\/51x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/18\/99\/11189960_ori.jpg"
+      },
+      "abridged_cast": [
+        {
+          "name": "Amy Schumer",
+          "id": "771395996",
+          "characters": [
+            "Amy"
+          ]
+        },
+        {
+          "name": "Bill Hader",
+          "id": "742790769",
+          "characters": [
+            "Aaron Conners"
+          ]
+        },
+        {
+          "name": "Colin Quinn",
+          "id": "371352225",
+          "characters": [
+            "Gordon"
+          ]
+        },
+        {
+          "name": "Brie Larson",
+          "id": "341816562",
+          "characters": [
+            "Kim"
+          ]
+        },
+        {
+          "name": "Mike Birbiglia",
+          "id": "770762134",
+          "characters": [
+            "Tom"
+          ]
+        }
+      ],
+      "alternate_ids": {
+        "imdb": "3152624"
+      },
+      "links": {
+        "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771372670.json",
+        "alternate": "http:\/\/www.rottentomatoes.com\/m\/trainwreck\/",
+        "cast": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771372670\/cast.json",
+        "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771372670\/reviews.json",
+        "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771372670\/similar.json"
+      }
+    },
+    {
+      "id": "771258788",
+      "title": "Southpaw",
+      "year": 2015,
+      "mpaa_rating": "R",
+      "runtime": 123,
+      "critics_consensus": "",
+      "release_dates": {
+        "theater": "2015-07-24"
+      },
+      "ratings": {
+        "critics_rating": "Rotten",
+        "critics_score": 58,
+        "audience_rating": "Upright",
+        "audience_score": 83
+      },
+      "synopsis": "From acclaimed director Antoine Fuqua (TRAINING DAY) and screenwriters Kurt Sutter (\"Sons of Anarchy) and Richard Wenk (THE MECHANIC), SOUTHPAW tells the riveting story of Billy \"The Great\" Hope, reigning Junior Middleweight Boxing Champion of the World (Academy Award (R) nominee Jake Gyllenhaal). Billy Hope seemingly has it all with an impressive career, a beautiful and loving wife (Rachel McAdams), an adorable daughter (Oona Laurence) and a lavish lifestyle. When tragedy strikes and his lifelong manager and friend (Curtis \"50 Cent\" Jackson) leaves him behind, Hope hits rock bottom and turns to an unlikely savior at a run-down local gym: Tick Willis (Academy Award (R) winner Forest Whitaker), a retired fighter and trainer to the city's toughest amateur boxers. With his future riding on Tick's guidance and tenacity, Billy enters the hardest battle of his life as he struggles with redemption and to win back the trust of those he loves. (C) Weinstein",
+      "posters": {
+        "thumbnail": "http:\/\/resizing.flixster.com\/fAt2zdrNorDTrqoHLNXTro422W8=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/15\/11191554_ori.jpg",
+        "profile": "http:\/\/resizing.flixster.com\/fAt2zdrNorDTrqoHLNXTro422W8=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/15\/11191554_ori.jpg",
+        "detailed": "http:\/\/resizing.flixster.com\/fAt2zdrNorDTrqoHLNXTro422W8=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/15\/11191554_ori.jpg",
+        "original": "http:\/\/resizing.flixster.com\/fAt2zdrNorDTrqoHLNXTro422W8=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/15\/11191554_ori.jpg"
+      },
+      "abridged_cast": [
+        {
+          "name": "Jake Gyllenhaal",
+          "id": "162653968",
+          "characters": [
+            "Billy \"The Great\" Hope"
+          ]
+        },
+        {
+          "name": "Forest Whitaker",
+          "id": "162662640",
+          "characters": [
+            "Titus \"Tick\" Wills"
+          ]
+        },
+        {
+          "name": "Rachel McAdams",
+          "id": "162652838",
+          "characters": [
+            "Maureen Hope"
+          ]
+        },
+        {
+          "name": "Naomie Harris",
+          "id": "162705781",
+          "characters": [
+            "Angela Rivera"
+          ]
+        },
+        {
+          "name": "Victor Ortiz",
+          "id": "770813528",
+          "characters": [
+            "Ramone"
+          ]
+        }
+      ],
+      "alternate_ids": {
+        "imdb": "1937444"
+      },
+      "links": {
+        "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771258788.json",
+        "alternate": "http:\/\/www.rottentomatoes.com\/m\/southpaw_2015\/",
+        "cast": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771258788\/cast.json",
+        "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771258788\/reviews.json",
+        "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771258788\/similar.json"
+      }
+    },
+    {
+      "id": "771385882",
+      "title": "Paper Towns",
+      "year": 2015,
+      "mpaa_rating": "PG-13",
+      "runtime": 109,
+      "critics_consensus": "",
+      "release_dates": {
+        "theater": "2015-07-24"
+      },
+      "ratings": {
+        "critics_rating": "Rotten",
+        "critics_score": 55,
+        "audience_rating": "Upright",
+        "audience_score": 65
+      },
+      "synopsis": "Adapted from the bestselling novel by author John Green (\"The Fault in Our Stars\"), PAPER TOWNS is a coming-of-age story centering on Quentin and his enigmatic neighbor Margo, who loved mysteries so much she became one. After taking him on an all-night adventure through their hometown, Margo suddenly disappears--leaving behind cryptic clues for Quentin to decipher. The search leads Quentin and his quick-witted friends on an exhilarating adventure that is equal parts hilarious and moving. Ultimately, to track down Margo, Quentin must find a deeper understanding of true friendship--and true love. (C) Fox",
+      "posters": {
+        "thumbnail": "http:\/\/resizing.flixster.com\/oTyJe1LAx6dEyggL0pvWM_N-NUs=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/06\/11190655_ori.jpg",
+        "profile": "http:\/\/resizing.flixster.com\/oTyJe1LAx6dEyggL0pvWM_N-NUs=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/06\/11190655_ori.jpg",
+        "detailed": "http:\/\/resizing.flixster.com\/oTyJe1LAx6dEyggL0pvWM_N-NUs=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/06\/11190655_ori.jpg",
+        "original": "http:\/\/resizing.flixster.com\/oTyJe1LAx6dEyggL0pvWM_N-NUs=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/06\/11190655_ori.jpg"
+      },
+      "abridged_cast": [
+        {
+          "name": "Nat Wolff",
+          "id": "459518388",
+          "characters": [
+            "Quentin Jacobsen"
+          ]
+        },
+        {
+          "name": "Cara Delevingne",
+          "id": "771427364",
+          "characters": [
+            "Margo Roth Spiegelman"
+          ]
+        },
+        {
+          "name": "Halston Sage",
+          "id": "771424882",
+          "characters": [
+            "Lacey Pemberton"
+          ]
+        },
+        {
+          "name": "Austin Abrams",
+          "id": "771086796",
+          "characters": [
+            "Ben Starling"
+          ]
+        },
+        {
+          "name": "Justice Jesse Smith",
+          "id": "771102431",
+          "characters": [
+            "Radar"
+          ]
+        }
+      ],
+      "alternate_ids": {
+        "imdb": "3622592"
+      },
+      "links": {
+        "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771385882.json",
+        "alternate": "http:\/\/www.rottentomatoes.com\/m\/paper_towns\/",
+        "cast": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771385882\/cast.json",
+        "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771385882\/reviews.json",
+        "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771385882\/similar.json"
       }
     },
     {
@@ -85,7 +442,7 @@
         "critics_rating": "Certified Fresh",
         "critics_score": 98,
         "audience_rating": "Upright",
-        "audience_score": 92
+        "audience_score": 91
       },
       "synopsis": "Growing up can be a bumpy road, and it's no exception for Riley, who is uprooted from her Midwest life when her father starts a new job in San Francisco. Like all of us, Riley is guided by her emotions - Joy (Amy Poehler), Fear (Bill Hader), Anger (Lewis Black), Disgust (Mindy Kaling) and Sadness (Phyllis Smith). The emotions live in Headquarters, the control center inside Riley's mind, where they help advise her through everyday life. As Riley and her emotions struggle to adjust to a new life in San Francisco, turmoil ensues in Headquarters. Although Joy, Riley's main and most important emotion, tries to keep things positive, the emotions conflict on how best to navigate a new city, house and school. -- (C) Pixar",
       "posters": {
@@ -143,6 +500,415 @@
       }
     },
     {
+      "id": "771324839",
+      "title": "Jurassic World",
+      "year": 2015,
+      "mpaa_rating": "PG-13",
+      "runtime": 123,
+      "critics_consensus": "",
+      "release_dates": {
+        "theater": "2015-06-12"
+      },
+      "ratings": {
+        "critics_rating": "Fresh",
+        "critics_score": 71,
+        "audience_rating": "Upright",
+        "audience_score": 81
+      },
+      "synopsis": "Steven Spielberg returns to executive produce the long-awaited next installment of his groundbreaking Jurassic Park series, Jurassic World. Colin Trevorrow directs the epic action-adventure based on characters created by Michael Crichton. The screenplay is by Rick Jaffa & Amanda Silver and Derek Connolly & Trevorrow, and the story is by Rick Jaffa & Amanda Silver. Frank Marshall and Patrick Crowley join the team as producers. (C) Universal",
+      "posters": {
+        "thumbnail": "http:\/\/resizing.flixster.com\/zJnnEYLx2T9TbVL9UspqrKV7X2g=\/51x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/12\/11191223_ori.jpg",
+        "profile": "http:\/\/resizing.flixster.com\/zJnnEYLx2T9TbVL9UspqrKV7X2g=\/51x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/12\/11191223_ori.jpg",
+        "detailed": "http:\/\/resizing.flixster.com\/zJnnEYLx2T9TbVL9UspqrKV7X2g=\/51x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/12\/11191223_ori.jpg",
+        "original": "http:\/\/resizing.flixster.com\/zJnnEYLx2T9TbVL9UspqrKV7X2g=\/51x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/12\/11191223_ori.jpg"
+      },
+      "abridged_cast": [
+        {
+          "name": "Chris Pratt",
+          "id": "770692298",
+          "characters": [
+            "Owen Grady"
+          ]
+        },
+        {
+          "name": "Bryce Dallas Howard",
+          "id": "162660901",
+          "characters": [
+            "Claire Dearing"
+          ]
+        },
+        {
+          "name": "Vincent D'Onofrio",
+          "id": "162654048",
+          "characters": [
+            "Vic Hoskins"
+          ]
+        },
+        {
+          "name": "Judy Greer",
+          "id": "162654580",
+          "characters": [
+            "Karen Mitchell"
+          ]
+        },
+        {
+          "name": "Omar Sy",
+          "id": "595303554",
+          "characters": [
+            "Barry"
+          ]
+        }
+      ],
+      "alternate_ids": {
+        "imdb": "0369610"
+      },
+      "links": {
+        "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771324839.json",
+        "alternate": "http:\/\/www.rottentomatoes.com\/m\/jurassic_world\/",
+        "cast": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771324839\/cast.json",
+        "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771324839\/reviews.json",
+        "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771324839\/similar.json"
+      }
+    },
+    {
+      "id": "771413413",
+      "title": "Mr. Holmes",
+      "year": 2015,
+      "mpaa_rating": "PG",
+      "runtime": 105,
+      "critics_consensus": "",
+      "release_dates": {
+        "theater": "2015-07-17"
+      },
+      "ratings": {
+        "critics_rating": "Certified Fresh",
+        "critics_score": 87,
+        "audience_rating": "Upright",
+        "audience_score": 78
+      },
+      "synopsis": "MR HOLMES is a new twist on the world's most famous detective. 1947, an aging Sherlock Holmes returns from a journey to Japan, where, in search of a rare plant with powerful restorative qualities, he has witnessed the devastation of nuclear warfare. Now, in his remote seaside farmhouse, Holmes faces the end of his days tending to his bees, with only the company of his housekeeper and her young son, Roger. Grappling with the diminishing powers of his mind, Holmes comes to rely upon the boy as he revisits the circumstances of the unsolved case that forced him into retirement, and searches for answers to the mysteries of life and love - before it's too late. (C) Roadside Attractions",
+      "posters": {
+        "thumbnail": "http:\/\/resizing.flixster.com\/3Fy62gWQ-puFdixZJJKd_pclJyY=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/13\/11191375_ori.jpg",
+        "profile": "http:\/\/resizing.flixster.com\/3Fy62gWQ-puFdixZJJKd_pclJyY=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/13\/11191375_ori.jpg",
+        "detailed": "http:\/\/resizing.flixster.com\/3Fy62gWQ-puFdixZJJKd_pclJyY=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/13\/11191375_ori.jpg",
+        "original": "http:\/\/resizing.flixster.com\/3Fy62gWQ-puFdixZJJKd_pclJyY=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/13\/11191375_ori.jpg"
+      },
+      "abridged_cast": [
+        {
+          "name": "Ian McKellen",
+          "id": "162653241",
+          "characters": [
+            "Sherlock Holmes"
+          ]
+        },
+        {
+          "name": "Laura Linney",
+          "id": "162653768",
+          "characters": [
+            "Mrs. Munro"
+          ]
+        },
+        {
+          "name": "Milo Parker",
+          "id": "771630648",
+          "characters": [
+            "Roger"
+          ]
+        },
+        {
+          "name": "Hiroyuki Sanada",
+          "id": "162729305",
+          "characters": [
+            "Mr. Umezaki"
+          ]
+        },
+        {
+          "name": "Hattie Morahan",
+          "id": "770792957",
+          "characters": [
+            "Ann Kelmot"
+          ]
+        }
+      ],
+      "alternate_ids": {
+        "imdb": "3168230"
+      },
+      "links": {
+        "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771413413.json",
+        "alternate": "http:\/\/www.rottentomatoes.com\/m\/mr_holmes\/",
+        "cast": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771413413\/cast.json",
+        "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771413413\/reviews.json",
+        "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771413413\/similar.json"
+      }
+    },
+    {
+      "id": "771359910",
+      "title": "Terminator Genisys",
+      "year": 2015,
+      "mpaa_rating": "PG-13",
+      "runtime": 119,
+      "critics_consensus": "",
+      "release_dates": {
+        "theater": "2015-07-01"
+      },
+      "ratings": {
+        "critics_rating": "Rotten",
+        "critics_score": 27,
+        "audience_rating": "Upright",
+        "audience_score": 64
+      },
+      "synopsis": "James Cameron's sci-fi classic gets rebooted in this Paramount production designed as the first installment in a new trilogy. ~ Jason Buchanan, Rovi",
+      "posters": {
+        "thumbnail": "http:\/\/resizing.flixster.com\/dJI58rrq2j-YLSflD5sc-H7fAfg=\/52x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/11\/11191190_ori.jpg",
+        "profile": "http:\/\/resizing.flixster.com\/dJI58rrq2j-YLSflD5sc-H7fAfg=\/52x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/11\/11191190_ori.jpg",
+        "detailed": "http:\/\/resizing.flixster.com\/dJI58rrq2j-YLSflD5sc-H7fAfg=\/52x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/11\/11191190_ori.jpg",
+        "original": "http:\/\/resizing.flixster.com\/dJI58rrq2j-YLSflD5sc-H7fAfg=\/52x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/11\/11191190_ori.jpg"
+      },
+      "abridged_cast": [
+        {
+          "name": "Emilia Clarke",
+          "id": "771370354",
+          "characters": [
+            "Sarah Connor"
+          ]
+        },
+        {
+          "name": "Jason Clarke",
+          "id": "359854726",
+          "characters": [
+            "John Connor"
+          ]
+        },
+        {
+          "name": "Jai Courtney",
+          "id": "771383833",
+          "characters": [
+            "Kyle Reese"
+          ]
+        },
+        {
+          "name": "Arnold Schwarzenegger",
+          "id": "162662233",
+          "characters": [
+            "The Terminator"
+          ]
+        },
+        {
+          "name": "J.K. Simmons",
+          "id": "592170459",
+          "characters": [
+            "Detective O'Brien"
+          ]
+        }
+      ],
+      "alternate_ids": {
+        "imdb": "1340138"
+      },
+      "links": {
+        "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771359910.json",
+        "alternate": "http:\/\/www.rottentomatoes.com\/m\/terminator_genisys\/",
+        "cast": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771359910\/cast.json",
+        "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771359910\/reviews.json",
+        "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771359910\/similar.json"
+      }
+    },
+    {
+      "id": "771378808",
+      "title": "Magic Mike XXL",
+      "year": 2015,
+      "mpaa_rating": "R",
+      "runtime": 115,
+      "critics_consensus": "",
+      "release_dates": {
+        "theater": "2015-07-01"
+      },
+      "ratings": {
+        "critics_rating": "Fresh",
+        "critics_score": 64,
+        "audience_rating": "Upright",
+        "audience_score": 66
+      },
+      "synopsis": "Picking up the story three years after Mike bowed out of the stripper life at the top of his game, \"Magic Mike XXL\" finds the remaining Kings of Tampa likewise ready to throw in the towel. But they want to do it their way: burning down the house in one last blow-out performance in Myrtle Beach, and with legendary headliner Magic Mike sharing the spotlight with them. On the road to their final show, with whistle stops in Jacksonville and Savannah to renew old acquaintances and make new friends, Mike and the guys learn some new moves and shake off the past in surprising ways. (C) Warner Bros",
+      "posters": {
+        "thumbnail": "http:\/\/resizing.flixster.com\/kMu5Vezjykda0YzkLCsGG_R6LXo=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/16\/11191603_ori.jpg",
+        "profile": "http:\/\/resizing.flixster.com\/kMu5Vezjykda0YzkLCsGG_R6LXo=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/16\/11191603_ori.jpg",
+        "detailed": "http:\/\/resizing.flixster.com\/kMu5Vezjykda0YzkLCsGG_R6LXo=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/16\/11191603_ori.jpg",
+        "original": "http:\/\/resizing.flixster.com\/kMu5Vezjykda0YzkLCsGG_R6LXo=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/16\/11191603_ori.jpg"
+      },
+      "abridged_cast": [
+        {
+          "name": "Channing Tatum",
+          "id": "162661835",
+          "characters": [
+            "Magic Mike"
+          ]
+        },
+        {
+          "name": "Matt Bomer",
+          "id": "771077752",
+          "characters": [
+            "Ken"
+          ]
+        },
+        {
+          "name": "Joe Manganiello",
+          "id": "770800475",
+          "characters": [
+            "Big Dick Richie"
+          ]
+        },
+        {
+          "name": "Kevin Nash",
+          "id": "563393054",
+          "characters": [
+            "Tarzan"
+          ]
+        },
+        {
+          "name": "Adam Rodriguez",
+          "id": "770707558",
+          "characters": [
+            "Tito"
+          ]
+        }
+      ],
+      "alternate_ids": {
+        "imdb": "2268016"
+      },
+      "links": {
+        "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771378808.json",
+        "alternate": "http:\/\/www.rottentomatoes.com\/m\/magic_mike_xxl\/",
+        "cast": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771378808\/cast.json",
+        "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771378808\/reviews.json",
+        "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771378808\/similar.json"
+      }
+    },
+    {
+      "id": "771416962",
+      "title": "Bajrangi Bhaijaan",
+      "year": 2015,
+      "mpaa_rating": "Unrated",
+      "runtime": 145,
+      "release_dates": {
+        "theater": "2015-07-17"
+      },
+      "ratings": {
+        "critics_score": -1,
+        "audience_rating": "Upright",
+        "audience_score": 89
+      },
+      "synopsis": "A 5 years old girl from Pakistan gets separated from her mother at an Indian railway station. Lost and hungry she finds shelter at the home of Pavan, an ardent devotee of Hanuman, a devout Hindu and hailing from a robust wrestling family. Bajrangi Bhaijaan is the moving story of Pavan's quest to unite the child with her parents against all odds. Set against the backdrop of colourful Chandni Chowk, the film travels from the heartland of Punjab, through the deserts of Rajasthan, over the snow-capped mountains of Kashmir. Bajrangi Bhaijaan tells the story of how Pavan, who will move heaven and earth to fulfil the promise he made to the girl from across the border.",
+      "posters": {
+        "thumbnail": "http:\/\/d3biamo577v4eu.cloudfront.net\/static\/images\/redesign\/poster_default_thumb.gif",
+        "profile": "http:\/\/d3biamo577v4eu.cloudfront.net\/static\/images\/redesign\/poster_default_thumb.gif",
+        "detailed": "http:\/\/d3biamo577v4eu.cloudfront.net\/static\/images\/redesign\/poster_default_thumb.gif",
+        "original": "http:\/\/d3biamo577v4eu.cloudfront.net\/static\/images\/redesign\/poster_default_thumb.gif"
+      },
+      "abridged_cast": [
+        {
+          "name": "Nawazuddin Siddiqui",
+          "id": "770867888"
+        },
+        {
+          "name": "Salman Khan",
+          "id": "286572659"
+        },
+        {
+          "name": "Kareena Kapoor",
+          "id": "162699105"
+        },
+        {
+          "name": "Emraan Hashmi",
+          "id": "335717694"
+        },
+        {
+          "name": "Mirza Ali Quli",
+          "id": "771401474"
+        }
+      ],
+      "alternate_ids": {
+        "imdb": "3863552"
+      },
+      "links": {
+        "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771416962.json",
+        "alternate": "http:\/\/www.rottentomatoes.com\/m\/bajrangi_bhaijaan\/",
+        "cast": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771416962\/cast.json",
+        "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771416962\/reviews.json",
+        "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771416962\/similar.json"
+      }
+    },
+    {
+      "id": "771417481",
+      "title": "The Gallows",
+      "year": 2015,
+      "mpaa_rating": "R",
+      "runtime": 87,
+      "critics_consensus": "",
+      "release_dates": {
+        "theater": "2015-07-10"
+      },
+      "ratings": {
+        "critics_rating": "Rotten",
+        "critics_score": 14,
+        "audience_rating": "Spilled",
+        "audience_score": 30
+      },
+      "synopsis": "Twenty years after a deadly freak accident at a high school play, a misguided attempt to re-stage the play and honor the student proves that some things are better left in the past.",
+      "posters": {
+        "thumbnail": "http:\/\/resizing.flixster.com\/e3ZbhVC7kk9XY4IrpYgvZGA5urw=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/13\/11191387_ori.jpg",
+        "profile": "http:\/\/resizing.flixster.com\/e3ZbhVC7kk9XY4IrpYgvZGA5urw=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/13\/11191387_ori.jpg",
+        "detailed": "http:\/\/resizing.flixster.com\/e3ZbhVC7kk9XY4IrpYgvZGA5urw=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/13\/11191387_ori.jpg",
+        "original": "http:\/\/resizing.flixster.com\/e3ZbhVC7kk9XY4IrpYgvZGA5urw=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/13\/11191387_ori.jpg"
+      },
+      "abridged_cast": [
+        {
+          "name": "Cassidy Gifford",
+          "id": "771458004",
+          "characters": [
+            "Cassidy"
+          ]
+        },
+        {
+          "name": "Pfeifer Brown",
+          "id": "771640687",
+          "characters": [
+            "Pfeifer"
+          ]
+        },
+        {
+          "name": "Ryan Shoos",
+          "id": "771633090",
+          "characters": [
+            "Ryan"
+          ]
+        },
+        {
+          "name": "Reese Mishler",
+          "id": "771640688",
+          "characters": [
+            "Reese"
+          ]
+        },
+        {
+          "name": "Alexis Schneider",
+          "id": "771640689",
+          "characters": [
+            "Young Pfeifer's Mom\/Mary"
+          ]
+        }
+      ],
+      "alternate_ids": {
+        "imdb": "2309260"
+      },
+      "links": {
+        "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771417481.json",
+        "alternate": "http:\/\/www.rottentomatoes.com\/m\/the_gallows\/",
+        "cast": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771417481\/cast.json",
+        "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771417481\/reviews.json",
+        "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771417481\/similar.json"
+      }
+    },
+    {
       "id": "771362652",
       "title": "Ted 2",
       "year": 2015,
@@ -154,9 +920,9 @@
       },
       "ratings": {
         "critics_rating": "Rotten",
-        "critics_score": 45,
+        "critics_score": 46,
         "audience_rating": "Upright",
-        "audience_score": 67
+        "audience_score": 60
       },
       "synopsis": "Newlywed couple Ted and Tami-Lynn want to have a baby, but in order to qualify to be a parent, Ted will have to prove he's a person in a court of law.",
       "posters": {
@@ -214,6 +980,58 @@
       }
     },
     {
+      "id": "771422386",
+      "title": "The Vatican Tapes",
+      "year": 2015,
+      "mpaa_rating": "PG-13",
+      "runtime": 88,
+      "release_dates": {
+        "theater": "2015-07-24"
+      },
+      "ratings": {
+        "critics_rating": "Rotten",
+        "critics_score": 17,
+        "audience_rating": "Spilled",
+        "audience_score": 26
+      },
+      "synopsis": "THE VATICAN TAPES follows the ultimate battle between good and evil- God versus Satan. Angela Holmes is ordinary 27-year- old until she begins to have a devastating effect on anyone close, causing serious injury and death. Holmes is examined and possession is suspected, but when the Vatican is called upon to exorcise the demon, the possession proves to be an ancient satanic force more powerful than ever imagined. It's all up to Father Lozano (MICHAEL PENA) to wage war for more than just Angela's soul, but for the world as we know it. (C) Lionsgate",
+      "posters": {
+        "thumbnail": "http:\/\/resizing.flixster.com\/z6-4njvNfw5LKKRwqX9gHQfAi6o=\/54x77\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/17\/11191762_ori.jpg",
+        "profile": "http:\/\/resizing.flixster.com\/z6-4njvNfw5LKKRwqX9gHQfAi6o=\/54x77\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/17\/11191762_ori.jpg",
+        "detailed": "http:\/\/resizing.flixster.com\/z6-4njvNfw5LKKRwqX9gHQfAi6o=\/54x77\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/17\/11191762_ori.jpg",
+        "original": "http:\/\/resizing.flixster.com\/z6-4njvNfw5LKKRwqX9gHQfAi6o=\/54x77\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/17\/11191762_ori.jpg"
+      },
+      "abridged_cast": [
+        {
+          "name": "Kathleen Robertson",
+          "id": "364621328"
+        },
+        {
+          "name": "Djimon Hounsou",
+          "id": "162652873"
+        },
+        {
+          "name": "Michael Pena",
+          "id": "309887156"
+        },
+        {
+          "name": "Dougray Scott",
+          "id": "162652857"
+        },
+        {
+          "name": "Olivia Taylor Dudley",
+          "id": "771075168"
+        }
+      ],
+      "links": {
+        "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771422386.json",
+        "alternate": "http:\/\/www.rottentomatoes.com\/m\/the_vatican_tapes_2015\/",
+        "cast": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771422386\/cast.json",
+        "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771422386\/reviews.json",
+        "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771422386\/similar.json"
+      }
+    },
+    {
       "id": "771379965",
       "title": "Max",
       "year": 2015,
@@ -221,7 +1039,8 @@
       "runtime": 111,
       "critics_consensus": "",
       "release_dates": {
-        "theater": "2015-06-26"
+        "theater": "2015-06-26",
+        "dvd": "2015-09-29"
       },
       "ratings": {
         "critics_rating": "Rotten",
@@ -298,7 +1117,7 @@
         "critics_rating": "Certified Fresh",
         "critics_score": 95,
         "audience_rating": "Upright",
-        "audience_score": 84
+        "audience_score": 83
       },
       "synopsis": "Susan Cooper (Melissa McCarthy) is an unassuming, deskbound CIA analyst, and the unsung hero behind the Agency's most dangerous missions. But when her partner (Jude Law) falls off the grid and another top agent (Jason Statham) is compromised, she volunteers to go deep undercover to infiltrate the world of a deadly arms dealer, and prevent a global disaster. (C) Fox",
       "posters": {
@@ -353,216 +1172,59 @@
       }
     },
     {
-      "id": "771374432",
-      "title": "San Andreas",
-      "year": 2015,
-      "mpaa_rating": "PG-13",
-      "runtime": 114,
-      "critics_consensus": "",
-      "release_dates": {
-        "theater": "2015-05-29"
-      },
-      "ratings": {
-        "critics_rating": "Rotten",
-        "critics_score": 50,
-        "audience_rating": "Upright",
-        "audience_score": 60
-      },
-      "synopsis": "Journey 2: The Mysterious Island's Brad Peyton steps into disaster movie territory with this 3D film surrounding an earthquake that hits the West Coast. Carlton Cuse provides the script. ~ Jeremy Wheeler, Rovi",
-      "posters": {
-        "thumbnail": "http:\/\/resizing.flixster.com\/AeaFMmg9JiQcPXr64RZhonhPQCw=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/13\/11191363_ori.jpg",
-        "profile": "http:\/\/resizing.flixster.com\/AeaFMmg9JiQcPXr64RZhonhPQCw=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/13\/11191363_ori.jpg",
-        "detailed": "http:\/\/resizing.flixster.com\/AeaFMmg9JiQcPXr64RZhonhPQCw=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/13\/11191363_ori.jpg",
-        "original": "http:\/\/resizing.flixster.com\/AeaFMmg9JiQcPXr64RZhonhPQCw=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/13\/11191363_ori.jpg"
-      },
-      "abridged_cast": [
-        {
-          "name": "Dwayne \"The Rock\" Johnson",
-          "id": "770893686",
-          "characters": [
-            "Chief Ray Gaines"
-          ]
-        },
-        {
-          "name": "Carla Gugino",
-          "id": "162662384",
-          "characters": [
-            "Emma"
-          ]
-        },
-        {
-          "name": "Alexandra Daddario",
-          "id": "770777867",
-          "characters": [
-            "Blake Gaines"
-          ]
-        },
-        {
-          "name": "Paul Giamatti",
-          "id": "162683649",
-          "characters": [
-            "Lawrence"
-          ]
-        },
-        {
-          "name": "Ioan Gruffudd",
-          "id": "162652780",
-          "characters": [
-            "Daniel"
-          ]
-        }
-      ],
-      "alternate_ids": {
-        "imdb": "2126355"
-      },
-      "links": {
-        "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771374432.json",
-        "alternate": "http:\/\/www.rottentomatoes.com\/m\/san_andreas\/",
-        "cast": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771374432\/cast.json",
-        "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771374432\/reviews.json",
-        "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771374432\/similar.json"
-      }
-    },
-    {
-      "id": "771412133",
-      "title": "Dope",
+      "id": "771416996",
+      "title": "Amy",
       "year": 2015,
       "mpaa_rating": "R",
-      "runtime": 115,
+      "runtime": 128,
       "critics_consensus": "",
       "release_dates": {
-        "theater": "2015-06-19"
+        "theater": "2015-07-03"
       },
       "ratings": {
         "critics_rating": "Certified Fresh",
-        "critics_score": 89,
+        "critics_score": 97,
         "audience_rating": "Upright",
-        "audience_score": 86
+        "audience_score": 92
       },
-      "synopsis": "A critical hit and audience favorite out of the Sundance Film Festival, in DOPE, Malcolm (Shameik Moore) is carefully surviving life in a tough neighborhood in Los Angeles while juggling college applications, academic interviews, and the SAT. A chance invitation to an underground party leads him into an adventure that could allow him to go from being a geek, to being dope, to ultimately being himself. (C) Open Road",
+      "synopsis": "Despite just two albums to her name Amy Winehouse is one of the biggest music icons in British history. With a voice oft described as a combination of Billy Holiday, Dinah Washington and Sarah Vaughan, Amy Winehouse was a pop star with soul; a once in two generational musical talent whose appeal crossed cultural and demographic boundaries. But while her music made her a star, her chaotic personal life stole headlines.",
       "posters": {
-        "thumbnail": "http:\/\/resizing.flixster.com\/W6Gr_EeXbo3kUedTbWl4CQ9TvpY=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/11\/11191193_ori.jpg",
-        "profile": "http:\/\/resizing.flixster.com\/W6Gr_EeXbo3kUedTbWl4CQ9TvpY=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/11\/11191193_ori.jpg",
-        "detailed": "http:\/\/resizing.flixster.com\/W6Gr_EeXbo3kUedTbWl4CQ9TvpY=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/11\/11191193_ori.jpg",
-        "original": "http:\/\/resizing.flixster.com\/W6Gr_EeXbo3kUedTbWl4CQ9TvpY=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/11\/11191193_ori.jpg"
+        "thumbnail": "http:\/\/resizing.flixster.com\/BZ7Y3vdV4skfUAkdw9rl8elDrOY=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/13\/11191362_ori.jpg",
+        "profile": "http:\/\/resizing.flixster.com\/BZ7Y3vdV4skfUAkdw9rl8elDrOY=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/13\/11191362_ori.jpg",
+        "detailed": "http:\/\/resizing.flixster.com\/BZ7Y3vdV4skfUAkdw9rl8elDrOY=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/13\/11191362_ori.jpg",
+        "original": "http:\/\/resizing.flixster.com\/BZ7Y3vdV4skfUAkdw9rl8elDrOY=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/13\/11191362_ori.jpg"
       },
       "abridged_cast": [
         {
-          "name": "Shameik Moore",
-          "id": "771628319",
-          "characters": [
-            "Malcolm"
-          ]
+          "name": "Yasiin Bey",
+          "id": "771396491"
         },
         {
-          "name": "Kiersey Clemons",
-          "id": "771483259",
-          "characters": [
-            "Diggy"
-          ]
+          "name": "Mark Ronson",
+          "id": "771027018"
         },
         {
-          "name": "Tony Revolori",
-          "id": "771471838",
-          "characters": [
-            "Jib"
-          ]
+          "name": "Tony Bennett",
+          "id": "770675881"
         },
         {
-          "name": "Zoe Kravitz",
-          "id": "771460102",
-          "characters": [
-            "Nakia"
-          ]
+          "name": "Pete Doherty",
+          "id": "770734126"
         },
         {
-          "name": "ASAP Rocky",
-          "id": "771578411",
-          "characters": [
-            "Dom"
-          ]
+          "name": "Blake Fielder-Civil",
+          "id": "771653949"
         }
       ],
       "alternate_ids": {
-        "imdb": "3850214"
+        "imdb": "2870648"
       },
       "links": {
-        "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771412133.json",
-        "alternate": "http:\/\/www.rottentomatoes.com\/m\/dope_2015\/",
-        "cast": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771412133\/cast.json",
-        "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771412133\/reviews.json",
-        "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771412133\/similar.json"
-      }
-    },
-    {
-      "id": "771375494",
-      "title": "Insidious: Chapter 3",
-      "year": 2015,
-      "mpaa_rating": "PG-13",
-      "runtime": 97,
-      "critics_consensus": "",
-      "release_dates": {
-        "theater": "2015-06-05"
-      },
-      "ratings": {
-        "critics_rating": "Rotten",
-        "critics_score": 59,
-        "audience_rating": "Spilled",
-        "audience_score": 59
-      },
-      "synopsis": "The new chapter in the terrifying horror series is written and directed by franchise co-creator Leigh Whannell. This chilling prequel, set before the haunting of the Lambert family, reveals how gifted psychic Elise Rainier (Lin Shaye) reluctantly agrees to use her ability to contact the dead in order to help a teenage girl (Stefanie Scott) who has been targeted by a dangerous supernatural entity. (C) Focus",
-      "posters": {
-        "thumbnail": "http:\/\/resizing.flixster.com\/nNWsU2L5D9nmJw1KGVOl-nBlX7Q=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/14\/11191449_ori.jpg",
-        "profile": "http:\/\/resizing.flixster.com\/nNWsU2L5D9nmJw1KGVOl-nBlX7Q=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/14\/11191449_ori.jpg",
-        "detailed": "http:\/\/resizing.flixster.com\/nNWsU2L5D9nmJw1KGVOl-nBlX7Q=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/14\/11191449_ori.jpg",
-        "original": "http:\/\/resizing.flixster.com\/nNWsU2L5D9nmJw1KGVOl-nBlX7Q=\/54x80\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/14\/11191449_ori.jpg"
-      },
-      "abridged_cast": [
-        {
-          "name": "Dermot Mulroney",
-          "id": "162652930",
-          "characters": [
-            "Sean Brenner"
-          ]
-        },
-        {
-          "name": "Stefanie Scott",
-          "id": "771093757",
-          "characters": [
-            "Quinn Brenner"
-          ]
-        },
-        {
-          "name": "Angus Sampson",
-          "id": "364615082",
-          "characters": [
-            "Tucker"
-          ]
-        },
-        {
-          "name": "Leigh Whannell",
-          "id": "364604347",
-          "characters": [
-            "Specs"
-          ]
-        },
-        {
-          "name": "Lin Shaye",
-          "id": "364609819",
-          "characters": [
-            "Elise Rainier"
-          ]
-        }
-      ],
-      "alternate_ids": {
-        "imdb": "3195644"
-      },
-      "links": {
-        "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771375494.json",
-        "alternate": "http:\/\/www.rottentomatoes.com\/m\/insidious_chapter_3_2015\/",
-        "cast": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771375494\/cast.json",
-        "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771375494\/reviews.json",
-        "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771375494\/similar.json"
+        "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771416996.json",
+        "alternate": "http:\/\/www.rottentomatoes.com\/m\/amy_2015\/",
+        "cast": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771416996\/cast.json",
+        "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771416996\/reviews.json",
+        "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771416996\/similar.json"
       }
     },
     {
@@ -580,7 +1242,7 @@
         "critics_rating": "Certified Fresh",
         "critics_score": 98,
         "audience_rating": "Upright",
-        "audience_score": 89
+        "audience_score": 88
       },
       "synopsis": "Filmmaker George Miller gears up for another post-apocalyptic action adventure with Fury Road, the fourth outing in the Mad Max film series. Charlize Theron stars alongside Tom Hardy (Bronson), with Zoe Kravitz, Adelaide Clemens, and Rosie Huntington Whiteley heading up the supporting cast. ~ Jeremy Wheeler, Rovi",
       "posters": {
@@ -636,81 +1298,10 @@
         "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771028170\/reviews.json",
         "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771028170\/similar.json"
       }
-    },
-    {
-      "id": "771313962",
-      "title": "Avengers: Age of Ultron",
-      "year": 2015,
-      "mpaa_rating": "PG-13",
-      "runtime": 141,
-      "critics_consensus": "",
-      "release_dates": {
-        "theater": "2015-05-01"
-      },
-      "ratings": {
-        "critics_rating": "Certified Fresh",
-        "critics_score": 74,
-        "audience_rating": "Upright",
-        "audience_score": 87
-      },
-      "synopsis": "When Tony Stark jumpstarts a dormant peacekeeping program, things go awry and Earth's Mightiest Heroes, including Iron Man, Captain America, Thor, The Incredible Hulk, Black Widow and Hawkeye, are put to the ultimate test as they battle to save the planet from destruction at the hands of the villainous Ultron.",
-      "posters": {
-        "thumbnail": "http:\/\/resizing.flixster.com\/DVeVAWtpeCRUjCsJZWUyv1jxPTA=\/54x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/01\/11190143_ori.jpg",
-        "profile": "http:\/\/resizing.flixster.com\/DVeVAWtpeCRUjCsJZWUyv1jxPTA=\/54x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/01\/11190143_ori.jpg",
-        "detailed": "http:\/\/resizing.flixster.com\/DVeVAWtpeCRUjCsJZWUyv1jxPTA=\/54x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/01\/11190143_ori.jpg",
-        "original": "http:\/\/resizing.flixster.com\/DVeVAWtpeCRUjCsJZWUyv1jxPTA=\/54x81\/dkpu1ddg7pbsk.cloudfront.net\/movie\/11\/19\/01\/11190143_ori.jpg"
-      },
-      "abridged_cast": [
-        {
-          "name": "Robert Downey Jr.",
-          "id": "162654529",
-          "characters": [
-            "Tony Stark\/Iron Man"
-          ]
-        },
-        {
-          "name": "Chris Evans",
-          "id": "162652784",
-          "characters": [
-            "Steve Rogers\/Captain America"
-          ]
-        },
-        {
-          "name": "Mark Ruffalo",
-          "id": "162653904",
-          "characters": [
-            "Bruce Banner\/The Hulk"
-          ]
-        },
-        {
-          "name": "Chris Hemsworth",
-          "id": "770829335",
-          "characters": [
-            "Thor"
-          ]
-        },
-        {
-          "name": "Scarlett Johansson",
-          "id": "162652872",
-          "characters": [
-            "Natasha Romanoff\/Black Widow"
-          ]
-        }
-      ],
-      "alternate_ids": {
-        "imdb": "2395427"
-      },
-      "links": {
-        "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771313962.json",
-        "alternate": "http:\/\/www.rottentomatoes.com\/m\/avengers_age_of_ultron\/",
-        "cast": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771313962\/cast.json",
-        "reviews": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771313962\/reviews.json",
-        "similar": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/movies\/771313962\/similar.json"
-      }
     }
   ],
   "links": {
-    "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/lists\/movies\/box_office.json?limit=10&country=us",
+    "self": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/lists\/movies\/box_office.json?limit=20&country=us",
     "alternate": "http:\/\/www.rottentomatoes.com\/movie\/box-office\/"
   },
   "link_template": "http:\/\/api.rottentomatoes.com\/api\/public\/v1.0\/lists\/movies\/box_office.json?limit={num-results}&country={country-code}"

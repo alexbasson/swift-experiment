@@ -7,7 +7,9 @@ public class CellPresenterDataSource: NSObject {
     self.cellPresenters = cellPresenters
     if let tableView = tableView {
       tableView.dataSource = self as UITableViewDataSource?
-      tableView.reloadData()
+      performOnMainQueue {
+        tableView.reloadData()
+      }
     }
   }
 }

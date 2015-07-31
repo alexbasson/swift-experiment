@@ -12,14 +12,17 @@ public class ImageService: ImageServiceInterface {
 
   public func fetchImage(url url: NSURL, closure: ImageServiceClosure) {
     if let image = images[url] {
+      print("returning cached image")
       closure(image: image)
     } else {
+      print("fetching image from network")
       let request = NSURLRequest(URL: url)
       httpClient.sendRequest(request, closure: {
         (data, error) -> Void in
         if let
           data = data,
           image = UIImage(data: data) {
+            self.images[url] = image
             closure(image: image)
         }
       })

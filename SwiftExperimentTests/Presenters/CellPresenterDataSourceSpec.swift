@@ -40,16 +40,6 @@ class CellPresenterDataSourceSpec: QuickSpec {
         it("has two cells") {
           expect(cells.count).to(equal(2))
         }
-//
-//            it("sets the title of the first cell to 'Wall-E'") {
-//              let cell: MovieTableViewCell = cells[0] as! MovieTableViewCell
-//              expect(cell.titleLabel.text).to(equal("Wall-E"))
-//            }
-//
-//            it("sets the title of the second cell to 'Up'") {
-//              let cell: MovieTableViewCell = cells[1] as! MovieTableViewCell
-//              expect(cell.titleLabel.text).to(equal("Up"))
-//            }
       }
     }
   }
