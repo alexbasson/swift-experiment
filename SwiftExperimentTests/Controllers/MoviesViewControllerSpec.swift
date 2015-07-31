@@ -24,14 +24,13 @@ class MoviesViewControllerSpec: QuickSpec {
 
       describe("when the service returns") {
         context("successfully") {
-          var movie0 = Movie(title: "")
-          var movie1 = Movie(title: "")
+          var movie0 = Movie()
+          var movie1 = Movie()
 
           beforeEach {
             movie0 = Movie(title: "Wall-E")
             movie1 = Movie(title: "Up")
             movieService.getMoviesClosure(movies: [movie0, movie1], error: nil)
-
           }
 
           it("messages the moviesPresenter to present the movies in the tableView") {
