@@ -334,7 +334,6 @@
 			isa = PBXGroup;
 			children = (
 				FA7260781B476C9F00422466 /* MoviesViewControllerSpec.swift */,
-				FA99F2D61B6AD50E00D58590 /* MovieCellPresenterSpec.swift */,
 				FA96DC6C1B625DE200776B03 /* MovieDetailViewControllerSpec.swift */,
 			);
 			path = Controllers;
@@ -373,6 +372,7 @@
 		FA96DC7E1B63209D00776B03 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				FA99F2D61B6AD50E00D58590 /* MovieCellPresenterSpec.swift */,
 				FA96DC7F1B6320CB00776B03 /* MoviesPresenterSpec.swift */,
 				FA96DC811B6326A800776B03 /* CellPresenterDataSourceSpec.swift */,
 			);
