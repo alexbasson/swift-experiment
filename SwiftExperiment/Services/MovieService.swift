@@ -1,16 +1,13 @@
 import Foundation
 
 public class MovieService: MovieServiceInterface {
+  public static let sharedInstance = MovieService(requestProvider: RequestProvider(), jsonClient: JSONClient())
   let requestProvider: RequestProvider
   let jsonClient: JSONClientInterface
 
   public init(requestProvider: RequestProvider, jsonClient: JSONClientInterface) {
     self.requestProvider = requestProvider
     self.jsonClient = jsonClient
-  }
-
-  public convenience init() {
-    self.init(requestProvider: RequestProvider(), jsonClient: JSONClient())
   }
 
   public func getMovies(closure: MovieServiceClosure) {

@@ -1,15 +1,13 @@
 import UIKit
 
 public class ImageService: ImageServiceInterface {
+  public static let sharedInstance = ImageService(httpClient: HTTPClient())
+
   let httpClient: HTTPClientInterface
   var images: Dictionary<NSURL, UIImage> = [:]
 
   public init(httpClient: HTTPClientInterface) {
     self.httpClient = httpClient
-  }
-
-  public convenience init() {
-    self.init(httpClient: HTTPClient())
   }
 
   public func fetchImage(url url: NSURL, closure: ImageServiceClosure) {
