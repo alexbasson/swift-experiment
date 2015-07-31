@@ -8,10 +8,11 @@ func performOnMainQueue(closure: () -> Void) {
 
 public class MovieCellPresenter: CellPresenter {
   public let movie: Movie
-  public let imageService = ImageService()
+  public let imageService: ImageServiceInterface
 
-  public init(movie: Movie) {
+  public init(movie: Movie, imageService: ImageServiceInterface) {
     self.movie = movie
+    self.imageService = imageService
   }
 
   public static func registerInTableView(tableView: UITableView) {

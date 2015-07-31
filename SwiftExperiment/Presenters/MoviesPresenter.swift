@@ -15,7 +15,7 @@ public class MoviesPresenter {
     var cellPresenters: [CellPresenter] = []
 
     for movie in movies {
-      cellPresenters.append(MovieCellPresenter(movie: movie))
+      cellPresenters.append(MovieCellPresenter(movie: movie, imageService: ImageService.sharedInstance))
     }
 
     cellPresenterDataSource.displayCellPresentersInTableView(cellPresenters: cellPresenters, tableView: tableView)
