@@ -8,5 +8,7 @@ public class MockImageService: ImageServiceInterface {
 
   public func fetchImage(url url: NSURL, closure: ImageServiceClosure) {
     receivedFetchImage = true
+    fetchImageURLParam = url
+    fetchImageClosure = closure
   }
 }
