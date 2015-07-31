@@ -24,16 +24,16 @@ class MovieSpec: QuickSpec {
     }
 
     describe("serializable") {
-      var movie: Movie!
+      var subject: Movie!
       var dictionary: Dictionary<String, AnyObject>!
 
       describe("serialize") {
         beforeEach {
-          movie = Movie()
+          subject = Movie()
         }
 
-        it("serializes the things") {
-          let dict = movie.serialize()
+        it("serializes the movie") {
+          let dict = subject.serialize()
           expect(dict["title"] as? String).to(equal("A title"))
           expect(dict["posters"] as? Dictionary<String, String>)
             .to(equal([
@@ -48,7 +48,7 @@ class MovieSpec: QuickSpec {
 
       describe("init(dict:))") {
         beforeEach {
-          movie = Movie()
+          subject = Movie()
           dictionary = [
             "title": "A title",
             "posters": [
@@ -61,7 +61,7 @@ class MovieSpec: QuickSpec {
         }
 
         it("deserializes the dictionary into a Movie") {
-          expect(Movie(dict: dictionary)).to(equal(movie))
+          expect(Movie(dict: dictionary)).to(equal(subject))
         }
       }
     }

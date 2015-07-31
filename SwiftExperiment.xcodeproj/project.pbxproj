@@ -55,6 +55,7 @@
 		FA99F2D71B6AD50E00D58590 /* MovieCellPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F2D61B6AD50E00D58590 /* MovieCellPresenterSpec.swift */; };
 		FA99F2DC1B6B059D00D58590 /* UITableViewCell+ReuseIdentifierSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F2DB1B6B059D00D58590 /* UITableViewCell+ReuseIdentifierSpec.swift */; };
 		FA99F2DE1B6B06DF00D58590 /* UIViewController+StoryboardIdentifierSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F2DD1B6B06DF00D58590 /* UIViewController+StoryboardIdentifierSpec.swift */; };
+		FA99F2E01B6B075600D58590 /* PostersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F2DF1B6B075600D58590 /* PostersSpec.swift */; };
 		FAA426FC1B59DEFC00D0AA32 /* Pods_SwiftExperimentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA426FB1B59DEFC00D0AA32 /* Pods_SwiftExperimentTests.framework */; };
 		FAA427051B59EC8B00D0AA32 /* HTTPClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA427041B59EC8B00D0AA32 /* HTTPClientSpec.swift */; };
 		FAA427081B59F78B00D0AA32 /* MovieSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA427071B59F78B00D0AA32 /* MovieSpec.swift */; };
@@ -142,6 +143,7 @@
 		FA99F2D61B6AD50E00D58590 /* MovieCellPresenterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCellPresenterSpec.swift; sourceTree = "<group>"; };
 		FA99F2DB1B6B059D00D58590 /* UITableViewCell+ReuseIdentifierSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReuseIdentifierSpec.swift"; sourceTree = "<group>"; };
 		FA99F2DD1B6B06DF00D58590 /* UIViewController+StoryboardIdentifierSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardIdentifierSpec.swift"; sourceTree = "<group>"; };
+		FA99F2DF1B6B075600D58590 /* PostersSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostersSpec.swift; sourceTree = "<group>"; };
 		FAA426FB1B59DEFC00D0AA32 /* Pods_SwiftExperimentTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_SwiftExperimentTests.framework; path = "Pods/../build/Debug-iphoneos/Pods_SwiftExperimentTests.framework"; sourceTree = "<group>"; };
 		FAA427041B59EC8B00D0AA32 /* HTTPClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientSpec.swift; sourceTree = "<group>"; };
 		FAA427071B59F78B00D0AA32 /* MovieSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSpec.swift; sourceTree = "<group>"; };
@@ -422,6 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				FAA427071B59F78B00D0AA32 /* MovieSpec.swift */,
+				FA99F2DF1B6B075600D58590 /* PostersSpec.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -699,6 +702,7 @@
 				FA99F2C71B67A14700D58590 /* MockNSURLSessionDataTask.swift in Sources */,
 				FA99F2D31B6A3E4A00D58590 /* PostersFactory.swift in Sources */,
 				FA99F2C31B67A0C000D58590 /* MockMovieService.swift in Sources */,
+				FA99F2E01B6B075600D58590 /* PostersSpec.swift in Sources */,
 				FA96DC821B6326A800776B03 /* CellPresenterDataSourceSpec.swift in Sources */,
 				FA96DC6D1B625DE200776B03 /* MovieDetailViewControllerSpec.swift in Sources */,
 				FA99F2DC1B6B059D00D58590 /* UITableViewCell+ReuseIdentifierSpec.swift in Sources */,
