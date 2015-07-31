@@ -263,9 +263,8 @@
 		FA49656F1B47598500D487F1 /* SwiftExperimentTests */ = {
 			isa = PBXGroup;
 			children = (
+				FAAE14BC1B6BE02900DD0610 /* Helpers */,
 				FA99F2DA1B6B057200D58590 /* Extensions */,
-				FA99F2CF1B69BF1F00D58590 /* Factories */,
-				FA99F2BB1B679FD500D58590 /* Mocks */,
 				FA7260AC1B4B6B6800422466 /* Controllers */,
 				FAA427061B59F77700D0AA32 /* Models */,
 				FADD04361B55F23100B4DA2B /* Network */,
@@ -402,7 +401,8 @@
 				FA99F2D41B6A423E00D58590 /* MockMoviePresenter.swift */,
 				FA99F2E11B6B0D1D00D58590 /* MockCellPresenterDataSource.swift */,
 			);
-			path = Mocks;
+			name = Mocks;
+			path = ../Mocks;
 			sourceTree = "<group>";
 		};
 		FA99F2CF1B69BF1F00D58590 /* Factories */ = {
@@ -411,7 +411,7 @@
 				FA99F2D01B69BF3100D58590 /* MovieFactory.swift */,
 				FA99F2D21B6A3E4A00D58590 /* PostersFactory.swift */,
 			);
-			name = Factories;
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		FA99F2DA1B6B057200D58590 /* Extensions */ = {
@@ -430,6 +430,15 @@
 				FA99F2DF1B6B075600D58590 /* PostersSpec.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FAAE14BC1B6BE02900DD0610 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA99F2CF1B69BF1F00D58590 /* Factories */,
+				FA99F2BB1B679FD500D58590 /* Mocks */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		FADD04361B55F23100B4DA2B /* Network */ = {
