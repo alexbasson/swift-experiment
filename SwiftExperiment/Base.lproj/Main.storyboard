@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1My-qb-J3A">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Movies-->
@@ -86,19 +87,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Og-bu-vL5">
-                                <rect key="frame" x="279" y="155" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AcQ-Fo-fvi">
+                                <rect key="frame" x="20" y="72" width="100" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="U0h-jR-8vq"/>
+                                    <constraint firstAttribute="width" constant="100" id="lY1-3S-v61"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Og-bu-vL5">
+                                <rect key="frame" x="128" y="72" width="51" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="AcQ-Fo-fvi" firstAttribute="top" secondItem="qsn-EX-XiO" secondAttribute="bottom" constant="8" id="9Qw-ED-t6g"/>
                             <constraint firstItem="1Og-bu-vL5" firstAttribute="top" secondItem="qsn-EX-XiO" secondAttribute="bottom" constant="91" id="IXM-m8-jOt"/>
                             <constraint firstItem="1Og-bu-vL5" firstAttribute="centerX" secondItem="qfj-xm-kya" secondAttribute="centerX" id="K9x-zN-ZiK"/>
+                            <constraint firstItem="1Og-bu-vL5" firstAttribute="top" secondItem="AcQ-Fo-fvi" secondAttribute="top" id="fcX-Sc-34W"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="AcQ-Fo-fvi" secondAttribute="leading" id="i7k-GM-1fk"/>
+                            <constraint firstItem="1Og-bu-vL5" firstAttribute="leading" secondItem="AcQ-Fo-fvi" secondAttribute="trailing" constant="8" id="jRh-Vf-r3F"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IXM-m8-jOt"/>
+                                <exclude reference="K9x-zN-ZiK"/>
+                            </mask>
+                        </variation>
                         <connections>
+                            <outlet property="posterImageView" destination="AcQ-Fo-fvi" id="KAj-Pk-8hZ"/>
                             <outlet property="titleLabel" destination="1Og-bu-vL5" id="1lA-GW-PdR"/>
                         </connections>
                     </view>

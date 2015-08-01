@@ -78,7 +78,11 @@ class MoviesViewControllerSpec: QuickSpec {
       }
 
       it("shows a MoviesDetailViewController and configures it with the movie") {
-        expect(movieDetailViewController.movie!.title).to(equal("Wall-E"))
+        if let viewPresenter = movieDetailViewController.viewPresenter as? MovieDetailViewPresenter {
+          expect(viewPresenter.movie.title).to(equal("Wall-E"))
+        } else {
+          XCTFail()
+        }
       }
     }
   }
