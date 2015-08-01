@@ -15,7 +15,7 @@ public class MovieCellPresenter: CellPresenter {
     self.imageService = imageService
   }
 
-  public static func registerInTableView(tableView: UITableView) {
+  public static func register(tableView tableView: UITableView) {
     tableView.registerClass(MovieTableViewCell.self, forCellReuseIdentifier: MovieTableViewCell.reuseIdentifier())
   }
 

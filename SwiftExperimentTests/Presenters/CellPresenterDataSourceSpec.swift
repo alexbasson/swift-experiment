@@ -3,7 +3,7 @@ import Nimble
 import SwiftExperiment
 
 public class MockCellPresenter: CellPresenter {
-  public static func registerInTableView(tableView: UITableView) {
+  public static func register(tableView tableView: UITableView) {
     tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
   }
   public func presentInCell(cell: UITableViewCell) {}
@@ -26,7 +26,7 @@ class CellPresenterDataSourceSpec: QuickSpec {
 
       beforeEach {
         tableView = UITableView(frame: CGRectMake(0, 0, 100, 100), style: UITableViewStyle.Plain)
-        MockCellPresenter.registerInTableView(tableView)
+        MockCellPresenter.register(tableView: tableView)
         cellPresenter0 = MockCellPresenter()
         cellPresenter1 = MockCellPresenter()
 

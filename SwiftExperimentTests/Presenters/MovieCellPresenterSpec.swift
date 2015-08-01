@@ -28,7 +28,7 @@ class MovieCellPresenterSpec: QuickSpec {
 
         beforeEach {
           tableView = MockUITableView()
-          MovieCellPresenter.registerInTableView(tableView)
+          MovieCellPresenter.register(tableView: tableView)
         }
 
         it("registers the movie cell in the table view") {
