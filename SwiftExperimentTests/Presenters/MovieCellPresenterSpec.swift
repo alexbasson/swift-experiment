@@ -2,6 +2,14 @@ import Quick
 import Nimble
 import SwiftExperiment
 
+class MockUITableView: UITableView {
+  var identifier: String!
+
+  override func registerClass(cellClass: AnyClass?,forCellReuseIdentifier identifier: String) {
+    self.identifier = identifier
+  }
+}
+
 class MovieCellPresenterSpec: QuickSpec {
     override func spec() {
       var subject: MovieCellPresenter!
@@ -13,6 +21,19 @@ class MovieCellPresenterSpec: QuickSpec {
         imageService = MockImageService()
 
         subject = MovieCellPresenter(movie: movie, imageService: imageService)
+      }
+
+      describe("registerInTableView()") {
+        var tableView: MockUITableView!
+
+        beforeEach {
+          tableView = MockUITableView()
+          MovieCellPresenter.registerInTableView(tableView)
+        }
+
+        it("registers the movie cell in the table view") {
+          expect(tableView.identifier).to(equal("MovieTableViewCell"))
+        }
       }
 
       describe("presentInCell") {
