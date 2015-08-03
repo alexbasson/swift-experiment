@@ -15,7 +15,7 @@ class MoviesViewControllerSpec: QuickSpec {
       movieService.resetSentMessages()
       moviesPresenter.resetSentMessages()
 
-      expect(subject.view).notTo(beNil())
+      subject.renderView()
       view = subject.moviesView
     }
 
@@ -47,11 +47,24 @@ class MoviesViewControllerSpec: QuickSpec {
         }
 
         context("with error") {
-          var error: NSError!
+          let error = NSError(domain: "MovieServiceError", code: 0, userInfo: ["NSLocalizedDescription": "Could not get movie list"])
+          var alertController: UIAlertController!
 
           beforeEach {
-            error = NSError(domain: "MovieServiceError", code: 0, userInfo: nil)
             movieService.getMovies.closure(movies: nil, error: error)
+            alertController = subject.presentedViewController as! UIAlertController
+          }
+
+          it("presents an alert controller") {
+            expect(subject.presentedViewController).to(beAnInstanceOf(UIAlertController.self))
+          }
+
+          it("sets the alert's title") {
+            expect(alertController.title).to(equal("Error"))
+          }
+
+          it("sets the alert's message") {
+            expect(alertController.message).to(equal("Could not get movie list"))
           }
         }
       }
