@@ -5,12 +5,10 @@ import SwiftExperiment
 class MovieDetailViewPresenterSpec: QuickSpec {
     override func spec() {
       var subject: MovieDetailViewPresenter!
-      var movie: Movie!
-      var imageService: ImageServiceInterface!
+      let movie = Movie()
+      let imageService = MockImageService()
 
       beforeEach {
-        movie = Movie()
-        imageService = MockImageService()
         subject = MovieDetailViewPresenter(movie: movie, imageService: imageService)
       }
 

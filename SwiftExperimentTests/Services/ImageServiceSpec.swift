@@ -19,11 +19,10 @@ extension UIImage {
 class ImageServiceSpec: QuickSpec {
     override func spec() {
       var subject: ImageService!
-      var httpClient: MockHTTPClient!
+      let httpClient = MockHTTPClient()
 
       beforeEach {
-        httpClient = MockHTTPClient()
-
+        httpClient.receivedSendRequest = false
         subject = ImageService(httpClient: httpClient)
       }
 
@@ -40,7 +39,7 @@ class ImageServiceSpec: QuickSpec {
         }
 
         it("messages the http client to make a request") {
-          expect(httpClient.receivedSendRequest).to(beTruthy())
+          expect(httpClient.receivedSendRequest).to(beTrue())
         }
 
         it("passes the request to the http client") {

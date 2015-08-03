@@ -5,13 +5,12 @@ import SwiftExperiment
 class MovieDetailViewControllerSpec: QuickSpec {
   override func spec() {
     var subject: MovieDetailViewController!
-    var viewPresenter: MockMovieDetailViewPresenter!
+    let viewPresenter: MockMovieDetailViewPresenter = MockMovieDetailViewPresenter()
     let movie = Movie(title: "A Title")
 
     beforeEach {
       subject = MovieDetailViewController.getInstanceFromStoryboard("Main") as! MovieDetailViewController
-      viewPresenter = MockMovieDetailViewPresenter()
-      expect(viewPresenter.receivedPresentInView).to(beFalsy())
+      viewPresenter.receivedPresentInView = false
       subject.configure(movie: movie, movieDetailViewPresenter: viewPresenter)
 
       expect(subject.view).notTo(beNil())
@@ -22,7 +21,7 @@ class MovieDetailViewControllerSpec: QuickSpec {
 
     describe("when the view loads") {
       it("sets the title label text") {
-        expect(viewPresenter.receivedPresentInView).to(beTruthy())
+        expect(viewPresenter.receivedPresentInView).to(beTrue())
       }
     }
   }

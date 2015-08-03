@@ -5,22 +5,18 @@ import SwiftExperiment
 class MovieServiceSpec: QuickSpec {
   override func spec() {
     var subject: MovieService!
-    var requestProvider: MockRequestProvider!
-    var jsonClient: MockJSONClient!
+    let requestProvider = MockRequestProvider()
+    let jsonClient = MockJSONClient()
     var closureWasCalled: Bool = false
     var movieParam: [Movie]!
     var errorParam: NSError!
 
     beforeEach {
-      requestProvider = MockRequestProvider()
-      jsonClient = MockJSONClient()
+      requestProvider.receivedGetMoviesRequest = false
+      jsonClient.receivedSendRequest = false
+      closureWasCalled = false
 
       subject = MovieService(requestProvider: requestProvider, jsonClient: jsonClient)
-
-      expect(requestProvider.receivedGetMoviesRequest).to(beFalsy())
-      expect(jsonClient.receivedSendRequest).to(beFalsy())
-
-      closureWasCalled = false
     }
 
     describe("getMovies()") {
@@ -34,11 +30,11 @@ class MovieServiceSpec: QuickSpec {
       }
 
       it("gets the getMovies request from the request provider") {
-        expect(requestProvider.receivedGetMoviesRequest).to(beTruthy())
+        expect(requestProvider.receivedGetMoviesRequest).to(beTrue())
       }
 
       it("messages the json client to send the request") {
-        expect(jsonClient.receivedSendRequest).to(beTruthy())
+        expect(jsonClient.receivedSendRequest).to(beTrue())
         expect(jsonClient.requestParam).to(beIdenticalTo(requestProvider.fakeGetMoviesRequest))
       }
 

@@ -7,17 +7,15 @@ typealias NSURLSessionDataTaskClosure = (data: NSData?, response: NSURLResponse?
 class HTTPClientSpec: QuickSpec {
   override func spec() {
     var subject: HTTPClient!
-    var session: MockNSURLSession!
+    let task = MockNSURLSessionDataTask()
+    let session = MockNSURLSession(task: task)
     var sendRequestClosureWasCalled: Bool!
     var dataParam: NSData!
     var errorParam: NSError!
-    var task: MockNSURLSessionDataTask!
 
     beforeEach {
       sendRequestClosureWasCalled = false
 
-      task = MockNSURLSessionDataTask()
-      session = MockNSURLSession(task: task)
       subject = HTTPClient(session: session)
     }
 
@@ -26,6 +24,7 @@ class HTTPClientSpec: QuickSpec {
 
       beforeEach {
         request = NSURLRequest()
+        session.receivedDataTaskWithRequest = false
         subject.sendRequest(request) {
           (data, error) in
           sendRequestClosureWasCalled = true
@@ -35,7 +34,7 @@ class HTTPClientSpec: QuickSpec {
       }
 
       it("gets a task from the session") {
-        expect(session.receivedDataTaskWithRequest).to(beTruthy())
+        expect(session.receivedDataTaskWithRequest).to(beTrue())
         expect(task).to(equal(session.task))
       }
 
@@ -59,7 +58,7 @@ class HTTPClientSpec: QuickSpec {
           }
 
           it("calls its closure with the data") {
-            expect(sendRequestClosureWasCalled).to(beTruthy())
+            expect(sendRequestClosureWasCalled).to(beTrue())
             expect(dataParam).to(equal(data))
             expect(errorParam).to(beNil())
           }
@@ -74,7 +73,7 @@ class HTTPClientSpec: QuickSpec {
           }
 
           it("calls its closure with the error") {
-            expect(sendRequestClosureWasCalled).to(beTruthy())
+            expect(sendRequestClosureWasCalled).to(beTrue())
             expect(dataParam).to(beNil())
             expect(errorParam).to(equal(error))
           }

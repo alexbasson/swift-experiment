@@ -5,11 +5,10 @@ import SwiftExperiment
 class MoviesPresenterSpec: QuickSpec {
     override func spec() {
       var subject: MoviesPresenter!
-      var cellPresenterDataSource: MockCellPresenterDataSource!
+      let cellPresenterDataSource = MockCellPresenterDataSource()
 
       beforeEach {
-        cellPresenterDataSource = MockCellPresenterDataSource()
-
+        cellPresenterDataSource.receivedDisplayCellPresentersInTableView = false
         subject = MoviesPresenter(cellPresenterDataSource: cellPresenterDataSource)
       }
 
@@ -24,7 +23,7 @@ class MoviesPresenterSpec: QuickSpec {
         }
 
         it("messages the cell presenter data source to display cell presenters in a table view") {
-          expect(cellPresenterDataSource.receivedDisplayCellPresentersInTableView).to(beTruthy())
+          expect(cellPresenterDataSource.receivedDisplayCellPresentersInTableView).to(beTrue())
         }
 
         it("passes to the cell presenter data source an array of cell presenters that have been configured with the movies") {

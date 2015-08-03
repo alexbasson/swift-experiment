@@ -19,16 +19,13 @@ class CellPresenterDataSourceSpec: QuickSpec {
     }
 
     describe("displayCellPresentersInTableView") {
-      var tableView: UITableView!
-      var cellPresenter0: MockCellPresenter!
-      var cellPresenter1: MockCellPresenter!
+      let tableView = UITableView(frame: CGRectMake(0, 0, 100, 100), style: UITableViewStyle.Plain)
+      let cellPresenter0 = MockCellPresenter()
+      let cellPresenter1 = MockCellPresenter()
       var cells = []
 
       beforeEach {
-        tableView = UITableView(frame: CGRectMake(0, 0, 100, 100), style: UITableViewStyle.Plain)
         MockCellPresenter.register(tableView: tableView)
-        cellPresenter0 = MockCellPresenter()
-        cellPresenter1 = MockCellPresenter()
 
         subject.displayCellPresentersInTableView(cellPresenters: [cellPresenter0, cellPresenter1], tableView: tableView)
 

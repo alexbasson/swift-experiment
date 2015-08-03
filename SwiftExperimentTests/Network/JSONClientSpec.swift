@@ -5,7 +5,7 @@ import SwiftExperiment
 class JSONClientSpec: QuickSpec {
   override func spec() {
     var subject: JSONClient!
-    var httpClient: MockHTTPClient!
+    let httpClient = MockHTTPClient()
     var closureWasCalled: Bool!
     var request: NSURLRequest!
     var jsonParam: AnyObject!
@@ -13,10 +13,9 @@ class JSONClientSpec: QuickSpec {
 
     beforeEach {
       closureWasCalled = false
-      httpClient = MockHTTPClient()
       subject = JSONClient(httpClient: httpClient)
 
-      expect(httpClient.receivedSendRequest).to(beFalsy())
+      httpClient.receivedSendRequest = false
 
       request = NSURLRequest()
       closureWasCalled = false
@@ -30,7 +29,7 @@ class JSONClientSpec: QuickSpec {
 
     describe("sendRequest()") {
       it("messages the http client to send the request") {
-        expect(httpClient.receivedSendRequest).to(beTruthy())
+        expect(httpClient.receivedSendRequest).to(beTrue())
         expect(httpClient.requestParam).to(beIdenticalTo(request))
       }
 
@@ -42,7 +41,7 @@ class JSONClientSpec: QuickSpec {
           }
 
           it("calls its closure with parsed json") {
-            expect(closureWasCalled).to(beTruthy())
+            expect(closureWasCalled).to(beTrue())
             expect(errorParam).to(beNil())
           }
         }
