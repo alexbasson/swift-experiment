@@ -9,3 +9,9 @@ public class MockMovieService: MovieServiceInterface {
     getMoviesClosure = closure
   }
 }
+
+extension MockMovieService: Mockable {
+  func resetSentMessages() {
+    receivedGetMovies = false
+  }
+}

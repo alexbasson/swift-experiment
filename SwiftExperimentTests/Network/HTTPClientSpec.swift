@@ -14,6 +14,8 @@ class HTTPClientSpec: QuickSpec {
     var errorParam: NSError!
 
     beforeEach {
+      session.resetSentMessages()
+      task.resetSentMessages()
       sendRequestClosureWasCalled = false
 
       subject = HTTPClient(session: session)
@@ -39,7 +41,7 @@ class HTTPClientSpec: QuickSpec {
       }
 
       it("passes the request to the NSURLSession") {
-        expect(session.requestParam).to(equal(request))
+        expect(session.dataTaskWithRequestParams.request).to(equal(request))
       }
 
       it("resumes the data task") {
@@ -54,7 +56,7 @@ class HTTPClientSpec: QuickSpec {
           beforeEach {
             data = NSData()
             response = NSURLResponse()
-            session.dataTaskClosure(data: data, response: response, error: nil)
+            session.dataTaskWithRequestParams.completionHandler(data: data, response: response, error: nil)
           }
 
           it("calls its closure with the data") {
@@ -69,7 +71,7 @@ class HTTPClientSpec: QuickSpec {
 
           beforeEach {
             error = NSError(domain: "", code: 0, userInfo: nil)
-            session.dataTaskClosure(data: nil, response: nil, error: error)
+            session.dataTaskWithRequestParams.completionHandler(data: nil, response: nil, error: error)
           }
 
           it("calls its closure with the error") {

@@ -1,14 +1,18 @@
 import UIKit
 import SwiftExperiment
 
-public class MockCellPresenterDataSource: CellPresenterDataSource {
-  public var receivedDisplayCellPresentersInTableView = false
-  public var cellPresentersParam: [CellPresenter]!
-  public var tableViewParam: UITableView!
+class MockCellPresenterDataSource: CellPresenterDataSource {
+  var receivedDisplayCellPresentersInTableView = false
+  var displayCellPresentersInTableViewParams: (cellPresenters: [CellPresenter], tableView: UITableView?)!
 
-  public override func displayCellPresentersInTableView(cellPresenters cellPresenters: [CellPresenter], tableView: UITableView?) {
+  override func displayCellPresentersInTableView(cellPresenters cellPresenters: [CellPresenter], tableView: UITableView?) {
     receivedDisplayCellPresentersInTableView = true
-    cellPresentersParam = cellPresenters
-    tableViewParam = tableView
+    displayCellPresentersInTableViewParams = (cellPresenters: cellPresenters, tableView: tableView)
+  }
+}
+
+extension MockCellPresenterDataSource: Mockable {
+  func resetSentMessages() {
+    receivedDisplayCellPresentersInTableView = false
   }
 }

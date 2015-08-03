@@ -10,10 +10,15 @@ class MockNSURLSessionDataTask: NSURLSessionDataTask {
   }
 }
 
+extension MockNSURLSessionDataTask: Mockable {
+  func resetSentMessages() {
+    receivedResume = false
+  }
+}
+
 class MockNSURLSession: NSURLSession {
   var receivedDataTaskWithRequest: Bool = false
-  var requestParam: NSURLRequest!
-  var dataTaskClosure: NSURLSessionDataTaskClosure!
+  var dataTaskWithRequestParams: (request: NSURLRequest, completionHandler: NSURLSessionDataTaskClosure)!
 
   let task: MockNSURLSessionDataTask
 
@@ -23,8 +28,13 @@ class MockNSURLSession: NSURLSession {
 
   override func dataTaskWithRequest(request: NSURLRequest, completionHandler: (NSData?, NSURLResponse?, NSError?) -> Void) -> NSURLSessionDataTask {
     receivedDataTaskWithRequest = true
-    requestParam = request
-    dataTaskClosure = completionHandler
+    dataTaskWithRequestParams = (request: request, completionHandler: completionHandler)
     return task
+  }
+}
+
+extension MockNSURLSession: Mockable {
+  func resetSentMessages() {
+    receivedDataTaskWithRequest = false
   }
 }

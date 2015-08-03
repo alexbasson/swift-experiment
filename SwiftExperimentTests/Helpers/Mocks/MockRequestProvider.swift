@@ -10,3 +10,9 @@ public class MockRequestProvider: RequestProvider {
     return fakeGetMoviesRequest
   }
 }
+
+extension MockRequestProvider: Mockable {
+  func resetSentMessages() {
+    receivedGetMoviesRequest = false
+  }
+}

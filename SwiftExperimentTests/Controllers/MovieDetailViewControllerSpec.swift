@@ -10,9 +10,9 @@ class MovieDetailViewControllerSpec: QuickSpec {
 
     beforeEach {
       subject = MovieDetailViewController.getInstanceFromStoryboard("Main") as! MovieDetailViewController
-      viewPresenter.receivedPresentInView = false
       subject.configure(movie: movie, movieDetailViewPresenter: viewPresenter)
 
+      viewPresenter.resetSentMessages()
       expect(subject.view).notTo(beNil())
     }
 

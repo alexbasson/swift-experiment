@@ -17,6 +17,7 @@ class MovieCellPresenterSpec: QuickSpec {
       let imageService = MockImageService()
 
       beforeEach {
+        imageService.resetSentMessages()
         subject = MovieCellPresenter(movie: movie, imageService: imageService)
       }
 
@@ -49,6 +50,10 @@ class MovieCellPresenterSpec: QuickSpec {
 
         it("sets the title label on the cell") {
           expect(movieCell.titleLabel.text).to(equal("A title"))
+        }
+
+        it("messages the image service to fetch the poster image") {
+          expect(imageService.receivedFetchImage).to(beTrue())
         }
       }
 

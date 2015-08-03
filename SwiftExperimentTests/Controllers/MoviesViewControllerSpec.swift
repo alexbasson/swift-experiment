@@ -12,6 +12,8 @@ class MoviesViewControllerSpec: QuickSpec {
     beforeEach {
       subject = MoviesViewController.getInstanceFromStoryboard("Main") as! MoviesViewController
       subject.configure(movieService: movieService, moviesPresenter: moviesPresenter)
+      movieService.resetSentMessages()
+      moviesPresenter.resetSentMessages()
 
       expect(subject.view).notTo(beNil())
       view = subject.moviesView
@@ -36,11 +38,11 @@ class MoviesViewControllerSpec: QuickSpec {
           }
 
           it("passes the movies to the movies presenter") {
-            expect(moviesPresenter.moviesParam).to(equal([movie0, movie1]))
+            expect(moviesPresenter.presentMoviesInTableViewParams.movies).to(equal([movie0, movie1]))
           }
 
           it("passes the table view to the movies presenter") {
-            expect(moviesPresenter.tableViewParam).to(beIdenticalTo(view.tableView))
+            expect(moviesPresenter.presentMoviesInTableViewParams.tableView).to(beIdenticalTo(view.tableView))
           }
         }
 

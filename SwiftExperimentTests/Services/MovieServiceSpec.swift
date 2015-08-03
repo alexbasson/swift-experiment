@@ -8,24 +8,23 @@ class MovieServiceSpec: QuickSpec {
     let requestProvider = MockRequestProvider()
     let jsonClient = MockJSONClient()
     var closureWasCalled: Bool = false
-    var movieParam: [Movie]!
-    var errorParam: NSError!
 
     beforeEach {
-      requestProvider.receivedGetMoviesRequest = false
-      jsonClient.receivedSendRequest = false
+      jsonClient.resetSentMessages()
+      requestProvider.resetSentMessages()
       closureWasCalled = false
 
       subject = MovieService(requestProvider: requestProvider, jsonClient: jsonClient)
     }
 
     describe("getMovies()") {
+      var getMoviesParams: (movies: [Movie]?, error: NSError?)!
+
       beforeEach {
         subject.getMovies {
-          (movie, error) in
+          (movies, error) in
           closureWasCalled = true
-          movieParam = movie
-          errorParam = error
+          getMoviesParams = (movies: movies, error: error)
         }
       }
 
@@ -35,7 +34,7 @@ class MovieServiceSpec: QuickSpec {
 
       it("messages the json client to send the request") {
         expect(jsonClient.receivedSendRequest).to(beTrue())
-        expect(jsonClient.requestParam).to(beIdenticalTo(requestProvider.fakeGetMoviesRequest))
+        expect(jsonClient.sendRequestParams.request).to(beIdenticalTo(requestProvider.fakeGetMoviesRequest))
       }
 
       describe("when the request returns") {
@@ -57,7 +56,7 @@ class MovieServiceSpec: QuickSpec {
                 ]
               ]
             ]
-            jsonClient.sendRequestClosure(json: json, error: nil)
+            jsonClient.sendRequestParams.closure(json: json, error: nil)
           }
 
           it("calls its closure with the array of movies") {
@@ -65,11 +64,11 @@ class MovieServiceSpec: QuickSpec {
           }
 
           it("passes to the closure the array of movies") {
-            expect(movieParam).to(equal([movie]))
+            expect(getMoviesParams.movies).to(equal([movie]))
           }
 
           it("passes to the closure a nil error") {
-            expect(errorParam).to(beNil())
+            expect(getMoviesParams.error).to(beNil())
           }
         }
 
@@ -78,7 +77,7 @@ class MovieServiceSpec: QuickSpec {
 
           beforeEach {
             error = NSError(domain: "MovieServiceError", code: 0, userInfo: nil)
-            jsonClient.sendRequestClosure(json: nil, error: error)
+            jsonClient.sendRequestParams.closure(json: nil, error: error)
           }
 
           it("calls its closure with the error") {
@@ -86,11 +85,11 @@ class MovieServiceSpec: QuickSpec {
           }
 
           it("passes to the closure a nil array of movies") {
-            expect(movieParam).to(beNil())
+            expect(getMoviesParams.movies).to(beNil())
           }
 
           it("passes to the closure the error") {
-            expect(errorParam).to(equal(error))
+            expect(getMoviesParams.error).to(equal(error))
           }
         }
       }

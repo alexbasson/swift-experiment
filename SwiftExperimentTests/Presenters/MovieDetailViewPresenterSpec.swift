@@ -9,6 +9,7 @@ class MovieDetailViewPresenterSpec: QuickSpec {
       let imageService = MockImageService()
 
       beforeEach {
+        imageService.resetSentMessages()
         subject = MovieDetailViewPresenter(movie: movie, imageService: imageService)
       }
 
@@ -27,6 +28,10 @@ class MovieDetailViewPresenterSpec: QuickSpec {
           } else {
             XCTFail()
           }
+        }
+
+        it("messages the image service to fetch the poster image") {
+          expect(imageService.receivedFetchImage).to(beTrue())
         }
       }
     }

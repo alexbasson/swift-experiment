@@ -8,3 +8,9 @@ class MockMovieDetailViewPresenter: ViewPresenter {
     receivedPresentInView = true
   }
 }
+
+extension MockMovieDetailViewPresenter: Mockable {
+  func resetSentMessages() {
+    receivedPresentInView = false
+  }
+}

@@ -15,7 +15,7 @@ class JSONClientSpec: QuickSpec {
       closureWasCalled = false
       subject = JSONClient(httpClient: httpClient)
 
-      httpClient.receivedSendRequest = false
+      httpClient.resetSentMessages()
 
       request = NSURLRequest()
       closureWasCalled = false
@@ -30,14 +30,14 @@ class JSONClientSpec: QuickSpec {
     describe("sendRequest()") {
       it("messages the http client to send the request") {
         expect(httpClient.receivedSendRequest).to(beTrue())
-        expect(httpClient.requestParam).to(beIdenticalTo(request))
+        expect(httpClient.sendRequestParams.request).to(beIdenticalTo(request))
       }
 
       describe("when the request returns") {
         context("successfully") {
           beforeEach {
             let data = "{}".dataUsingEncoding(NSUTF8StringEncoding)
-            httpClient.sendRequestClosure(data: data, error: nil)
+            httpClient.sendRequestParams.closure(data: data, error: nil)
           }
 
           it("calls its closure with parsed json") {
@@ -51,7 +51,7 @@ class JSONClientSpec: QuickSpec {
 
           beforeEach {
             error = NSError(domain: "JSONClientError", code: 0, userInfo: nil)
-            httpClient.sendRequestClosure(data: nil, error: error)
+            httpClient.sendRequestParams.closure(data: nil, error: error)
           }
 
           it("calls its closure with the error") {

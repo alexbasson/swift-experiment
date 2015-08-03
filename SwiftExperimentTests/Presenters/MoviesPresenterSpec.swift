@@ -8,7 +8,7 @@ class MoviesPresenterSpec: QuickSpec {
       let cellPresenterDataSource = MockCellPresenterDataSource()
 
       beforeEach {
-        cellPresenterDataSource.receivedDisplayCellPresentersInTableView = false
+        cellPresenterDataSource.resetSentMessages()
         subject = MoviesPresenter(cellPresenterDataSource: cellPresenterDataSource)
       }
 
@@ -27,14 +27,15 @@ class MoviesPresenterSpec: QuickSpec {
         }
 
         it("passes to the cell presenter data source an array of cell presenters that have been configured with the movies") {
-          let cellPresenter0 = cellPresenterDataSource.cellPresentersParam[0] as! MovieCellPresenter
-          let cellPresenter1 = cellPresenterDataSource.cellPresentersParam[1] as! MovieCellPresenter
+          let cellPresenters = cellPresenterDataSource.displayCellPresentersInTableViewParams.cellPresenters
+          let cellPresenter0 = cellPresenters[0] as! MovieCellPresenter
+          let cellPresenter1 = cellPresenters[1] as! MovieCellPresenter
           expect(cellPresenter0.movie).to(equal(movie0))
           expect(cellPresenter1.movie).to(equal(movie1))
         }
 
         it("passes to the cell presenter data source the table view") {
-          expect(cellPresenterDataSource.tableViewParam).to(beIdenticalTo(tableView))
+          expect(cellPresenterDataSource.displayCellPresentersInTableViewParams.tableView!).to(beIdenticalTo(tableView))
         }
       }
     }

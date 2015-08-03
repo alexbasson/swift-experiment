@@ -62,6 +62,7 @@
 		FA99F2E21B6B0D1D00D58590 /* MockCellPresenterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F2E11B6B0D1D00D58590 /* MockCellPresenterDataSource.swift */; };
 		FAA395551B6C623A005D0B37 /* MovieDetailViewPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA395541B6C623A005D0B37 /* MovieDetailViewPresenterSpec.swift */; };
 		FAA395581B6D0EE3005D0B37 /* RequestProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA395571B6D0EE3005D0B37 /* RequestProviderSpec.swift */; };
+		FAA395CB1B6FDA68005D0B37 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA395CA1B6FDA68005D0B37 /* Mockable.swift */; };
 		FAA426FC1B59DEFC00D0AA32 /* Pods_SwiftExperimentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA426FB1B59DEFC00D0AA32 /* Pods_SwiftExperimentTests.framework */; };
 		FAA427051B59EC8B00D0AA32 /* HTTPClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA427041B59EC8B00D0AA32 /* HTTPClientSpec.swift */; };
 		FAA427081B59F78B00D0AA32 /* MovieSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA427071B59F78B00D0AA32 /* MovieSpec.swift */; };
@@ -157,6 +158,7 @@
 		FA99F2E11B6B0D1D00D58590 /* MockCellPresenterDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockCellPresenterDataSource.swift; path = ../Helpers/Mocks/MockCellPresenterDataSource.swift; sourceTree = "<group>"; };
 		FAA395541B6C623A005D0B37 /* MovieDetailViewPresenterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewPresenterSpec.swift; sourceTree = "<group>"; };
 		FAA395571B6D0EE3005D0B37 /* RequestProviderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProviderSpec.swift; sourceTree = "<group>"; };
+		FAA395CA1B6FDA68005D0B37 /* Mockable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
 		FAA426FB1B59DEFC00D0AA32 /* Pods_SwiftExperimentTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_SwiftExperimentTests.framework; path = "Pods/../build/Debug-iphoneos/Pods_SwiftExperimentTests.framework"; sourceTree = "<group>"; };
 		FAA427041B59EC8B00D0AA32 /* HTTPClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientSpec.swift; sourceTree = "<group>"; };
 		FAA427071B59F78B00D0AA32 /* MovieSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSpec.swift; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 				FA99F2D41B6A423E00D58590 /* MockMoviePresenter.swift */,
 				FA99F2E11B6B0D1D00D58590 /* MockCellPresenterDataSource.swift */,
 				FA8967D11B6C592A00FFB51E /* MockMovieDetailViewPresenter.swift */,
+				FAA395CA1B6FDA68005D0B37 /* Mockable.swift */,
 			);
 			name = Mocks;
 			path = ../Mocks;
@@ -767,6 +770,7 @@
 				FA96DC821B6326A800776B03 /* CellPresenterDataSourceSpec.swift in Sources */,
 				FA96DC6D1B625DE200776B03 /* MovieDetailViewControllerSpec.swift in Sources */,
 				FA99F2DC1B6B059D00D58590 /* UITableViewCell+ReuseIdentifierSpec.swift in Sources */,
+				FAA395CB1B6FDA68005D0B37 /* Mockable.swift in Sources */,
 				FA99F2C51B67A0F200D58590 /* MockImageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

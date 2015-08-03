@@ -43,15 +43,14 @@ class ImageServiceSpec: QuickSpec {
         }
 
         it("passes the request to the http client") {
-          let request = httpClient.requestParam
-          expect(request.URL).to(equal(url))
+          expect(httpClient.sendRequestParams.request.URL).to(equal(url))
         }
 
         describe("when the request returns") {
           var closure: HTTPClientClosure!
 
           beforeEach {
-            closure = httpClient.sendRequestClosure
+            closure = httpClient.sendRequestParams.closure
           }
 
           context("successfully") {
