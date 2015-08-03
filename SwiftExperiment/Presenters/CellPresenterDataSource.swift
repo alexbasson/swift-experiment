@@ -3,7 +3,7 @@ import UIKit
 public class CellPresenterDataSource: NSObject {
   var cellPresenters: [CellPresenter]?
 
-  public func displayCellPresentersInTableView(cellPresenters cellPresenters: [CellPresenter], tableView: UITableView?) -> Void {
+  public func display(cellPresenters cellPresenters: [CellPresenter], tableView: UITableView?) -> Void {
     self.cellPresenters = cellPresenters
     if let tableView = tableView {
       tableView.dataSource = self as UITableViewDataSource?
@@ -28,7 +28,7 @@ extension CellPresenterDataSource: UITableViewDataSource {
     if let cellPresenters = cellPresenters {
       let cellPresenter = cellPresenters[indexPath.row]
       let cell = tableView.dequeueReusableCellWithIdentifier(cellPresenter.cellIdentifier(), forIndexPath: indexPath)
-      cellPresenter.presentInCell(cell)
+      cellPresenter.present(cell)
       return cell
     }
 

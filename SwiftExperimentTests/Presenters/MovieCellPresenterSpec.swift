@@ -42,7 +42,7 @@ class MovieCellPresenterSpec: QuickSpec {
           let tableView = vc.moviesView.tableView
           if let tableView = tableView {
             movieCell = tableView.dequeueReusableCellWithIdentifier(MovieTableViewCell.reuseIdentifier()) as! MovieTableViewCell
-            subject.presentInCell(movieCell)
+            subject.present(movieCell)
           } else {
             XCTFail()
           }

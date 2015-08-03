@@ -11,13 +11,13 @@ public class MoviesPresenter {
     self.init(cellPresenterDataSource: CellPresenterDataSource())
   }
 
-  public func presentMoviesInTableView(movies movies: [Movie], tableView: UITableView?) -> Void {
+  public func present(movies movies: [Movie], tableView: UITableView?) -> Void {
     var cellPresenters: [CellPresenter] = []
 
     for movie in movies {
       cellPresenters.append(MovieCellPresenter(movie: movie, imageService: ImageService.sharedInstance))
     }
 
-    cellPresenterDataSource.displayCellPresentersInTableView(cellPresenters: cellPresenters, tableView: tableView)
+    cellPresenterDataSource.display(cellPresenters: cellPresenters, tableView: tableView)
   }
 }

@@ -19,7 +19,7 @@ public class MovieCellPresenter: CellPresenter {
     tableView.registerClass(MovieTableViewCell.self, forCellReuseIdentifier: MovieTableViewCell.reuseIdentifier())
   }
 
-  public func presentInCell(cell: UITableViewCell) {
+  public func present(cell: UITableViewCell) {
     let movieCell = cell as! MovieTableViewCell
     movieCell.titleLabel.text = movie.title
     imageService.fetchImage(url: movie.posters.thumbnailURL) {

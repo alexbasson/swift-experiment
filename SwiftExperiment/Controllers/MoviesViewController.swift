@@ -19,7 +19,7 @@ public class MoviesViewController: UIViewController {
       (movies, error) in
       if let movies = movies {
         self.movies = movies
-        self.moviesPresenter.presentMoviesInTableView(movies: movies, tableView: self.moviesView.tableView)
+        self.moviesPresenter.present(movies: movies, tableView: self.moviesView.tableView)
       } else if let error = error {
         print(error)
         // do something with the error

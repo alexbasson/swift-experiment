@@ -19,15 +19,15 @@ class MoviesPresenterSpec: QuickSpec {
 
         beforeEach {
           tableView = UITableView()
-          subject.presentMoviesInTableView(movies: [movie0, movie1], tableView: tableView)
+          subject.present(movies: [movie0, movie1], tableView: tableView)
         }
 
         it("messages the cell presenter data source to display cell presenters in a table view") {
-          expect(cellPresenterDataSource.receivedDisplayCellPresentersInTableView).to(beTrue())
+          expect(cellPresenterDataSource.receivedDisplay).to(beTrue())
         }
 
         it("passes to the cell presenter data source an array of cell presenters that have been configured with the movies") {
-          let cellPresenters = cellPresenterDataSource.displayCellPresentersInTableViewParams.cellPresenters
+          let cellPresenters = cellPresenterDataSource.displayParams.cellPresenters
           let cellPresenter0 = cellPresenters[0] as! MovieCellPresenter
           let cellPresenter1 = cellPresenters[1] as! MovieCellPresenter
           expect(cellPresenter0.movie).to(equal(movie0))
@@ -35,7 +35,7 @@ class MoviesPresenterSpec: QuickSpec {
         }
 
         it("passes to the cell presenter data source the table view") {
-          expect(cellPresenterDataSource.displayCellPresentersInTableViewParams.tableView!).to(beIdenticalTo(tableView))
+          expect(cellPresenterDataSource.displayParams.tableView!).to(beIdenticalTo(tableView))
         }
       }
     }

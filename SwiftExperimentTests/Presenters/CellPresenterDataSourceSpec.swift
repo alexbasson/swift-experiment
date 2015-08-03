@@ -6,7 +6,7 @@ public class MockCellPresenter: CellPresenter {
   public static func register(tableView tableView: UITableView) {
     tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
   }
-  public func presentInCell(cell: UITableViewCell) {}
+  public func present(cell: UITableViewCell) {}
   public func cellIdentifier() -> String { return "Cell" }
 }
 
@@ -27,7 +27,7 @@ class CellPresenterDataSourceSpec: QuickSpec {
       beforeEach {
         MockCellPresenter.register(tableView: tableView)
 
-        subject.displayCellPresentersInTableView(cellPresenters: [cellPresenter0, cellPresenter1], tableView: tableView)
+        subject.display(cellPresenters: [cellPresenter0, cellPresenter1], tableView: tableView)
 
         tableView.layoutIfNeeded()
         cells = tableView.visibleCells

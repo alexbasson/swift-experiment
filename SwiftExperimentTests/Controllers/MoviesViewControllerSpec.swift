@@ -34,15 +34,15 @@ class MoviesViewControllerSpec: QuickSpec {
           }
 
           it("messages the moviesPresenter to present the movies in the tableView") {
-            expect(moviesPresenter.receivedPresentMoviesInTableView).to(beTruthy())
+            expect(moviesPresenter.receivedPresent).to(beTruthy())
           }
 
           it("passes the movies to the movies presenter") {
-            expect(moviesPresenter.presentMoviesInTableViewParams.movies).to(equal([movie0, movie1]))
+            expect(moviesPresenter.presentParams.movies).to(equal([movie0, movie1]))
           }
 
           it("passes the table view to the movies presenter") {
-            expect(moviesPresenter.presentMoviesInTableViewParams.tableView).to(beIdenticalTo(view.tableView))
+            expect(moviesPresenter.presentParams.tableView).to(beIdenticalTo(view.tableView))
           }
         }
 
