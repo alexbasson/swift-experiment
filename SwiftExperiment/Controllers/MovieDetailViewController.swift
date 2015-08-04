@@ -16,7 +16,7 @@ public class MovieDetailViewController: UIViewController {
     super.viewDidLoad()
 
     if let viewPresenter = viewPresenter {
-      viewPresenter.presentInView(self.view)
+      viewPresenter.present(self.view)
     }
   }
 }

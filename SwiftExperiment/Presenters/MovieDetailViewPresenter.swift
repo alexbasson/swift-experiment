@@ -11,7 +11,7 @@ public class MovieDetailViewPresenter: ViewPresenter {
     self.imageService = imageService
   }
 
-  public func presentInView(view: UIView) {
+  public func present(view: UIView) {
     let view = view as! MovieDetailView
     if let titleLabel = view.titleLabel {
       titleLabel.text = movie.title

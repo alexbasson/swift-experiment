@@ -19,7 +19,7 @@ class MovieDetailViewPresenterSpec: QuickSpec {
         beforeEach {
           let vc = MovieDetailViewController.getInstanceFromStoryboard("Main")
           view = vc.view as! MovieDetailView
-          subject.presentInView(view)
+          subject.present(view)
         }
 
         it("sets the title label's text to the movie's title") {

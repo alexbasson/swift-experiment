@@ -5,7 +5,7 @@ class MockMovieDetailViewPresenter: ViewPresenter {
   typealias presentTuple = (wasReceived: Bool, view: UIView!)
 
   var present: presentTuple = (wasReceived: false, view: nil)
-  func presentInView(view: UIView) {
+  func present(view: UIView) {
     present = (wasReceived: true, view: view)
   }
 }
