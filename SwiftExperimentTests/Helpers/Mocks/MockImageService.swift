@@ -2,19 +2,16 @@ import Foundation
 import SwiftExperiment
 
 class MockImageService: ImageServiceInterface {
-  var receivedFetchImage = false
-  var fetchImageURLParam: NSURL!
-  var fetchImageClosure: ImageServiceClosure!
-  var fetchImageParams: (url: NSURL, closure: ImageServiceClosure)!
+  typealias fetchImagesTuple = (wasReceived: Bool, params: (url: NSURL!, closure: ImageServiceClosure!))
 
+  var fetchImage: fetchImagesTuple = (wasReceived: false, params: (url: nil, closure: nil))
   func fetchImage(url url: NSURL, closure: ImageServiceClosure) {
-    receivedFetchImage = true
-    fetchImageParams = (url: url, closure: closure)
+    fetchImage = (wasReceived: true, params: (url: url, closure: closure))
   }
 }
 
 extension MockImageService: Mockable {
   func resetSentMessages() {
-    receivedFetchImage = false
+    fetchImage = (wasReceived: false, params: (url: nil, closure: nil))
   }
 }

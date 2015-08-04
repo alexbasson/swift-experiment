@@ -1,17 +1,16 @@
 import SwiftExperiment
 
-public class MockMovieService: MovieServiceInterface {
-  public var receivedGetMovies = false
-  public var getMoviesClosure: MovieServiceClosure!
+class MockMovieService: MovieServiceInterface {
+  typealias getMoviesTuple = (wasReceived: Bool, closure: MovieServiceClosure!)
 
-  public func getMovies(closure: MovieServiceClosure) {
-    receivedGetMovies = true
-    getMoviesClosure = closure
+  var getMovies: getMoviesTuple = (wasReceived: false, closure: nil)
+  func getMovies(closure: MovieServiceClosure) {
+    getMovies = (wasReceived: true, closure: closure)
   }
 }
 
 extension MockMovieService: Mockable {
   func resetSentMessages() {
-    receivedGetMovies = false
+    getMovies = (wasReceived: false, closure: nil)
   }
 }

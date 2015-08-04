@@ -21,7 +21,7 @@ class MoviesViewControllerSpec: QuickSpec {
 
     describe("when the view loads") {
       it("messages the movie service to get movies") {
-        expect(movieService.receivedGetMovies).to(beTruthy())
+        expect(movieService.getMovies.wasReceived).to(beTruthy())
       }
 
       describe("when the service returns") {
@@ -30,19 +30,19 @@ class MoviesViewControllerSpec: QuickSpec {
           let movie1 = Movie(title: "Up")
 
           beforeEach {
-            movieService.getMoviesClosure(movies: [movie0, movie1], error: nil)
+            movieService.getMovies.closure(movies: [movie0, movie1], error: nil)
           }
 
           it("messages the moviesPresenter to present the movies in the tableView") {
-            expect(moviesPresenter.receivedPresent).to(beTruthy())
+            expect(moviesPresenter.present.wasReceived).to(beTruthy())
           }
 
           it("passes the movies to the movies presenter") {
-            expect(moviesPresenter.presentParams.movies).to(equal([movie0, movie1]))
+            expect(moviesPresenter.present.params.movies).to(equal([movie0, movie1]))
           }
 
           it("passes the table view to the movies presenter") {
-            expect(moviesPresenter.presentParams.tableView).to(beIdenticalTo(view.tableView))
+            expect(moviesPresenter.present.params.tableView).to(beIdenticalTo(view.tableView))
           }
         }
 
@@ -51,7 +51,7 @@ class MoviesViewControllerSpec: QuickSpec {
 
           beforeEach {
             error = NSError(domain: "MovieServiceError", code: 0, userInfo: nil)
-            movieService.getMoviesClosure(movies: nil, error: error)
+            movieService.getMovies.closure(movies: nil, error: error)
           }
         }
       }
@@ -64,7 +64,7 @@ class MoviesViewControllerSpec: QuickSpec {
       beforeEach {
         let movie0 = Movie(title: "Wall-E")
         let movie1 = Movie(title: "Up")
-        movieService.getMoviesClosure(movies: [movie0, movie1], error: nil)
+        movieService.getMovies.closure(movies: [movie0, movie1], error: nil)
 
         if let tableView = view.tableView {
           tableView.layoutIfNeeded()

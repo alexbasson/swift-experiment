@@ -2,15 +2,16 @@ import UIKit
 import SwiftExperiment
 
 class MockMovieDetailViewPresenter: ViewPresenter {
-  var receivedPresentInView = false
+  typealias presentTuple = (wasReceived: Bool, view: UIView!)
 
+  var present: presentTuple = (wasReceived: false, view: nil)
   func presentInView(view: UIView) {
-    receivedPresentInView = true
+    present = (wasReceived: true, view: view)
   }
 }
 
 extension MockMovieDetailViewPresenter: Mockable {
   func resetSentMessages() {
-    receivedPresentInView = false
+    present = (wasReceived: false, view: nil)
   }
 }

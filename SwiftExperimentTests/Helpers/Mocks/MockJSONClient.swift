@@ -2,17 +2,16 @@ import Foundation
 import SwiftExperiment
 
 class MockJSONClient: JSONClientInterface {
-  var receivedSendRequest = false
-  var sendRequestParams: (request: NSURLRequest, closure: JSONClientClosure)!
+  typealias sendRequestTuple = (wasReceived: Bool, params: (request: NSURLRequest!, closure: JSONClientClosure!))
 
+  var sendRequest: sendRequestTuple = (wasReceived: false, params: (request: nil, closure: nil))
   func sendRequest(request: NSURLRequest, closure: JSONClientClosure) {
-    receivedSendRequest = true
-    sendRequestParams = (request: request, closure: closure)
+    sendRequest = (wasReceived: true, params: (request: request, closure: closure))
   }
 }
 
 extension MockJSONClient: Mockable {
   func resetSentMessages() {
-    receivedSendRequest = false
+    sendRequest = (wasReceived: false, params: (request: nil, closure: nil))
   }
 }

@@ -2,17 +2,16 @@ import UIKit
 import SwiftExperiment
 
 class MockCellPresenterDataSource: CellPresenterDataSource {
-  var receivedDisplay = false
-  var displayParams: (cellPresenters: [CellPresenter], tableView: UITableView?)!
+  typealias displayTuple = (wasReceived: Bool, params: (cellPresenters: [CellPresenter]!, tableView: UITableView!))
 
+  var display: displayTuple = (wasReceived: false, params: (cellPresenters: nil, tableView: nil))
   override func display(cellPresenters cellPresenters: [CellPresenter], tableView: UITableView?) {
-    receivedDisplay = true
-    displayParams = (cellPresenters: cellPresenters, tableView: tableView)
+    display = (wasReceived: true, params: (cellPresenters: cellPresenters, tableView: tableView))
   }
 }
 
 extension MockCellPresenterDataSource: Mockable {
   func resetSentMessages() {
-    receivedDisplay = false
+    display = (wasReceived: false, params: (cellPresenters: nil, tableView: nil))
   }
 }

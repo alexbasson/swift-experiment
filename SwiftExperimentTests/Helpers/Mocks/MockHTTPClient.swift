@@ -2,18 +2,17 @@ import Foundation
 import SwiftExperiment
 
 class MockHTTPClient: HTTPClientInterface {
-  var receivedSendRequest = false
-  var sendRequestParams: (request: NSURLRequest, closure: HTTPClientClosure)!
+  typealias sendRequestTuple = (wasReceived: Bool, params: (request: NSURLRequest!, closure: HTTPClientClosure!))
 
+  var sendRequest: sendRequestTuple = (wasReceived: false, params: (request: nil, closure: nil))
   func sendRequest(request: NSURLRequest, closure: HTTPClientClosure) {
-    receivedSendRequest = true
-    sendRequestParams = (request: request, closure: closure)
+    sendRequest = (wasReceived: true, params: (request: request, closure: closure))
   }
 }
 
 extension MockHTTPClient: Mockable {
   func resetSentMessages() {
-    receivedSendRequest = false
+    sendRequest = (wasReceived: false, params: (request: nil, closure: nil))
   }
 }
 

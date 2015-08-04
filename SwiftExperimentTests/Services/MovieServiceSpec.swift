@@ -29,12 +29,12 @@ class MovieServiceSpec: QuickSpec {
       }
 
       it("gets the getMovies request from the request provider") {
-        expect(requestProvider.receivedGetMoviesRequest).to(beTrue())
+        expect(requestProvider.getMoviesRequestWasReceived).to(beTrue())
       }
 
       it("messages the json client to send the request") {
-        expect(jsonClient.receivedSendRequest).to(beTrue())
-        expect(jsonClient.sendRequestParams.request).to(beIdenticalTo(requestProvider.fakeGetMoviesRequest))
+        expect(jsonClient.sendRequest.wasReceived).to(beTrue())
+        expect(jsonClient.sendRequest.params.request).to(beIdenticalTo(requestProvider.fakeGetMoviesRequest))
       }
 
       describe("when the request returns") {
@@ -56,7 +56,7 @@ class MovieServiceSpec: QuickSpec {
                 ]
               ]
             ]
-            jsonClient.sendRequestParams.closure(json: json, error: nil)
+            jsonClient.sendRequest.params.closure(json: json, error: nil)
           }
 
           it("calls its closure with the array of movies") {
@@ -77,7 +77,7 @@ class MovieServiceSpec: QuickSpec {
 
           beforeEach {
             error = NSError(domain: "MovieServiceError", code: 0, userInfo: nil)
-            jsonClient.sendRequestParams.closure(json: nil, error: error)
+            jsonClient.sendRequest.params.closure(json: nil, error: error)
           }
 
           it("calls its closure with the error") {

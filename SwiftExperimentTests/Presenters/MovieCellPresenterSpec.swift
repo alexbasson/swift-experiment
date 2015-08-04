@@ -53,7 +53,7 @@ class MovieCellPresenterSpec: QuickSpec {
         }
 
         it("messages the image service to fetch the poster image") {
-          expect(imageService.receivedFetchImage).to(beTrue())
+          expect(imageService.fetchImage.wasReceived).to(beTrue())
         }
       }
 

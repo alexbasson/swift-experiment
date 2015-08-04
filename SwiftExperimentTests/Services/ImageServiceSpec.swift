@@ -22,7 +22,7 @@ class ImageServiceSpec: QuickSpec {
       let httpClient = MockHTTPClient()
 
       beforeEach {
-        httpClient.receivedSendRequest = false
+        httpClient.resetSentMessages()
         subject = ImageService(httpClient: httpClient)
       }
 
@@ -39,18 +39,18 @@ class ImageServiceSpec: QuickSpec {
         }
 
         it("messages the http client to make a request") {
-          expect(httpClient.receivedSendRequest).to(beTrue())
+          expect(httpClient.sendRequest.wasReceived).to(beTrue())
         }
 
         it("passes the request to the http client") {
-          expect(httpClient.sendRequestParams.request.URL).to(equal(url))
+          expect(httpClient.sendRequest.params.request.URL).to(equal(url))
         }
 
         describe("when the request returns") {
           var closure: HTTPClientClosure!
 
           beforeEach {
-            closure = httpClient.sendRequestParams.closure
+            closure = httpClient.sendRequest.params.closure
           }
 
           context("successfully") {

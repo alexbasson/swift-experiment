@@ -2,18 +2,17 @@ import UIKit
 import SwiftExperiment
 
 class MockMoviesPresenter: MoviesPresenter {
-  var receivedPresent = false
-  var presentParams: (movies: [Movie], tableView: UITableView?)!
+  typealias presentTuple = (wasReceived: Bool, params: (movies: [Movie]!, tableView: UITableView!))
 
+  var present: presentTuple = (wasReceived: false, params: (movies: nil, tableView: nil))
   override func present(movies movies: [Movie], tableView: UITableView?) {
-    receivedPresent = true
-    presentParams = (movies: movies, tableView: tableView)
+    present = (wasReceived: true, params: (movies: movies, tableView: tableView))
     super.present(movies: movies, tableView: tableView)
   }
 }
 
 extension MockMoviesPresenter: Mockable {
   func resetSentMessages() {
-    receivedPresent = false
+    present = (wasReceived: false, params: (movies: nil, tableView: nil))
   }
 }

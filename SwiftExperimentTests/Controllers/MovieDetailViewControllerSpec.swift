@@ -21,7 +21,7 @@ class MovieDetailViewControllerSpec: QuickSpec {
 
     describe("when the view loads") {
       it("sets the title label text") {
-        expect(viewPresenter.receivedPresentInView).to(beTrue())
+        expect(viewPresenter.present.wasReceived).to(beTrue())
       }
     }
   }

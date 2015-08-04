@@ -1,18 +1,18 @@
 import Foundation
 import SwiftExperiment
 
-public class MockRequestProvider: RequestProvider {
-  public var receivedGetMoviesRequest = false
-  public let fakeGetMoviesRequest = NSURLRequest()
+class MockRequestProvider: RequestProvider {
+  let fakeGetMoviesRequest = NSURLRequest()
 
-  override public func getMoviesRequest() -> NSURLRequest? {
-    receivedGetMoviesRequest = true
+  var getMoviesRequestWasReceived = false
+  override func getMoviesRequest() -> NSURLRequest? {
+    getMoviesRequestWasReceived = true
     return fakeGetMoviesRequest
   }
 }
 
 extension MockRequestProvider: Mockable {
   func resetSentMessages() {
-    receivedGetMoviesRequest = false
+    getMoviesRequestWasReceived = false
   }
 }
