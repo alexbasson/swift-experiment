@@ -6,7 +6,7 @@ func performOnMainQueue(closure: () -> Void) {
   }
 }
 
-public class MovieCellPresenter: CellPresenter {
+public class MovieCellPresenter {
   public let movie: Movie
   public let imageService: ImageServiceInterface
 
@@ -14,7 +14,9 @@ public class MovieCellPresenter: CellPresenter {
     self.movie = movie
     self.imageService = imageService
   }
+}
 
+extension MovieCellPresenter: CellPresenter {
   public static func register(tableView tableView: UITableView) {
     tableView.registerClass(MovieTableViewCell.self, forCellReuseIdentifier: MovieTableViewCell.reuseIdentifier())
   }
