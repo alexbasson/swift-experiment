@@ -8,7 +8,8 @@ public class HTTPClient: HTTPClientInterface {
   }
 
   public convenience init() {
-    self.init(session: NSURLSession.sharedSession())
+    let session = NSURLSession(configuration: NSURLSessionConfiguration.ephemeralSessionConfiguration())
+    self.init(session: session)
   }
 
   public func sendRequest(request: NSURLRequest, closure: HTTPClientClosure) {
