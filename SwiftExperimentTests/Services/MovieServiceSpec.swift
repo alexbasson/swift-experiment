@@ -29,7 +29,7 @@ class MovieServiceSpec: QuickSpec {
       }
 
       it("gets the getMovies request from the request provider") {
-        expect(requestProvider.getMoviesRequestWasReceived).to(beTrue())
+        expect(requestProvider.getMoviesRequestInvocation.wasReceived).to(beTrue())
       }
 
       it("messages the json client to send the request") {
