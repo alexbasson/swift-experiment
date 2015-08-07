@@ -29,6 +29,7 @@ class ImageServiceSpec: QuickSpec {
       describe("fetchImage()") {
         var url: NSURL!
         var fetchedImage: UIImage!
+        var sendRequestParams: MockHTTPClient.SendRequestParams!
 
         beforeEach {
           url = NSURL(string: "example.com")!
@@ -36,21 +37,22 @@ class ImageServiceSpec: QuickSpec {
             (image) in
             fetchedImage = image
           }
+          sendRequestParams = httpClient.sendRequestInvocation.params as! MockHTTPClient.SendRequestParams
         }
 
         it("messages the http client to make a request") {
-          expect(httpClient.sendRequest.wasReceived).to(beTrue())
+          expect(httpClient.sendRequestInvocation.wasReceived).to(beTrue())
         }
 
         it("passes the request to the http client") {
-          expect(httpClient.sendRequest.params.request.URL).to(equal(url))
+          expect(sendRequestParams.request.URL).to(equal(url))
         }
 
         describe("when the request returns") {
           var closure: HTTPClientClosure!
 
           beforeEach {
-            closure = httpClient.sendRequest.params.closure
+            closure = sendRequestParams.closure
           }
 
           context("successfully") {

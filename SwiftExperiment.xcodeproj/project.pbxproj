@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DC90F1B7ED7E6218D24F3EB8 /* Pods_SwiftExperimentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8993E2EE26DF516905C94059 /* Pods_SwiftExperimentUITests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FA17C4FD1B610B21004C3F56 /* UIViewController+StoryboardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17C4FC1B610B21004C3F56 /* UIViewController+StoryboardIdentifier.swift */; };
+		FA28B4B01B755F6600AA1E4C /* Invocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28B4AF1B755F6600AA1E4C /* Invocation.swift */; };
 		FA45475E1B5F242B0034D6D2 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45475D1B5F242B0034D6D2 /* MovieDetailViewController.swift */; };
 		FA4547601B5F26C80034D6D2 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45475F1B5F26C80034D6D2 /* MovieDetailView.swift */; };
 		FA4547631B5F2AAE0034D6D2 /* UITableViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4547621B5F2AAE0034D6D2 /* UITableViewCell+ReuseIdentifier.swift */; };
@@ -100,6 +101,7 @@
 		E2AA8656D9F886B7449E3F55 /* Pods-SwiftExperimentUITests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftExperimentUITests.staging.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftExperimentUITests/Pods-SwiftExperimentUITests.staging.xcconfig"; sourceTree = "<group>"; };
 		F61DB120E5B5A75F1ABA1C3A /* Pods_SwiftExperimentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftExperimentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA17C4FC1B610B21004C3F56 /* UIViewController+StoryboardIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardIdentifier.swift"; sourceTree = "<group>"; };
+		FA28B4AF1B755F6600AA1E4C /* Invocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invocation.swift; sourceTree = "<group>"; };
 		FA45475D1B5F242B0034D6D2 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		FA45475F1B5F26C80034D6D2 /* MovieDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		FA4547621B5F2AAE0034D6D2 /* UITableViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 				FA8967D11B6C592A00FFB51E /* MockMovieDetailViewPresenter.swift */,
 				FAA395D01B704F66005D0B37 /* MockNSURLSessionDataTask.swift */,
 				FAA395CA1B6FDA68005D0B37 /* Mockable.swift */,
+				FA28B4AF1B755F6600AA1E4C /* Invocation.swift */,
 			);
 			name = Mocks;
 			path = ../Mocks;
@@ -752,6 +755,7 @@
 				FA99F2E21B6B0D1D00D58590 /* MockCellPresenterDataSource.swift in Sources */,
 				FA99F2D11B69BF3100D58590 /* MovieFactory.swift in Sources */,
 				FAA395581B6D0EE3005D0B37 /* RequestProviderSpec.swift in Sources */,
+				FA28B4B01B755F6600AA1E4C /* Invocation.swift in Sources */,
 				FA99F2BF1B67A05200D58590 /* MockRequestProvider.swift in Sources */,
 				FADD04381B55F25C00B4DA2B /* JSONClientSpec.swift in Sources */,
 				FAA395551B6C623A005D0B37 /* MovieDetailViewPresenterSpec.swift in Sources */,
