@@ -19,6 +19,7 @@ class MovieServiceSpec: QuickSpec {
 
     describe("getMovies()") {
       var getMoviesParams: (movies: [Movie]?, error: NSError?)!
+      var sendRequestParams: MockJSONClient.SendRequestParams!
 
       beforeEach {
         subject.getMovies {
@@ -26,6 +27,7 @@ class MovieServiceSpec: QuickSpec {
           closureWasCalled = true
           getMoviesParams = (movies: movies, error: error)
         }
+        sendRequestParams = jsonClient.sendRequestInvocation.params as! MockJSONClient.SendRequestParams
       }
 
       it("gets the getMovies request from the request provider") {
@@ -33,8 +35,8 @@ class MovieServiceSpec: QuickSpec {
       }
 
       it("messages the json client to send the request") {
-        expect(jsonClient.sendRequest.wasReceived).to(beTrue())
-        expect(jsonClient.sendRequest.params.request).to(beIdenticalTo(requestProvider.fakeGetMoviesRequest))
+        expect(jsonClient.sendRequestInvocation.wasReceived).to(beTrue())
+        expect(sendRequestParams.request).to(beIdenticalTo(requestProvider.fakeGetMoviesRequest))
       }
 
       describe("when the request returns") {
@@ -56,7 +58,7 @@ class MovieServiceSpec: QuickSpec {
                 ]
               ]
             ]
-            jsonClient.sendRequest.params.closure(json: json, error: nil)
+            sendRequestParams.closure(json: json, error: nil)
           }
 
           it("calls its closure with the array of movies") {
@@ -77,7 +79,7 @@ class MovieServiceSpec: QuickSpec {
 
           beforeEach {
             error = NSError(domain: "MovieServiceError", code: 0, userInfo: nil)
-            jsonClient.sendRequest.params.closure(json: nil, error: error)
+            sendRequestParams.closure(json: nil, error: error)
           }
 
           it("calls its closure with the error") {

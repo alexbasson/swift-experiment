@@ -10,6 +10,7 @@ class JSONClientSpec: QuickSpec {
     var request: NSURLRequest!
     var jsonParam: AnyObject!
     var errorParam: NSError!
+    var sendRequestParams: MockHTTPClient.SendRequestParams!
 
     beforeEach {
       closureWasCalled = false
@@ -25,12 +26,12 @@ class JSONClientSpec: QuickSpec {
         jsonParam = json
         errorParam = error
       }
+      sendRequestParams = httpClient.sendRequestInvocation.params as! MockHTTPClient.SendRequestParams
     }
 
     describe("sendRequest()") {
       it("messages the http client to send the request") {
         expect(httpClient.sendRequestInvocation.wasReceived).to(beTrue())
-        let sendRequestParams = httpClient.sendRequestInvocation.params as! MockHTTPClient.SendRequestParams
         expect(sendRequestParams.request).to(beIdenticalTo(request))
       }
 
