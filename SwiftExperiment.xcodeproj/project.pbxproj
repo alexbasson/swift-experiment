@@ -26,8 +26,6 @@
 		FA7260811B47736B00422466 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260801B47736B00422466 /* MoviesView.swift */; };
 		FA7260831B477E8400422466 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260821B477E8400422466 /* MovieTableViewCell.swift */; };
 		FA7260861B47833E00422466 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260851B47833E00422466 /* Movie.swift */; };
-		FA7260A31B48D1D100422466 /* Production.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA7260A21B48D1D100422466 /* Production.plist */; };
-		FA7260A51B48DF6600422466 /* Test.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA7260A41B48DF6600422466 /* Test.plist */; };
 		FA7260A81B4B646600422466 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260A71B4B646600422466 /* MovieService.swift */; };
 		FA7260AF1B4B6FDE00422466 /* MovieServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260AE1B4B6FDE00422466 /* MovieServiceSpec.swift */; };
 		FA7260B91B4CBA7600422466 /* JSONClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7260B81B4CBA7600422466 /* JSONClient.swift */; };
@@ -124,8 +122,6 @@
 		FA7260801B47736B00422466 /* MoviesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
 		FA7260821B477E8400422466 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		FA7260851B47833E00422466 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		FA7260A21B48D1D100422466 /* Production.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Production.plist; sourceTree = "<group>"; };
-		FA7260A41B48DF6600422466 /* Test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Test.plist; sourceTree = "<group>"; };
 		FA7260A71B4B646600422466 /* MovieService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		FA7260AE1B4B6FDE00422466 /* MovieServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieServiceSpec.swift; sourceTree = "<group>"; };
 		FA7260B81B4CBA7600422466 /* JSONClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONClient.swift; sourceTree = "<group>"; };
@@ -272,8 +268,6 @@
 				FA4965621B47598500D487F1 /* Assets.xcassets */,
 				FA4965641B47598500D487F1 /* LaunchScreen.storyboard */,
 				FA4965671B47598500D487F1 /* Info.plist */,
-				FA7260A21B48D1D100422466 /* Production.plist */,
-				FA7260A41B48DF6600422466 /* Test.plist */,
 			);
 			path = SwiftExperiment;
 			sourceTree = "<group>";
@@ -612,8 +606,6 @@
 			files = (
 				FA4965661B47598500D487F1 /* LaunchScreen.storyboard in Resources */,
 				FA4965631B47598500D487F1 /* Assets.xcassets in Resources */,
-				FA7260A51B48DF6600422466 /* Test.plist in Resources */,
-				FA7260A31B48D1D100422466 /* Production.plist in Resources */,
 				FA4965611B47598500D487F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -864,6 +856,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MOVIE_SERVICE_API_KEY = none;
+				MOVIE_SERVICE_URL = "http://localhost:8000/movies.json";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
@@ -904,6 +898,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MOVIE_SERVICE_API_KEY = f5u89dy6zq9ccyh5a728dzcu;
+				MOVIE_SERVICE_URL = "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
@@ -1027,6 +1023,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MOVIE_SERVICE_API_KEY = none;
+				MOVIE_SERVICE_URL = "http://localhost:8000/movies.json";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1106,6 +1104,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MOVIE_SERVICE_API_KEY = none;
+				MOVIE_SERVICE_URL = "http://localhost:8000/movies.json";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
