@@ -10,6 +10,7 @@
 		DC90F1B7ED7E6218D24F3EB8 /* Pods_SwiftExperimentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8993E2EE26DF516905C94059 /* Pods_SwiftExperimentUITests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FA17C4FD1B610B21004C3F56 /* UIViewController+StoryboardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17C4FC1B610B21004C3F56 /* UIViewController+StoryboardIdentifier.swift */; };
 		FA28B4B01B755F6600AA1E4C /* Invocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28B4AF1B755F6600AA1E4C /* Invocation.swift */; };
+		FA3FFC911B7CB5B800643565 /* UIViewController+RenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3FFC901B7CB5B800643565 /* UIViewController+RenderView.swift */; };
 		FA45475E1B5F242B0034D6D2 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45475D1B5F242B0034D6D2 /* MovieDetailViewController.swift */; };
 		FA4547601B5F26C80034D6D2 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45475F1B5F26C80034D6D2 /* MovieDetailView.swift */; };
 		FA4547631B5F2AAE0034D6D2 /* UITableViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4547621B5F2AAE0034D6D2 /* UITableViewCell+ReuseIdentifier.swift */; };
@@ -100,6 +101,7 @@
 		F61DB120E5B5A75F1ABA1C3A /* Pods_SwiftExperimentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftExperimentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA17C4FC1B610B21004C3F56 /* UIViewController+StoryboardIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardIdentifier.swift"; sourceTree = "<group>"; };
 		FA28B4AF1B755F6600AA1E4C /* Invocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invocation.swift; sourceTree = "<group>"; };
+		FA3FFC901B7CB5B800643565 /* UIViewController+RenderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+RenderView.swift"; sourceTree = "<group>"; };
 		FA45475D1B5F242B0034D6D2 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		FA45475F1B5F26C80034D6D2 /* MovieDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		FA4547621B5F2AAE0034D6D2 /* UITableViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
@@ -218,6 +220,14 @@
 				E2AA8656D9F886B7449E3F55 /* Pods-SwiftExperimentUITests.staging.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA3FFC8F1B7CB59A00643565 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA3FFC901B7CB5B800643565 /* UIViewController+RenderView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FA4547611B5F2A500034D6D2 /* Extensions */ = {
@@ -463,6 +473,7 @@
 		FAAE14BC1B6BE02900DD0610 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FA3FFC8F1B7CB59A00643565 /* Extensions */,
 				FAAE14BD1B6BE13500DD0610 /* Fixtures */,
 				FA99F2CF1B69BF1F00D58590 /* Factories */,
 				FA99F2BB1B679FD500D58590 /* Mocks */,
@@ -762,6 +773,7 @@
 				FA7260AF1B4B6FDE00422466 /* MovieServiceSpec.swift in Sources */,
 				FA8967D21B6C592A00FFB51E /* MockMovieDetailViewPresenter.swift in Sources */,
 				FA99F2C11B67A08100D58590 /* MockJSONClient.swift in Sources */,
+				FA3FFC911B7CB5B800643565 /* UIViewController+RenderView.swift in Sources */,
 				FA99F2D51B6A423E00D58590 /* MockMoviePresenter.swift in Sources */,
 				FA99F2C71B67A14700D58590 /* MockNSURLSession.swift in Sources */,
 				FA99F2D31B6A3E4A00D58590 /* PostersFactory.swift in Sources */,
