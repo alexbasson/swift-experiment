@@ -1,18 +1,23 @@
+import Foundation
 import XCTest
 
 class SwiftExperimentUITests: XCTestCase {
 
-    override func setUp() {
-        super.setUp()
+  override func setUp() {
+    super.setUp()
 
-        continueAfterFailure = false
-        XCUIApplication().launch()
-    }
+    continueAfterFailure = false
+    XCUIApplication().launch()
+  }
 
-    func testExample() {
-      let app = XCUIApplication()
-      let table = app.tables
-      table.staticTexts["Ant-Man"].tap()
-    }
+  override func tearDown() {
+    super.tearDown()
+  }
+
+  func testUserSeesMoviesList() {
+    let app = XCUIApplication()
+    let table = app.tables
+    table.staticTexts["Ant-Man"].tap()
+  }
 
 }
