@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DDFAB7845C07A51FA525AAE6 /* Pods_SwiftExperimentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8993E2EE26DF516905C94059 /* Pods_SwiftExperimentUITests.framework */; };
 		FA17C4FD1B610B21004C3F56 /* UIViewController+StoryboardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17C4FC1B610B21004C3F56 /* UIViewController+StoryboardIdentifier.swift */; };
 		FA28B4B01B755F6600AA1E4C /* Invocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28B4AF1B755F6600AA1E4C /* Invocation.swift */; };
 		FA3FFC911B7CB5B800643565 /* UIViewController+RenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3FFC901B7CB5B800643565 /* UIViewController+RenderView.swift */; };
@@ -189,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDFAB7845C07A51FA525AAE6 /* Pods_SwiftExperimentUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,9 +551,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA5F7BBB1B7ECDEC00344017 /* Build configuration list for PBXNativeTarget "SwiftExperimentUITests" */;
 			buildPhases = (
+				740DDC895F7EAFC06E09300B /* Check Pods Manifest.lock */,
 				FA5F7BB01B7ECDEC00344017 /* Sources */,
 				FA5F7BB11B7ECDEC00344017 /* Frameworks */,
 				FA5F7BB21B7ECDEC00344017 /* Resources */,
+				A16A28AE02D785D72517F09A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -650,6 +654,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftExperimentTests/Pods-SwiftExperimentTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		740DDC895F7EAFC06E09300B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		88ED7C0329A011D73B4D0CED /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -663,6 +682,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftExperimentTests/Pods-SwiftExperimentTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A16A28AE02D785D72517F09A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftExperimentUITests/Pods-SwiftExperimentUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C8374C0D5B74C41D5CE01717 /* Check Pods Manifest.lock */ = {
@@ -937,6 +971,7 @@
 		};
 		FA5F7BBC1B7ECDEC00344017 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB907FB1FFF4ED74A5D1C4C7 /* Pods-SwiftExperimentUITests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftExperimentUITests/Info.plist;
@@ -951,6 +986,7 @@
 		};
 		FA5F7BBD1B7ECDEC00344017 /* Test */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30F88B2E69623D8105C38C30 /* Pods-SwiftExperimentUITests.test.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftExperimentUITests/Info.plist;
@@ -965,6 +1001,7 @@
 		};
 		FA5F7BBE1B7ECDEC00344017 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAA71174ABDA2E35115D6525 /* Pods-SwiftExperimentUITests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftExperimentUITests/Info.plist;
@@ -978,6 +1015,7 @@
 		};
 		FA5F7BBF1B7ECDEC00344017 /* Staging */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2AA8656D9F886B7449E3F55 /* Pods-SwiftExperimentUITests.staging.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftExperimentUITests/Info.plist;
@@ -1173,6 +1211,7 @@
 				FA5F7BBF1B7ECDEC00344017 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

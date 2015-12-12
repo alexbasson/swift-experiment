@@ -45,6 +45,8 @@ const void * const QCKExampleKey = &QCKExampleKey;
                            @"Here's the original exception: '%@', reason: '%@', userInfo: '%@'",
                            exception.name, exception.reason, exception.userInfo];
     }
+    [self testInvocations];
+    world.currentExampleGroup = nil;
 }
 
 /**
