@@ -1,6 +1,6 @@
 PODS:
-  - Nimble (3.0.0)
-  - Quick (0.8.0)
+  - Nimble (4.0.1)
+  - Quick (0.9.2)
 
 DEPENDENCIES:
   - Nimble (from `https://github.com/Quick/Nimble.git`)
@@ -14,14 +14,16 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Nimble:
-    :commit: 7989d7e4ebc4d8d29adeb3acf88f4472a92a07f1
+    :commit: d8900634c5ae69bf0cdf24b97096fa599d9890d7
     :git: https://github.com/Quick/Nimble.git
   Quick:
-    :commit: c3eab5f0947deeb44974a22fd0c7a10273c10035
+    :commit: 4c9e0514998ab382cadd30cf5f607d67d7c35b7f
     :git: https://github.com/Quick/Quick.git
 
 SPEC CHECKSUMS:
-  Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
-  Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
+  Nimble: 0f3c8b8b084cda391209c3c5efbb48bedeeb920a
+  Quick: d61ff037eeb0b01bf53094a6b0c9184111c9e904
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 8adeccf7a3343109da7f6d0d74cae094cc81fcb9
+
+COCOAPODS: 1.0.1
